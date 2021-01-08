@@ -1,0 +1,59 @@
+mixin header
+  header.header.container
+    .header__menu.js-menu
+      .header__menu-head
+        p.header__menu-title Ether God
+        .header__menu-close.js-menu-close
+      .header__menu-block
+        a.header__menu-item(href="#", data-icon="star") Избранное
+        a.header__menu-item(href="#", data-icon="recent") Недавние
+      .header__menu-block
+        a.header__menu-item.header__menu-item--highlighted(href="#", data-icon="fire") Игры EtherGod
+        a.header__menu-item(href="#", data-icon="slots") Слоты
+        a.header__menu-item(href="#", data-icon="rocket") Новинки
+        a.header__menu-item(href="#", data-icon="rapid") Быстрые
+        a.header__menu-item(href="#", data-icon="dice") Кости
+        a.header__menu-item(href="#", data-icon="cards") Блек-джек
+        a.header__menu-item(href="#", data-icon="roulette") Рулетки
+      .header__menu-block
+        a.header__menu-item(href="#", data-icon="support") Поддержка
+        .header__menu-dropdown.js-header-dropdown
+          .header__menu-dropdown-item.js-header-dropdown-item(data-lang="rus") Русский
+          .header__menu-dropdown-inner.js-header-dropdown-inner
+            .header__menu-dropdown-item.js-header-dropdown-item(data-lang="eng") English
+    .wrapper.header__wrapper
+      .header__col
+        .header__burger.js-burger
+        img(src="img/logo.svg", alt="")
+      .header__col
+        .header__crypto.js-header-dropdown
+          .header__crypto-item.js-header-dropdown-item(data-currency="1", data-crypto="1.22342420", data-cash="2500.052", data-icon="eth") 1.22342420
+          .header__crypto-inner.js-header-dropdown-inner
+            .header__crypto-item.js-header-dropdown-item(data-currency="2", data-crypto="1.22342420", data-cash="2500.052", data-icon="eth-grey") 1.22342420
+            .header__crypto-label.js-header-switch(data-type="crypto")
+              p.header__crypto-label-text View in $
+                .header__crypto-label-switch
+        a.header__wallet(href="#") Кошелёк
+      .header__col
+        a.header__search(href="#") Поиск
+        .header__context
+          .header__context-trigger.js-header-context(data-icon="profile")
+          .header__context-menu.js-header-context-menu
+            p.header__context-menu-head Привет, <span>longusername123</span>
+            a.header__context-menu-item(href="#", data-icon="slots") Кошелёк
+            a.header__context-menu-item(href="#", data-icon="rocket") Хранилище
+            a.header__context-menu-item(href="#", data-icon="rapid") Вип-программа
+            a.header__context-menu-item(href="#", data-icon="dice") Партнёрская программа
+            a.header__context-menu-item(href="#", data-icon="cards") Статистика
+            a.header__context-menu-item(href="#", data-icon="roulette") Транзакции
+            a.header__context-menu-item(href="#")
+              span 13 
+              |Уведомления
+            a.header__context-menu-item(href="#", data-icon="dice") Настройки
+            a.header__context-menu-item(href="#", data-icon="cards") Поддержка
+            a.header__context-menu-item(href="#", data-icon="dice") Сменить профиль
+        .header__context
+          .header__context-trigger.js-header-context(data-icon="chat")
+          .header__context-menu.js-header-context-menu
+            a.header__context-menu-item(href="#", data-icon="slots") Чат
+            a.header__context-menu-item(href="#", data-icon="rocket") Уведомления
