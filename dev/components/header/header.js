@@ -4,7 +4,7 @@ $(document).on('click', e => {
     $('.js-menu').removeClass('header__menu--active');
   }
   
-  // hide dropodown on outer click
+  // hide dropdown on outer click
   if(!$(e.target).closest('.js-header-dropdown').length) {
     $('.js-header-dropdown').removeClass('js-header-dropdown--active').find('.js-header-dropdown-inner').slideUp(300);
   }

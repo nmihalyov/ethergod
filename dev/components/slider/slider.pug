@@ -1,0 +1,13 @@
+include ../_ui/button/button
+
+mixin slider
+  section.slider.container
+    .wrapper
+      .slider__carousel.js-slider
+        -for (let i = 1; i <= 3; i++)
+          .slider__carousel-item
+            .slider__carousel-slide(style="background-image: url('img/inhtml/slider.png');")
+              .slider__carousel-content
+                .slider__carousel-content-row
+                  p.slider__carousel-title Уникальное предложение
+                  +button-primary('link', 'Подробнее', 'slider__carousel-btn', {link: '#'})

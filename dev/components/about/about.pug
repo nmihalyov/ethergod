@@ -1,0 +1,19 @@
+include ../_ui/button/button
+include ../stats/stats
+
+mixin about
+  section.about.container
+    .wrapper
+      .about__wrapper
+        .about__hero
+          .about__block
+            .about__block-image(style="background-image: url('../img/inhtml/about-1.png');")
+            p.about__block-title Казино, сделанное исключительно для криптовалют
+            p.about__block-desc On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
+            +button-primary('link', 'Перейти к каталогу игр', 'about__block-btn', {link: '#'})
+          .about__block
+            .about__block-image(style="background-image: url('../img/inhtml/about-2.png');")
+            p.about__block-title Казино, сделанное исключительно для криптовалют
+            p.about__block-desc On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
+            +button-primary('link', 'Перейти к каталогу игр', 'about__block-btn', {link: '#'})
+        +stats

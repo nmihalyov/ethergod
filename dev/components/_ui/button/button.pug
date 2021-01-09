@@ -1,0 +1,3 @@
+mixin button-primary(type, text, className, options)
+  if type === 'link'
+    a.button.button--primary(class=`${className || ''}`, href=options.link)= text

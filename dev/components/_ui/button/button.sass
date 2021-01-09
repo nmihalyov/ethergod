@@ -1,0 +1,21 @@
+.button
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 48px
+  padding-bottom: 3px
+  border-radius: 10px
+  border: none
+  text-decoration: none
+  transition: all .15s ease
+  cursor: pointer
+  outline: 0
+  font-size: 14px
+  &--primary
+    background-image: $gradient
+    color: #fff
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 5px 11px -5px rgba(0,0,0,.25)

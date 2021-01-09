@@ -1,0 +1,62 @@
+.slider
+  padding-top: 40px
+    position: relative
+  &__carousel
+    position: relative
+    .slick-slide
+      opacity: 0.3
+      transition: opacity .3s ease
+      outline: 0
+      &.slick-current
+        opacity: 1
+    &-arrow
+      z-index: 2
+      position: absolute
+      top: calc(50% - 14px)
+      width: 27px
+      height: 18px
+      cursor: pointer
+      background:
+        image: url('../img/icons/caret.svg')
+        size: 18px
+        position: center
+        repeat: no-repeat
+      &--prev
+        left: 210px
+        transform: rotate(90deg)
+      &--next
+        right: 210px
+        transform: rotate(-90deg)
+    &-item
+      padding: 0 6px
+    &-slide
+      overflow: hidden
+      width: 710px
+      height: 305px
+      border-radius: 10px
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+    &-content
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-end
+      align-items: stretch
+      height: 100%
+      padding: 40px
+      background-image: linear-gradient(360deg, #C7C6FF 1.56%, rgba(184, 172, 255, 0.79) 24.43%, rgba(255, 255, 255, 0) 70.89%)
+      &-row
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+    &-title
+      width: 440px
+      color: $white
+      text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1)
+      font:
+        size: 24px
+        weight: 500
+    &-btn
+      width: 125px
