@@ -1,0 +1,13 @@
+mixin input(type, label, name, placeholder, value, className, options)
+  label.input(class=`${className || ''} ${(options && options.sum) ? 'input--sum' : ''}`)
+    p.input__label= label
+    input.input__field(class=`${(options && options.copy) ? 'input__field--copy' : ''}`, type=type, name=name, required=required, placeholder=placeholder, value=value, readonly=options && options.copy, data-min=options && options.min, data-max=options && options.max, step="any")
+    if options
+      if options.sum
+        +button-primary('link', 'Максимум', 'input__max js-input-max', {link: 'javascript:void(0)'})
+      if options.copy
+        button.input__copy.js-input-copy
+      if options.error
+        p.input__error= options.error
+      if options.additional
+        p.input__additional= options.additional

@@ -1,0 +1,14 @@
+mixin tabs(tabs, dropdown)
+  .tabs.js-tabs
+    .tabs__head
+      .tabs__grid
+        each el, i in tabs
+          a.tabs__item.js-tab(class=`${i === 0 ? 'tabs__item--active' : ''} ${el.online ? 'tabs__item--online' : ''}`, href="javascript:void(0)", data-content=i+1)= el.title
+      if dropdown
+        .tabs__dropdown.js-tabs-dropdown
+          .tabs__dropdown-item.js-tabs-dropdown-item 10
+          .tabs__dropdown-inner.js-tabs-dropdown-inner
+            .tabs__dropdown-item.js-tabs-dropdown-item 20
+            .tabs__dropdown-item.js-tabs-dropdown-item 50
+    .tabs__content
+      block

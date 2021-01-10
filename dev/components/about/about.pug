@@ -1,5 +1,6 @@
 include ../_ui/button/button
-include ../stats/stats
+include ../_ui/tabs/tabs
+include ../table/table
 
 mixin about
   section.about.container
@@ -16,4 +17,7 @@ mixin about
             p.about__block-title Казино, сделанное исключительно для криптовалют
             p.about__block-desc On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
             +button-primary('link', 'Перейти к каталогу игр', 'about__block-btn', {link: '#'})
-        +stats
+        +tabs([{title: 'Казино'}, {title: 'Топ дня'}, {title: 'Турниры', online: true}], true)
+          -for (let i = 1; i <= 3; i++)
+            .js-tabs-content(data-content=i)
+              +table

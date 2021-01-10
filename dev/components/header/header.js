@@ -10,7 +10,7 @@ $(document).on('click', e => {
   }
   
   // hide context menu on outer click
-  if(!$(e.target).closest('.js-header-context').length) {
+  if(!$(e.target).closest('.header__context').length) {
     $('.js-header-context-menu').fadeOut(300);
   }
 });

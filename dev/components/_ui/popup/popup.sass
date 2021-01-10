@@ -1,0 +1,202 @@
+.popup
+  z-index: 999999
+  position: fixed
+  top: 0
+  left: 0
+  display: none
+  width: 100%
+  height: 100%
+  cursor: pointer
+  &__container
+    position: relative
+    width: 100%
+    height: 100%
+    padding: 50px 0
+    overflow: scroll
+  &__backdrop
+    z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, 0.7)
+  &__wrapper
+    z-index: 2
+    position: relative
+    min-height: 100%
+    width: 100%
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+  &__window
+    position: relative
+    width: 600px
+    background-color: #fff
+    box-shadow: 0px 0px 12px -4px rgba(13, 13, 30, 0.3)
+    border-radius: 10px
+    cursor: auto
+  &__content
+    padding: 0 25px 25px
+  &__head
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding: 7px 5px 7px 15px
+  &__title
+    position: relative
+    padding-left: 25px
+    font:
+      size: 14px
+      weight: 500
+    &:before
+      content: ''
+      position: absolute
+      top: 3px
+      left: 0
+      width: 16px
+      height: 16px
+      background:
+        image: url('../img/icons/eth.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__close
+    width: 20px
+    height: 20px
+    cursor: pointer
+    background:
+      image: url('../img/icons/close.svg')
+      position: center
+      repeat: no-repeat
+  &__wallet
+    &-unverified
+      z-index: 3
+      position: absolute
+      top: 0
+      left: -5px
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      width: calc(100% + 10px)
+      height: calc(100% + 10px)
+      padding: 5px
+      background-color: rgba(255, 255, 255, .7)
+      backdrop-filter: blur(3px)
+    &-content
+      position: relative
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: center
+      padding-top: 25px
+    &-auth
+      margin-top: 35px
+      border-radius: 10px 10px 0 0
+      background-color: $grey-light
+      &-text
+        padding: 12px 0
+        text-align: center
+        font:
+          size: 14px
+          weight: 500
+  &__dropdown
+    position: relative
+    display: inline-block
+    margin-bottom: 25px
+    &.js-popup-dropdown--active 
+      & > .popup__dropdown-item:after
+        transform: rotate(180deg)
+      .popup__dropdown-item:hover
+        background-color: $white
+    &--reverse > .popup__dropdown-item:after
+      left: auto !important
+      right: -24px
+    & > .popup__dropdown-item
+      background-color: $grey-light
+      &:after
+        content: ''
+        position: absolute
+        left: -24px
+        top: 10px
+        width: 24px
+        height: 24px
+        transition: transform .3s ease
+        background:
+          image: url('../img/icons/caret.svg')
+          position: center
+          repeat: no-repeat
+    &-item
+      z-index: 2
+      position: relative
+      padding: 9px 10px 9px 35px
+      border-radius: 10px
+      cursor: pointer
+      white-space: nowrap
+      transition: background-color .3s ease
+      font:
+        size: 15px
+        weight: 500
+      &:before
+        content: ''
+        position: absolute
+        left: 12px
+        top: 12px
+        width: 16px
+        height: 16px
+        background:
+          size: contain
+          position: center
+          repeat: no-repeat
+      &[data-icon="eth"]:before
+        background-image: url('../img/icons/eth.svg')
+      &[data-icon="eth-grey"]:before
+        background-image: url('../img/icons/eth-grey.svg')
+    &-inner
+      z-index: 1
+      position: absolute
+      top: 0
+      left: 0
+      display: none
+      padding-top: 40px
+      border-radius: 10px 0 10px 10px
+      background-color: $grey-light
+      box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12)
+  &__input
+    margin-bottom: 20px
+  &__qr
+    width: 130px
+    height: 130px
+    margin-bottom: 10px
+  &__desc
+    color: $grey
+    text-align: center
+    line-height: 1.33
+    font:
+      size: 14px
+      weight: 500
+    &:not(:last-child)
+      margin-bottom: 25px
+  &__checkbox
+    align-self: flex-start
+    margin-bottom: 25px
+  &__dropdowns
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    margin-bottom: 25px
+    .popup__dropdown
+      margin-bottom: 0
+  &__swap
+    width: 20px
+    height: 20px
+    margin: 0 15px
+    background:
+      image: url('../img/icons/swap.svg')
+      size: contain
+      position: center
+      repeat: no-repeat

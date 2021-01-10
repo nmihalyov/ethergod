@@ -10,12 +10,19 @@
   border: none
   text-decoration: none
   transition: all .15s ease
+  color: #fff
   cursor: pointer
   outline: 0
   font-size: 14px
   &--primary
     background-image: $gradient
-    color: #fff
-  &:hover
-    transform: translateY(-2px)
-    box-shadow: 0 5px 11px -5px rgba(0,0,0,.25)
+    &:hover
+      transform: translateY(-2px)
+      box-shadow: 0 5px 11px -5px rgba(0,0,0,.25)
+  &--secondary
+    background-color: $green
+    &:hover
+      background-color: lighten($green, 3)
+    &:active
+      background-color: darken($green, 3)
+      transition: none

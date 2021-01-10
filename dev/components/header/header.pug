@@ -26,14 +26,14 @@ mixin header
         .header__burger.js-burger
         img(src="img/logo.svg", alt="")
       .header__col
-        .header__crypto.js-header-dropdown
+        .header__crypto.js-header-dropdown(data-dropdown)
           .header__crypto-item.js-header-dropdown-item(data-currency="1", data-crypto="1.22342420", data-cash="2500.052", data-icon="eth") 1.22342420
           .header__crypto-inner.js-header-dropdown-inner
             .header__crypto-item.js-header-dropdown-item(data-currency="2", data-crypto="1.22342420", data-cash="2500.052", data-icon="eth-grey") 1.22342420
             .header__crypto-label.js-header-switch(data-type="crypto")
               p.header__crypto-label-text View in $
                 .header__crypto-label-switch
-        a.header__wallet(href="#") Кошелёк
+        a.header__wallet.js-open-popup(href="javascript:void(0)", data-popup="wallet") Кошелёк
       .header__col
         a.header__search(href="#") Поиск
         .header__context

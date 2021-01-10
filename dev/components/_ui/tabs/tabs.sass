@@ -1,0 +1,102 @@
+.tabs
+  &__head
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__grid
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    width: 1010px
+    &:after
+      z-index: 1
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 2px
+      border-radius: 2px
+      background-color: $grey-light
+  &__item
+    z-index: 2
+    position: relative
+    display: block
+    padding: 10px 20px
+    color: $black
+    text-decoration: none
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: 0
+      height: 2px
+      border-radius: 2px
+      background-image: $gradient
+    &--active
+      pointer-events: none
+      &:before
+        left: 0
+        width: 100%
+        transition: all .3s ease-out
+    &--online
+      &:after
+        content: ''
+        position: absolute
+        top: calc(50% - 4px)
+        right: -4px
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background-color: $green
+  &__dropdown
+    position: relative
+    width: 55px
+    background-color: $grey-light
+    border-radius: 10px
+    &.js-tabs-dropdown--active > .tabs__dropdown-item:after
+      transform: rotate(180deg)
+    & > .tabs__dropdown-item:after
+      content: ''
+      position: absolute
+      right: 12px
+      top: 14px
+      width: 14px
+      height: 8px
+      transition: transform .3s ease
+      background:
+        image: url('../img/icons/caret.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-inner
+      z-index: 1
+      position: absolute
+      display: none
+      width: 100%
+      margin-top: -35px
+      padding-top: 35px
+      border-radius: 10px
+      background-color: $grey-light
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.12)
+      .tabs__dropdown-item
+        &:hover
+          background-color: $white
+    &-item
+      z-index: 2
+      position: relative
+      height: 35px
+      padding: 7px 0 0 10px
+      color: $black
+      transition: all .3s ease
+      cursor: pointer
+      border-radius: 10px
+      font:
+        size: 14px
+        weight: 500
+  .js-tabs-content:not(:first-child)
+    display: none
