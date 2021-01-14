@@ -1,6 +1,9 @@
 mixin input(type, label, name, placeholder, value, className, options)
-  label.input(class=`${className || ''} ${(options && options.sum) ? 'input--sum' : ''}`)
-    p.input__label= label
+  label.input(class=`${className || ''} ${(options && options.sum) ? 'input--sum' : ''} ${type === 'search' ? 'input--search' : ''}`)
+    if type === 'search'
+      .input__icon(data-icon="search")
+    if label.length
+      p.input__label= label
     input.input__field(class=`${(options && options.copy) ? 'input__field--copy' : ''}`, type=type, name=name, required=required, placeholder=placeholder, value=value, readonly=options && options.copy, data-min=options && options.min, data-max=options && options.max, step="any")
     if options
       if options.sum

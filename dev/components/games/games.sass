@@ -1,0 +1,143 @@
+.games
+  padding-top: 20px
+  &__wrapper
+    padding: 35px 35px 20px
+    border-radius: 10px
+    background-color: $white
+  &__tabs
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    padding: 25px 0 35px
+  &__tab
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 48px
+    padding: 5px 15px 9px 32px
+    border-radius: 10px
+    background-color: $grey-light
+    box-shadow: 0px 0px 12px -4px rgba(13, 13, 30, 0.3)
+    color: $black
+    text-decoration: none
+    font-weight: 500
+    transition: opacity .3s ease
+    &:before
+      position: absolute
+      content: ''
+      top: 17px
+      left: 13px
+      width: 11px
+      height: 12px
+      background:
+        image: url('../img/icons/fire-grey.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &:not(:last-child)
+      margin-right: 25px
+    &:hover
+      opacity: 0.7
+    &--active
+      pointer-events: none
+      background-image: $gradient
+      color: $white
+      &:before
+        background-image: url('../img/icons/fire.svg')
+  &__content
+    margin-bottom: 15px
+  &__heading
+    position: relative
+    margin-bottom: 25px
+    padding-left: 20px
+    line-height: 1.33
+    font:
+      size: 24px
+      weight: 500
+    &:before
+      position: absolute
+      content: ''
+      left: 0
+      top: 10px
+      width: 13px
+      height: 14px
+      background:
+        image: url('../img/icons/fire-gradient.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__slider
+    position: relative
+    margin: 0 0 35px -8px
+    &-arrow
+      position: absolute
+      top: -35px
+      width: 30px
+      height: 35px
+      background-color: $grey-light
+      cursor: pointer
+      transition: opacity .3s ease
+      &:hover
+        opacity: 0.8
+      &--prev
+        right: 33px
+        border-radius: 10px 0 0 10px
+        &:before
+          transform: translate(-50%, -50%) rotate(90deg)
+      &--next
+        right: 0
+        border-radius: 0 10px 10px 0
+        &:before
+          transform: translate(-50%, -50%) rotate(-90deg)
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 12px
+        height: 8px
+        background:
+          image: url('../img/icons/caret.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    .slick-list
+      padding: 20px 4px
+      margin: -20px -4px
+    .slick-slide
+      pointer-events: none
+      opacity: 0.3
+      width: 186px !important
+      outline: 0 !important
+      transition: opacity .3s ease
+      &:not(:last-child)
+        padding: 0 8px
+      &.slick-active
+        pointer-events: all
+        opacity: 1
+    &--providers
+      .slick-slide
+        width: auto !important
+  &__provider
+    position: relative
+    display: flex !important
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 60px
+    padding: 0 20px
+    border-radius: 10px
+    background-color: $grey-light
+    box-shadow: 0px 0px 12px -4px rgba(13, 13, 30, 0.3)
+    color: $black
+    text-decoration: none
+    outline: 0
+    transition: opacity .3s ease
+    font:
+      size: 18px
+      weight: 500
+    &:hover
+      opacity: 0.7

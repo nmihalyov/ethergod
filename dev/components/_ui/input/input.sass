@@ -2,6 +2,9 @@
   position: relative
   display: block
   width: 100%
+  &--search
+    .input__field
+      padding-left: 40px
   &--error
     .input__error
       display: block
@@ -11,6 +14,17 @@
         padding-right: 150px
       &__error
         right: 140px
+  &__icon
+    position: absolute
+    top: 17px
+    left: 18px
+    width: 12px
+    height: 12px
+    background:
+      image: url('../img/icons/search-gradient.svg')
+      position: center
+      size: contain
+      repeat: no-repeat
   &__label
     margin-bottom: 10px
     color: $grey

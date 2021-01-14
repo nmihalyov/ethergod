@@ -1,0 +1,37 @@
+include ../_ui/input/input
+include ../_ui/game-card/game-card
+include ../_ui/tabs/tabs
+include ../table/table
+
+mixin games
+  section.games.container
+    .wrapper
+      .games__wrapper
+        form.games__form(action="")
+          +input('search', '', 'search', 'Найди свой идеал в нашем каталоге игр', '', '', 'games__form-search')
+        .games__tabs
+          a.games__tab.games__tab--active(href="#") Игры EtherGod
+          a.games__tab(href="#") Игры EtherGod
+          a.games__tab(href="#") Игры EtherGod
+          a.games__tab(href="#") Игры EtherGod
+        .games__content
+          p.games__heading Игры EtherGod
+          .games__slider.js-games-slider
+            -for (let i = 1; i <= 10; i++)
+              +game-card
+          p.games__heading Игры EtherGod
+          .games__slider.js-games-slider
+            -for (let i = 1; i <= 10; i++)
+              +game-card
+          p.games__heading Провайдеры
+          .games__slider.games__slider--providers.js-games-slider
+            -for (let i = 1; i <= 10; i++)
+              a.games__provider(href="#") Pragmatic Play
+          p.games__heading Игры EtherGod
+          .games__slider.js-games-slider
+            -for (let i = 1; i <= 10; i++)
+              +game-card
+        +tabs([{title: 'Казино'}, {title: 'Топ дня'}, {title: 'Турниры', online: true}], true)
+          -for (let i = 1; i <= 3; i++)
+            .js-tabs-content(data-content=i)
+              +table
