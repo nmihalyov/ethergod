@@ -1,0 +1,124 @@
+.group
+  padding-top: 30px
+  &__wrapper
+    padding: 0 35px 20px
+    border-radius: 10px
+    background-color: $white
+  &__head
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    width: calc(100% + 70px)
+    height: 120px
+    margin: 0 0 25px -35px
+    padding-left: 160px
+    border-radius: 10px
+    background:
+      image: url('../img/bgs/group-head-bg.png')
+      size: cover
+      position: center
+      repeat: no-repeat
+    &-img
+      position: absolute
+  &__heading
+    color: $white
+    font:
+      size: 24px
+      weight: 500
+  &__form
+    margin-bottom: 25px
+  &__actions
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 25px
+  &__dropdown
+    position: relative
+    height: 50px
+    background-color: $grey-light
+    border-radius: 10px
+    &.js-group-dropdown--active > .group__dropdown-item:after
+      transform: rotate(180deg)
+    & > .group__dropdown-item
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        background:
+          size: contain
+          position: center
+          repeat: no-repeat
+      &:before
+        left: 13px
+        top: 16px
+        width: 20px
+        height: 20px
+        background-image: url('../img/icons/swap.svg')
+      &:after
+        right: 12px
+        top: 22px
+        width: 14px
+        height: 8px
+        transition: transform .3s ease
+        background-image: url('../img/icons/caret.svg')
+    &-inner
+      z-index: 1
+      position: absolute
+      display: none
+      width: 100%
+      margin-top: -50px
+      padding-top: 50px
+      border-radius: 10px
+      background-color: $grey-light
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.12)
+      .group__dropdown-item
+        &:hover
+          background-color: $white
+    &-item
+      z-index: 2
+      position: relative
+      display: flex
+      align-items: center
+      height: 50px
+      padding: 0 40px 0
+      color: $black
+      transition: all .3s ease
+      cursor: pointer
+      border-radius: 10px
+      white-space: nowrap
+      font:
+        size: 16px
+        weight: 500
+  .js-group-content:not(:first-child)
+    display: none
+  &__providers
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 50px
+    padding: 0 25px
+    border-radius: 10px
+    background-color: $grey-light
+    color: $black
+    text-decoration: none
+    transition: opacity .3s ease
+    font:
+      size: 16px
+      weight: 500
+    &:hover
+      opacity: 0.7
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: calc(100% + 12px)
+    margin-left: -6px
+    padding-bottom: 30px
+  &__card
+    width: 158px
+    margin: 0 6px 25px

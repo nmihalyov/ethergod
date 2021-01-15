@@ -1,5 +1,5 @@
-mixin game-card
-  a.game-card(href="#", style="background-image: url('img/inhtml/game-card.png');")
+mixin game-card(className)
+  a.game-card(href="#", style="background-image: url('img/inhtml/game-card.png');", class=`${className || ''}`)
     .game-card__inner
       p.game-card__name Super Black Jack soup
       .game-card__icon
