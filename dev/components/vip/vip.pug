@@ -1,0 +1,43 @@
+include ../_ui/button/button
+include ../levels/levels
+include ../progress/progress
+
+mixin vip
+  section.vip.container
+    .wrapper
+      img(src="img/inhtml/vip.png", alt="").vip__image
+      .vip__grid
+        .vip__col
+          .vip__card
+            p.vip__heading Структура вип-программы
+            p.vip__desc Все виды наших привилегий совершенно уникальны, и вряд ли вы встретите подобные где-то ещё. Вот полный перечень привилегий, которые будут вам доступны
+            +levels
+            +button-primary('link', 'Перейти к каталогу игр', 'about__block-btn', {link: '#'})
+          .vip__card
+            p.vip__heading Что говорят наши игроки?
+          .vip__feedback
+            .vip__feedback-slider.js-vip-slider
+              .vip__feedback-slide
+                .vip__feedback-item
+                  p.vip__feedback-heading Suuasduasdak
+                  p.vip__feedback-desc Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживаниеВаш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживаниеВаш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание
+              .vip__feedback-slide
+                .vip__feedback-item
+                  p.vip__feedback-heading Suuasduasdak
+                  p.vip__feedback-desc Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживаниеВаш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживаниеВаш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание
+              .vip__feedback-slide
+                .vip__feedback-item
+                  p.vip__feedback-heading Suuasduasdak
+                  p.vip__feedback-desc Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживаниеВаш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживаниеВаш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание
+        .vip__col
+          .vip__card
+            +progress(true)
+          .vip__card
+            p.vip__heading Зачем повышать свой уровень?
+            p.vip__desc Отслеживайте свой прогресс, зарабатывайте новые уровни, чтобы получить уникальные бонусы
+            .vip__pic(style="background-image: url('../img/inhtml/about-1.png');")
+            p.vip__title Высочайшая доходность для игрока
+            p.vip__desc On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
+            .vip__pic(style="background-image: url('../img/inhtml/about-2.png');")
+            p.vip__title Эксклюзивные и гибкие бонусы
+            p.vip__desc On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.

@@ -1,16 +1,18 @@
 $(document).on('click', e => {
+  const $this = $(e.target);
+
   // hide menu on outer click
-  if(!$(e.target).closest('.js-menu').length && !$(e.target).hasClass('js-burger')) {
+  if(!$this.closest('.js-menu').length && !$this.hasClass('js-burger')) {
     $('.js-menu').removeClass('header__menu--active');
   }
   
   // hide dropdown on outer click
-  if(!$(e.target).closest('.js-header-dropdown').length) {
+  if(!$this.closest('.js-header-dropdown').length) {
     $('.js-header-dropdown').removeClass('js-header-dropdown--active').find('.js-header-dropdown-inner').slideUp(300);
   }
   
   // hide context menu on outer click
-  if(!$(e.target).closest('.header__context').length) {
+  if(!$this.closest('.header__context').length || $this.hasClass('js-open-popup')) {
     $('.js-header-context-menu').fadeOut(300);
   }
 });

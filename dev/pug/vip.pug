@@ -1,0 +1,21 @@
+include ../components/_ui/popup/popup
+include ../components/header/header
+include ../components/vip/vip
+include ../components/slider/slider
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Игры | EtherGod
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +vip
+      +slider
+      +footer
+    +popup('wallet')
+    +popup('vip')

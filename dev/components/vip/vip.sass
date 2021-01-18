@@ -1,0 +1,117 @@
+.vip
+  &__image
+    display: block
+    margin: 20px auto 50px
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+  &__col
+    &:first-child
+      width: 710px
+    &:last-child
+      width: 500px
+  &__card
+    width: 100%
+    padding: 15px 25px
+    background-color: #fff
+    border-radius: 10px
+    &:not(:last-child)
+      margin-bottom: 35px
+  &__heading
+    font:
+      size: 24px
+      weight: 500
+    &:not(:last-child)
+      margin-bottom: 10px
+  &__pic
+    width: 100%
+    height: 220px
+    margin-bottom: 10px
+    border-radius: 10px
+    box-shadow: 0px 0px 11px -6px rgba(0, 0, 0, 0.25)
+    background:
+      size: cover
+      position: center
+      repeat: no-repeat
+  &__title
+    margin-bottom: 10px
+    font:
+      size: 18px
+      weight: 500
+  &__desc
+    color: $grey
+    font-weight: 100
+    &:not(:last-child)
+      margin-bottom: 20px
+  &__feedback
+    margin-top: -10px
+    &-slider
+      position: relative
+      width: 100%
+      .slick-slide
+        outline: 0
+    &-arrow
+      z-index: 2
+      position: absolute
+      top: 0
+      width: 130px
+      height: 100%
+      cursor: pointer
+      &--prev
+        left: 0
+        background-image: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0))
+        &:after
+          left: 12px
+          transform: rotate(90deg)
+      &--next
+        right: 0
+        background-image: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0))
+        &:after
+          right: 12px
+          transform: rotate(-90deg)
+      &:after
+        content: ''
+        position: absolute
+        top: calc(50% - 9px)
+        width: 18px
+        height: 18px
+        transition: transform .3s ease
+        background:
+          image: url('../img/icons/caret.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-slide
+      padding: 0 12px
+    &-item
+      width: 410px
+      padding: 15px 30px 35px 25px
+      border-radius: 10px
+      background-color: $white
+    &-heading
+      position: relative
+      margin-bottom: 10px
+      padding-left: 20px
+      font:
+        size: 18px
+        weight: 500
+      &:before
+        content: ''
+        position: absolute
+        top: 8px
+        left: 0
+        width: 12px
+        height: 12px
+        background:
+          image: url('../img/icons/stage-new.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-desc
+      color: $grey
+      line-height: 1.57
+      font:
+        size: 14px
+        weight: 500

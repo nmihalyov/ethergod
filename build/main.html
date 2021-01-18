@@ -71,7 +71,7 @@
             <div class="header__context">
               <div class="header__context-trigger js-header-context" data-icon="profile"></div>
               <div class="header__context-menu js-header-context-menu">
-                <p class="header__context-menu-head">Привет, <span>longusername123</span></p><a class="header__context-menu-item" href="#" data-icon="slots">Кошелёк</a><a class="header__context-menu-item" href="#" data-icon="rocket">Хранилище</a><a class="header__context-menu-item" href="#" data-icon="rapid">Вип-программа</a><a class="header__context-menu-item" href="#" data-icon="dice">Партнёрская программа</a><a class="header__context-menu-item" href="#" data-icon="cards">Статистика</a><a class="header__context-menu-item" href="#" data-icon="roulette">Транзакции</a><a class="header__context-menu-item" href="#"><span>13 </span>Уведомления</a><a class="header__context-menu-item" href="#" data-icon="dice">Настройки</a><a class="header__context-menu-item" href="#" data-icon="cards">Поддержка</a><a class="header__context-menu-item" href="#" data-icon="dice">Сменить профиль</a>
+                <p class="header__context-menu-head">Привет, <span>longusername123</span></p><a class="header__context-menu-item" href="#" data-icon="slots">Кошелёк</a><a class="header__context-menu-item" href="#" data-icon="rocket">Хранилище</a><a class="header__context-menu-item js-open-popup" href="javascript:void(0)" data-popup="vip" data-icon="rapid">Вип-программа</a><a class="header__context-menu-item" href="#" data-icon="dice">Партнёрская программа</a><a class="header__context-menu-item" href="#" data-icon="cards">Статистика</a><a class="header__context-menu-item" href="#" data-icon="roulette">Транзакции</a><a class="header__context-menu-item" href="#"><span>13 </span>Уведомления</a><a class="header__context-menu-item" href="#" data-icon="dice">Настройки</a><a class="header__context-menu-item" href="#" data-icon="cards">Поддержка</a><a class="header__context-menu-item" href="#" data-icon="dice">Сменить профиль</a>
               </div>
             </div>
             <div class="header__context">
@@ -84,28 +84,30 @@
       <section class="hero container">
         <div class="wrapper">
           <div class="hero__wrapper">
-            <p class="hero__heading">С возвращением, konstantinkonstantin</p>
-            <p class="hero__desc">Ваш VIP-прогресс отображается ниже</p>
-            <div class="hero__progress">
-              <div class="hero__progress-bar">
-                <div class="hero__progress-bar-fill" style="width: 64%"></div>
-              </div>
-              <div class="hero__progress-carets">
-                <div class="hero__progress-caret" data-caret="blue"></div>
-                <div class="hero__progress-caret" data-caret="white"></div>
-              </div>
-              <div class="hero__progress-stages">
-                <div class="hero__progress-stage">
-                  <div class="hero__progress-stage-icon" data-stage="new"></div>
-                  <p class="hero__progress-stage-text">Начинающий</p>
+            <div class="progress">
+              <p class="progress__heading">С возвращением, konstantinkonstantin</p>
+              <p class="progress__desc">Ваш VIP-прогресс отображается ниже</p>
+              <div class="progress__progress">
+                <div class="progress__progress-bar">
+                  <div class="progress__progress-bar-fill" style="width: 64%"></div>
                 </div>
-                <div class="hero__progress-stage">
-                  <div class="hero__progress-stage-icon" data-stage="bronze"></div>
-                  <p class="hero__progress-stage-text">Бронза</p>
+                <div class="progress__progress-carets">
+                  <div class="progress__progress-caret" data-caret="blue"></div>
+                  <div class="progress__progress-caret" data-caret="white"></div>
+                </div>
+                <div class="progress__progress-stages">
+                  <div class="progress__progress-stage">
+                    <div class="progress__progress-stage-icon" data-stage="new"></div>
+                    <p class="progress__progress-stage-text">Начинающий</p>
+                  </div>
+                  <div class="progress__progress-stage">
+                    <div class="progress__progress-stage-icon" data-stage="bronze"></div>
+                    <p class="progress__progress-stage-text">Бронза</p>
+                  </div>
                 </div>
               </div>
+              <p class="progress__desc">Отслеживайте свой прогресс, зарабатывайте новые уровни, чтобы получить уникальные&nbsp;бонусы</p>
             </div>
-            <p class="hero__desc">Отслеживайте свой прогресс, зарабатывайте новые уровни, чтобы получить уникальные&nbsp;бонусы</p>
           </div>
         </div>
       </section>
@@ -506,7 +508,7 @@
                             <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">BTC</div>
                           </div>
                         </div>
-                        <label class="input popup__input  ">
+                        <label class="input popup__input    ">
                           <p class="input__label">Ваш адрес для депозита ETH</p>
                           <input class="input__field input__field--copy" type="text" name="ethDepositWalletAddress" placeholder="" value="3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY" readonly="readonly" step="any"/>
                           <button class="input__copy js-input-copy"></button>
@@ -522,12 +524,12 @@
                             <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
                           </div>
                         </div>
-                        <label class="input popup__input  ">
+                        <label class="input popup__input    ">
                           <p class="input__label">Ваш адрес ETH</p>
                           <input class="input__field" type="text" name="ethWithdrawalWalletAddress" placeholder="Введите адрес кошелька ETH для вывода" value="" step="any"/>
                           <p class="input__error">Неверные данные</p>
                         </label>
-                        <label class="input popup__input input--sum ">
+                        <label class="input popup__input input--sum   ">
                           <p class="input__label">Сумма для вывода в ETH (минимум 0.0005 ETH)</p>
                           <input class="input__field" type="number" name="ethSumToWithdraw" placeholder="Введите сумму для вывода" value="" data-min="0.0005" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
                           <p class="input__error">Недостаточно средств</p>
@@ -565,12 +567,12 @@
                             <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
                           </div>
                         </div>
-                        <label class="input popup__input  ">
+                        <label class="input popup__input    ">
                           <p class="input__label">Имя получателя</p>
                           <input class="input__field" type="text" name="recipientName" placeholder="Введите имя получателя" value="" step="any"/>
                           <p class="input__error">Неверные данные</p>
                         </label>
-                        <label class="input popup__input input--sum ">
+                        <label class="input popup__input input--sum   ">
                           <p class="input__label">Сумма перевода</p>
                           <input class="input__field" type="number" name="transferAmount" placeholder="Введите сумму перевода" value="" data-min="0" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
                           <p class="input__error">Недостаточно средств</p>
@@ -590,6 +592,96 @@
                 </div>
                 <div class="popup__wallet-auth">
                   <p class="popup__wallet-auth-text">У вас отключена 2ФА. Подключите её для повышения безопасности</p><a class="button button--secondary" href="#">Включить двухфакторную аутентификацию</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="vip">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window">
+            <div class="popup__head">
+              <p class="popup__title">Вип-программа</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="tabs js-tabs">
+                <div class="tabs__head">
+                  <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Прогресс</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Привилегии</a>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="js-tabs-content" data-content="1">
+                    <div class="popup__vip popup__vip--progress"><img class="popup__vip-image" src="img/inhtml/vip.png" alt=""/>
+                      <div class="progress progress--grey">
+                        <div class="progress__progress">
+                          <div class="progress__progress-bar">
+                            <div class="progress__progress-bar-fill" style="width: 64%"></div>
+                          </div>
+                          <div class="progress__progress-carets">
+                            <div class="progress__progress-caret" data-caret="blue"></div>
+                            <div class="progress__progress-caret" data-caret="grey"></div>
+                          </div>
+                          <div class="progress__progress-stages">
+                            <div class="progress__progress-stage">
+                              <div class="progress__progress-stage-icon" data-stage="new"></div>
+                              <p class="progress__progress-stage-text">Начинающий</p>
+                            </div>
+                            <div class="progress__progress-stage">
+                              <div class="progress__progress-stage-icon" data-stage="bronze"></div>
+                              <p class="progress__progress-stage-text">Бронза</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="popup__vip-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p><a class="button button--primary" href="#">Узнать больше о вип-программе EtherGod</a>
+                    </div>
+                  </div>
+                  <div class="js-tabs-content" data-content="2">
+                    <div class="popup__vip">
+                      <div class="levels">
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="new"></div>
+                            <p class="levels__item-title">Начинающий</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="bronze"></div>
+                            <p class="levels__item-title">Бронза</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="silver"></div>
+                            <p class="levels__item-title">Серебро</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="gold"></div>
+                            <p class="levels__item-title">Золото</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="platinum"></div>
+                            <p class="levels__item-title">Платина</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                      </div><a class="button button--primary" href="#">Узнать больше о вип-программе EtherGod</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

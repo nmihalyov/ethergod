@@ -2,6 +2,8 @@ include ../tabs/tabs
 include ../button/button
 include ../input/input
 include ../checkbox/checkbox
+include ../../progress/progress
+include ../../levels/levels
 
 mixin popup(type, unverified)
   .popup.js-popup.js-close-popup(data-popup=type)
@@ -12,6 +14,8 @@ mixin popup(type, unverified)
           .popup__head
             if type === 'wallet'
               p.popup__title Кошелёк
+            if type === 'vip'
+              p.popup__title Вип-программа
             .popup__close.js-close-popup
           .popup__content
             if type === 'wallet'
@@ -67,3 +71,15 @@ mixin popup(type, unverified)
                 .popup__wallet-auth
                   p.popup__wallet-auth-text У вас отключена 2ФА. Подключите её для повышения безопасности
                   +button-secondary('link', 'Включить двухфакторную аутентификацию', '', {link: '#'})
+            if type === 'vip'
+                +tabs([{title: 'Прогресс'}, {title: 'Привилегии'}])
+                  .js-tabs-content(data-content="1")
+                    .popup__vip.popup__vip--progress
+                      img(src="img/inhtml/vip.png", alt="").popup__vip-image
+                      +progress(true, true)
+                      p.popup__vip-desc Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание
+                      +button-primary('link', 'Узнать больше о вип-программе EtherGod', '', {link: '#'})
+                  .js-tabs-content(data-content="2")
+                    .popup__vip
+                      +levels
+                      +button-primary('link', 'Узнать больше о вип-программе EtherGod', '', {link: '#'})

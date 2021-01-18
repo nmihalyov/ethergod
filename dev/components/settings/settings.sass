@@ -1,0 +1,190 @@
+.settings
+  &__heading
+    position: relative
+    padding: 30px 0 25px 25px
+    font:
+      size: 18px
+      weight: 500
+    &:before
+      content: ""
+      position: absolute
+      top: 35px
+      left: 0
+      width: 16px
+      height: 17px
+      background:
+        image: url('../img/icons/gear-gradient.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+  &__sidebar
+    width: 250px
+  &__filter
+    position: sticky
+    top: 70px
+    width: 100%
+    padding: 15px 0
+    border-radius: 10px
+    background-color: $white
+  &__link
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    height: 40px
+    padding-left: 25px
+    color: $black
+    text-decoration: none
+    transition: background-color .3s ease
+    font:
+      size: 16px
+      weight: 500
+    &:hover
+      background-color: $grey-light
+    &--active
+      pointer-events: none
+      position: relative
+      background-color: $grey-light
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 4px
+        height: 100%
+        background-image: $gradient
+  &__main
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 960px
+  &__col
+    &:first-child
+      width: 325px
+    &:last-child
+      width: 600px
+  &__card
+    padding: 25px
+    border-radius: 10px
+    background-color: $white
+    &:not(:last-child)
+      margin-bottom: 35px
+  &__input
+    margin-bottom: 25px
+  &__email
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    &-approved
+      width: 150px
+    &-change
+      width: 115px
+  &__phone
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+    &-col
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: stretch
+      &:first-child
+        width: 280px
+      &:last-child
+        width: 250px
+    &-input
+      margin-bottom: 10px
+    &-pass
+      width: calc(100% - 35px)
+      margin-bottom: 10px
+      &:after
+        opacity: 0
+        content: ''
+        position: absolute
+        right: -35px
+        top: calc(50% - 10px)
+        width: 20px
+        height: 20px
+        background:
+          image: url('../img/icons/failure.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+      &--failure:after
+        opacity: 1
+    &-btn
+      margin-top: 28px
+    &-code
+      margin-bottom: 10px
+      color: $grey
+      line-height: 1.33
+      font:
+        size: 14px
+        weight: 500
+    &-result
+      display: none
+      height: 18px
+      margin-bottom: 10px
+      line-height: 1.33
+      font:
+        size: 14px
+        weight: 500
+      &--success
+        color: $green
+      &--failure
+        color: $red
+    &-resend
+      margin: auto 0 0 auto
+    &-approved
+      margin: 28px 0 16px
+  &__desc
+    color: $grey
+    line-height: 1.33
+    font:
+      size: 14px
+      weight: 500
+  &__token
+    margin-top: -10px
+    line-height: 1.33
+    font:
+      size: 14px
+      weight: 500
+  &__qr
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 20px
+    &-image
+      width: 90px
+      height: auto
+      margin-right: 15px
+    &-desc
+      width: 345px
+      color: $grey
+      line-height: 1.33
+      font:
+        size: 14px
+        weight: 500
+  &__twofactor
+    display: flex
+    felx-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-end
+    &-input
+      width: 275px
+      margin-bottom: 0
+    &-approved
+      width: 200px
+    &-btn
+      width: 265px
+  &__approved
+    margin-bottom: 10px
