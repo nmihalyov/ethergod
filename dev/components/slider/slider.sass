@@ -1,6 +1,5 @@
 .slider
   padding-top: 40px
-    position: relative
   &__carousel
     position: relative
     .slick-slide
@@ -62,3 +61,26 @@
         weight: 500
     &-btn
       width: 125px
+
+@media only screen and (max-width: $adaptive)
+  .slider
+    padding-top: 25px
+    &__wrapper
+      max-width: 100% !important
+      padding: 0 !important
+    &__carousel
+      .slick-slide
+        opacity: 1
+      &-arrow
+        display: none
+      &-item
+        padding: 0 3px
+      &-slide
+        width: 93.75vw
+        height: 46.875vw
+      &-content
+        padding: 20px 10px
+      &-title
+        display: none
+      &-btn
+        margin-left: auto

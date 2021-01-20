@@ -52,7 +52,7 @@
         </div>
         <div class="wrapper header__wrapper">
           <div class="header__col">
-            <div class="header__burger js-burger"></div><img src="img/logo.svg" alt=""/>
+            <div class="header__burger js-burger"></div><img class="header__logo" src="img/logo.svg" alt=""/>
           </div>
           <div class="header__col">
             <div class="header__crypto js-header-dropdown" data-dropdown="data-dropdown">
@@ -81,6 +81,20 @@
           </div>
         </div>
       </header>
+      <div class="header-bar">
+        <div class="header-bar__item js-burger">
+          <div class="header-bar__icon" data-icon="burger"></div>
+          <p class="header-bar__label">Меню</p>
+        </div><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="search"></div>
+          <p class="header-bar__label">Поиск</p></a><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="chat"></div>
+          <p class="header-bar__label">Чат</p></a><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="hot"></div>
+          <p class="header-bar__label">Игры</p></a><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="profile"></div>
+          <p class="header-bar__label">ЛК</p></a>
+      </div>
       <section class="hero container">
         <div class="wrapper">
           <div class="hero__wrapper">
@@ -421,7 +435,7 @@
         </div>
       </section>
       <section class="slider container">
-        <div class="wrapper">
+        <div class="slider__wrapper wrapper">
           <div class="slider__carousel js-slider">
             <div class="slider__carousel-item">
               <div class="slider__carousel-slide" style="background-image: url('img/inhtml/slider.png');">
@@ -510,8 +524,10 @@
                         </div>
                         <label class="input popup__input    ">
                           <p class="input__label">Ваш адрес для депозита ETH</p>
-                          <input class="input__field input__field--copy" type="text" name="ethDepositWalletAddress" placeholder="" value="3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY" readonly="readonly" step="any"/>
-                          <button class="input__copy js-input-copy"></button>
+                          <div class="input__inner">
+                            <input class="input__field input__field--copy" type="text" name="ethDepositWalletAddress" placeholder="" value="3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY" readonly="readonly" step="any"/>
+                            <button class="input__copy js-input-copy"></button>
+                          </div>
                         </label><img class="popup__qr" src="img/inhtml/qr.png" alt=""/>
                         <p class="popup__desc">Отправляйте деньги только на этот адрес<br>Количество подтверждений - 1</p>
                       </form>
@@ -528,13 +544,17 @@
                         </div>
                         <label class="input popup__input    ">
                           <p class="input__label">Ваш адрес ETH</p>
-                          <input class="input__field" type="text" name="ethWithdrawalWalletAddress" placeholder="Введите адрес кошелька ETH для вывода" value="" step="any"/>
-                          <p class="input__error">Неверные данные</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="text" name="ethWithdrawalWalletAddress" placeholder="Введите адрес кошелька ETH для вывода" value="" step="any"/>
+                            <p class="input__error">Неверные данные</p>
+                          </div>
                         </label>
                         <label class="input popup__input input--sum   ">
                           <p class="input__label">Сумма для вывода в ETH (минимум 0.0005 ETH)</p>
-                          <input class="input__field" type="number" name="ethSumToWithdraw" placeholder="Введите сумму для вывода" value="" data-min="0.0005" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
-                          <p class="input__error">Недостаточно средств</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="number" name="ethSumToWithdraw" placeholder="Введите сумму для вывода" value="" data-min="0.0005" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
+                            <p class="input__error">Недостаточно средств</p>
+                          </div>
                         </label>
                         <p class="popup__desc">При переводе из вашего остающегося баланса будет вычтено <br>0.0001 ETH в качестве комиссии за обработку операции</p>
                         <button class="button button--primary" type="submit">Вывести</button>
@@ -571,20 +591,22 @@
                         </div>
                         <label class="input popup__input    ">
                           <p class="input__label">Имя получателя</p>
-                          <input class="input__field" type="text" name="recipientName" placeholder="Введите имя получателя" value="" step="any"/>
-                          <p class="input__error">Неверные данные</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="text" name="recipientName" placeholder="Введите имя получателя" value="" step="any"/>
+                            <p class="input__error">Неверные данные</p>
+                          </div>
                         </label>
                         <label class="input popup__input input--sum   ">
                           <p class="input__label">Сумма перевода</p>
-                          <input class="input__field" type="number" name="transferAmount" placeholder="Введите сумму перевода" value="" data-min="0" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
-                          <p class="input__error">Недостаточно средств</p>
-                          <p class="input__additional">$300.00</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="number" name="transferAmount" placeholder="Введите сумму перевода" value="" data-min="0" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
+                            <p class="input__error">Недостаточно средств</p>
+                            <p class="input__additional">$300.00</p>
+                          </div>
                         </label>
                         <label class="checkbox popup__checkbox">
                           <input class="checkbox__input" type="checkbox" name="showInChat"/>
-                          <div class="checkbox__box">
-                            <div class="checkbox__box-mark"></div>
-                          </div>
+                          <div class="checkbox__box"></div>
                           <p class="checkbox__text">Отобразить перевод в чате</p>
                         </label>
                         <button class="button button--primary" type="submit">Перевести</button>

@@ -53,6 +53,7 @@
     background-color: $grey-light
     outline: 0
     line-height: 1.33
+    word-break: keep-all
     font:
       family: 'Segoe UI', Helvetica, sans-serif
       size: 14px
@@ -110,11 +111,18 @@
     width: 125px
     bottom: 0
     right: 0
+  &__inner
+    position: relative
   &__error
     position: absolute
     display: none
     top: 43px
     right: 25px
+    height: 48px
+    padding: 13px 10px
+    border-radius: 0 10px 10px 0
+    background-color: transparentize($grey-light, 0.3)
+    backdrop-filter: blur(2px)
     color: $red
     line-height: 1.33
     font:
@@ -206,3 +214,17 @@
       border-radius: 10px
       background-color: $grey-light
       box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12)
+
+@media only screen and (max-width: $adaptive)
+  .input
+    &--sum
+      .input
+        &__field
+          padding-right: 25px
+    &__max
+      position: static
+      width: 100%
+      margin-top: 25px
+    &__error
+      top: 0 !important
+      right: 0 !important

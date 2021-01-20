@@ -124,3 +124,20 @@
             size: contain
             position: center
             repeat: no-repeat
+
+@media only screen and (max-width: $adaptive)
+  .table
+    &__row .table__cell
+      padding: 10px 0
+    &__cell
+      display: none
+      &:first-child
+        display: block
+        width: calc(100% - 100px)
+        &:before
+          top: 12px !important
+      &:last-child
+        display: block
+        width: 100px
+        &:after
+          top: 14px !important

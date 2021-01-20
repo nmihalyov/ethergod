@@ -13,6 +13,7 @@
   color: #fff
   cursor: pointer
   outline: 0
+  text-align: center
   font-size: 14px
   &--primary
     background-image: $gradient
@@ -57,3 +58,7 @@
         size: contain
         position: center
         repeat: no-repeat
+
+@media only screen and (max-width: $adaptive)
+  .button
+    font-size: 13px

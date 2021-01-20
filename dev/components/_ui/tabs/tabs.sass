@@ -5,6 +5,7 @@
     justify-content: space-between
     align-items: center
   &__grid
+    z-index: 1
     position: relative
     display: flex
     flex-flow: row nowrap
@@ -29,6 +30,7 @@
     color: $black
     text-decoration: none
     &:before
+      z-index: 2
       content: ''
       position: absolute
       bottom: 0
@@ -100,3 +102,24 @@
         weight: 500
   .js-tabs-content:not(:first-child)
     display: none
+
+@media only screen and (max-width: $adaptive)
+  .tabs
+    &__dropdown
+      display: none
+    &__head
+      display: block
+      position: relative
+      white-space: nowrap
+      overflow: auto
+      width: calc(100% + 20px)
+      margin: 0 -10px 0
+      padding: 0 10px 0 10px
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+    &__grid
+      display: inline-flex
+      min-width: 100%
+      width: auto

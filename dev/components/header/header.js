@@ -2,7 +2,7 @@ $(document).on('click', e => {
   const $this = $(e.target);
 
   // hide menu on outer click
-  if(!$this.closest('.js-menu').length && !$this.hasClass('js-burger')) {
+  if(!$this.closest('.js-menu').length && !$this.hasClass('js-burger') && !$this.closest('.js-burger').length) {
     $('.js-menu').removeClass('header__menu--active');
   }
   
@@ -21,10 +21,17 @@ $(document).on('click', e => {
 $('.js-burger').on('click', () => {
   $('.js-menu').addClass('header__menu--active');
 
+  if ($(window).innerWidth() < 1199) {
+    hideOverflow();
+  }
 });
 
 $('.js-menu-close').on('click', () => {
   $('.js-menu').removeClass('header__menu--active');
+
+  if ($(window).innerWidth() < 1199) {
+    showOverflow();
+  }
 });
 
 // header dropdown

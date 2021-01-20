@@ -24,7 +24,7 @@ mixin header
     .wrapper.header__wrapper
       .header__col
         .header__burger.js-burger
-        img(src="img/logo.svg", alt="")
+        img.header__logo(src="img/logo.svg", alt="")
       .header__col
         .header__crypto.js-header-dropdown(data-dropdown)
           .header__crypto-item.js-header-dropdown-item(data-currency="1", data-crypto="1.22342420", data-cash="2500.052", data-icon="eth") 1.22342420
@@ -57,3 +57,19 @@ mixin header
           .header__context-menu.js-header-context-menu
             a.header__context-menu-item(href="#", data-icon="slots") Чат
             a.header__context-menu-item(href="#", data-icon="rocket") Уведомления
+  .header-bar
+    .header-bar__item.js-burger
+      .header-bar__icon(data-icon="burger")
+      p.header-bar__label Меню
+    a.header-bar__item(href="#")
+      .header-bar__icon(data-icon="search")
+      p.header-bar__label Поиск
+    a.header-bar__item(href="#")
+      .header-bar__icon(data-icon="chat")
+      p.header-bar__label Чат
+    a.header-bar__item(href="#")
+      .header-bar__icon(data-icon="hot")
+      p.header-bar__label Игры
+    a.header-bar__item(href="#")
+      .header-bar__icon(data-icon="profile")
+      p.header-bar__label ЛК

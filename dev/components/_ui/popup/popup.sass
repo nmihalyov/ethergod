@@ -220,3 +220,19 @@
       font:
         size: 14px
         weight: 500
+
+@media only screen and (max-width: $adaptive)
+  .popup
+    &__container
+      padding: 30px 0
+    &__window
+      max-width: 370px
+      width: calc(100% - 20px)
+    &__content
+      padding-left: 10px
+      padding-right: 10px
+    &__wallet-auth-text
+      font-size: 13px
+    &__vip
+      &-desc
+        width: 100%

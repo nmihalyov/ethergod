@@ -36,3 +36,22 @@
       font-weight: 100
     &-btn
       margin-top: auto
+
+@media only screen and (max-width: $adaptive)
+  .about
+    &__wrapper
+      overflow: hidden
+      width: calc(100% + 40px)
+      margin-left: -20px
+      padding: 10px 10px 20px
+      border-radius: 10px
+    &__hero
+      flex-flow: column nowrap
+      margin-bottom: 20px
+    &__block
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 35px
+      &-image
+        height: 220px
+        margin-bottom: 20px

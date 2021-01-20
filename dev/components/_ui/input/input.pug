@@ -6,27 +6,28 @@ mixin input(type, label, name, placeholder, value, className, options)
       .input__icon(data-icon="search")
     if label.length
       p.input__label= label
-    if type === 'tel'
-      .input__tel
-        .input__tel-dropdown.js-tel-dropdown(data-icon="rus")
-          .input__tel-inner.js-tel-dropdown-inner
-            .input__tel-item.js-tel-dropdown-item(data-icon="rus", data-mask="+7 (999) 999-99-99") <span>+7</span> Russia
-            .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+251 (999) 999-99-99") <span>+251</span> Not Russia
-            .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+4444 44444 999-99-99") <span>+4444 4444</span> Not Russia
-            .input__tel-item.js-tel-dropdown-item(data-icon="rus", data-mask="+7 (999) 999-99-99") <span>+7</span> Russia
-            .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+251 (999) 999-99-99") <span>+251</span> Not Russia
-            .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+4444 44444 999-99-99") <span>+4444 4444</span> Not Russia
-        input.input__field.input__field--tel(data-mask="+7 (999) 999-99-99", type=type, name=name, required=required, placeholder=placeholder, value=value)
-    else
-      input.input__field(class=`${(options && options.copy) ? 'input__field--copy' : ''}`, type=type, name=name, required=required, placeholder=placeholder, value=value, readonly=options && options.copy, data-min=options && options.min, data-max=options && options.max, step="any")
-    if options
-      if options.toggle
-        +button-tertiary('button', 'Показать / Скрыть', 'input__toggle js-input-toggle')
-      if options.sum
-        +button-primary('link', 'Максимум', 'input__max js-input-max', {link: 'javascript:void(0)'})
-      if options.copy
-        button.input__copy.js-input-copy
-      if options.error
-        p.input__error= options.error
-      if options.additional
-        p.input__additional= options.additional
+    .input__inner
+      if type === 'tel'
+        .input__tel
+          .input__tel-dropdown.js-tel-dropdown(data-icon="rus")
+            .input__tel-inner.js-tel-dropdown-inner
+              .input__tel-item.js-tel-dropdown-item(data-icon="rus", data-mask="+7 (999) 999-99-99") <span>+7</span> Russia
+              .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+251 (999) 999-99-99") <span>+251</span> Not Russia
+              .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+4444 44444 999-99-99") <span>+4444 4444</span> Not Russia
+              .input__tel-item.js-tel-dropdown-item(data-icon="rus", data-mask="+7 (999) 999-99-99") <span>+7</span> Russia
+              .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+251 (999) 999-99-99") <span>+251</span> Not Russia
+              .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+4444 44444 999-99-99") <span>+4444 4444</span> Not Russia
+          input.input__field.input__field--tel(data-mask="+7 (999) 999-99-99", type=type, name=name, required=required, placeholder=placeholder, value=value)
+      else
+        input.input__field(class=`${(options && options.copy) ? 'input__field--copy' : ''}`, type=type, name=name, required=required, placeholder=placeholder, value=value, readonly=options && options.copy, data-min=options && options.min, data-max=options && options.max, step="any")
+      if options
+        if options.toggle
+          +button-tertiary('button', 'Показать / Скрыть', 'input__toggle js-input-toggle')
+        if options.sum
+          +button-primary('link', 'Максимум', 'input__max js-input-max', {link: 'javascript:void(0)'})
+        if options.copy
+          button.input__copy.js-input-copy
+        if options.error
+          p.input__error= options.error
+        if options.additional
+          p.input__additional= options.additional
