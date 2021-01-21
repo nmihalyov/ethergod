@@ -115,3 +115,28 @@
       font:
         size: 14px
         weight: 500
+
+@media only screen and (max-width: $adaptive)
+  .vip
+    &__image
+      width: 100%
+      height: auto
+      margin: 25px 0
+    &__grid
+      flex-flow: column-reverse nowrap
+    &__col
+      width: 100% !important
+    &__card
+      width: calc(100% + 40px)
+      margin: 0 0 35px -20px !important
+      padding: 20px 10px
+    &__heading
+      font-size: 23px
+    &__feedback
+      width: 100vw
+      margin-left: calc(-50vw + 50%)
+      &-slide
+        padding: 0 3px
+      &-item
+        width: 300px
+        padding: 20px 10px
