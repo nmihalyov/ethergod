@@ -9,20 +9,21 @@ mixin group
         .group__head
           img(src="img/inhtml/group-img.png", alt="", style="top: -31px; left: -20px;").group__head-img
           p.group__heading Игры EtherGod
-        form.group__form(action="")
-          +input('search', '', 'search', 'Найди свой идеал в нашем каталоге игр', '', '', 'group__form-search')
-        .group__actions
-          .group__dropdown.js-group-dropdown
-            .group__dropdown-item.js-group-dropdown-item Популярное
-            .group__dropdown-inner.js-group-dropdown-inner
-              .group__dropdown-item.js-group-dropdown-item От A до Z
-              .group__dropdown-item.js-group-dropdown-item От Z до A
-              .group__dropdown-item.js-group-dropdown-item Интересное
-          a.group__providers(href="#") Все провайдеры
-        .group__grid
-          -for (let i = 1; i <= 23; i++)
-            +game-card('group__card')
-        +tabs([{title: 'Казино'}, {title: 'Топ дня'}, {title: 'Турниры', online: true}], true)
-          -for (let i = 1; i <= 3; i++)
-            .js-tabs-content(data-content=i)
-              +table
+        .group__inner
+          form.group__form(action="")
+            +input('search', '', 'search', 'Найди свой идеал в нашем каталоге игр', '', '', 'group__form-search')
+          .group__actions
+            .group__dropdown.js-group-dropdown
+              .group__dropdown-item.js-group-dropdown-item Популярное
+              .group__dropdown-inner.js-group-dropdown-inner
+                .group__dropdown-item.js-group-dropdown-item От A до Z
+                .group__dropdown-item.js-group-dropdown-item От Z до A
+                .group__dropdown-item.js-group-dropdown-item Интересное
+            a.group__providers(href="#") Все провайдеры
+          .group__grid
+            -for (let i = 1; i <= 23; i++)
+              +game-card('group__card')
+          +tabs([{title: 'Казино'}, {title: 'Топ дня'}, {title: 'Турниры', online: true}], true)
+            -for (let i = 1; i <= 3; i++)
+              .js-tabs-content(data-content=i)
+                +table
