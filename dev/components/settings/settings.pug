@@ -2,6 +2,7 @@ include ../_ui/button/button
 include ../_ui/input/input
 include ../_ui/code/code
 include ../_ui/approved/approved
+include ../_ui/checkbox/checkbox
 
 mixin settings
   section.settings.container
@@ -397,3 +398,35 @@ mixin settings-security3
             form.settings__card(action="")
               +input('password', 'Токен', 'token', '', '3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY', 'settings__input', {copy: true, toggle: true})
               p.settings__token Используйте токен только тогда, когда вы уверены в своих действиях!
+
+mixin settings-preferences
+  section.settings.container
+    .wrapper
+      p.settings__heading Настройки
+      .settings__head
+        p.settings__head-title Настройки
+        .settings__head-filter.js-settings-filter
+          a.settings__head-filter-item.js-settings-filter-item(href="preferences.html") Предпочтения
+          .settings__head-filter-inner.js-settings-filter-inner
+            a.settings__head-filter-item.js-settings-filter-item(href="settings.html") Общие
+            a.settings__head-filter-item.js-settings-filter-item(href="security.html") Безопасность
+            a.settings__head-filter-item.js-settings-filter-item(href="blacklist.html") Чёрный список
+            a.settings__head-filter-item.js-settings-filter-item(href="seessions.html") Сессии
+            a.settings__head-filter-item.js-settings-filter-item(href="verification.html") Верификация
+      .settings__grid
+        aside.settings__sidebar
+          .settings__filter
+            a.settings__link(href="settings.html") Общие
+            a.settings__link(href="security.html") Безопасность
+            a.settings__link.settings__link--active(href="preferences.html") Предпочтения
+            a.settings__link(href="blacklist.html") Чёрный список
+            a.settings__link(href="sessions.html") Сессии
+            a.settings__link(href="verification.html") Верификация
+        main.settings__main
+          .settings__card
+            .settings__preferences
+              p.settings__preferences-title Мои предпочтения:
+              +checkbox('preference1', 'settings__preferences-checkbox', false, false, 'Скрыть мои ставки от других пользователей')
+              +checkbox('preference2', 'settings__preferences-checkbox', false, true, 'Скрыть всю игровую статистику')
+              +checkbox('preference3', 'settings__preferences-checkbox', false, false, 'Скрыть статистику турниров')
+              +checkbox('preference4', 'settings__preferences-checkbox', false, true, 'Отказаться от оповещений')
