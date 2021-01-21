@@ -198,6 +198,49 @@
         weight: 500
     &-checkbox
       margin-bottom: 25px
+  &__blacklist
+    width: 100%
+    &-head
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 10px
+      &-cell
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+        &:first-child
+          width: 285px
+        &:nth-child(2)
+          width: 170px
+        &:last-child
+          width: 455px
+          text-align: right
+    &-item
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      padding: 10px 20px 10px 25px
+      border-radius: 10px
+      background-color: $grey-light
+      &:not(:last-child)
+        margin-bottom: 10px
+      &-user
+        width: 260px
+        font:
+          size: 14px
+          weight: 500
+      &-date
+        width: 170px
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+      &-remove
+        margin-left: auto
 
 @media only screen and (max-width: $adaptive)
   .settings
