@@ -22,6 +22,7 @@
       &__error
         right: 140px
   &__icon
+    z-index: 2
     position: absolute
     top: 17px
     left: 18px
@@ -54,6 +55,7 @@
     outline: 0
     line-height: 1.33
     word-break: keep-all
+    -webkit-appearance: none
     font:
       family: 'Segoe UI', Helvetica, sans-serif
       size: 14px
@@ -116,13 +118,13 @@
   &__error
     position: absolute
     display: none
-    top: 43px
-    right: 25px
+    top: 0
+    right: 0
     height: 48px
     padding: 13px 10px
     border-radius: 0 10px 10px 0
     background-color: transparentize($grey-light, 0.3)
-    backdrop-filter: blur(2px)
+    backdrop-filter: blur(1.5px)
     color: $red
     line-height: 1.33
     font:
@@ -131,7 +133,7 @@
   &__additional
     position: absolute
     right: 0
-    top: 0
+    top: -28px
     color: $grey
     line-height: 1.33
     font:

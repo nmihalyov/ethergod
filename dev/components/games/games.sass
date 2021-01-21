@@ -141,3 +141,33 @@
       weight: 500
     &:hover
       opacity: 0.7
+
+@media only screen and (max-width: $adaptive)
+  .games
+    &__wrapper
+      overflow: hidden
+      width: calc(100% + 40px)
+      margin-left: -20px
+      padding: 25px 10px 20px
+    &__tabs
+      display: block
+      position: relative
+      white-space: nowrap
+      overflow: auto
+      width: calc(100% + 20px)
+      margin: 0 -10px 0
+      padding: 25px 10px 35px 10px
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+    &__tab
+      display: inline-flex
+    &__slider
+      margin-right: -8px
+      .slick-slide
+        width: 150px !important
+        opacity: 1 !important
+    &__provider
+      height: 48px
+      white-space: nowrap
