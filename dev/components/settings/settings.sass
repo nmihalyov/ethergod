@@ -1,4 +1,6 @@
 .settings
+  &__head
+    display: none
   &__heading
     position: relative
     padding: 30px 0 25px 25px
@@ -188,3 +190,129 @@
       width: 265px
   &__approved
     margin-bottom: 10px
+
+@media only screen and (max-width: $adaptive)
+  .settings
+    &__heading
+      display: none
+    &__head
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      width: calc(100% + 20px)
+      margin-left: -10px
+      padding: 25px 0
+      &-title
+        position: relative
+        padding: 15px 20px 15px 40px
+        border-radius: 10px
+        background-color: $white
+        line-height: 1.33
+        font:
+          size: 14px
+          weight: 500
+        &:before
+          content: ""
+          position: absolute
+          top: calc(50% - 6px)
+          left: 20px
+          width: 12px
+          height: 12px
+          background:
+            image: url('../img/icons/gear-gradient-small.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+      &-filter
+        position: relative
+        &.js-settings-filter--active > .settings__head-filter-item:after
+          transform: rotate(180deg)
+        & > .settings__head-filter-item:after
+          content: ''
+          position: absolute
+          right: 12px
+          top: 20px
+          width: 14px
+          height: 8px
+          transition: transform .3s ease
+          background:
+            image: url('../img/icons/caret.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+        &-inner
+          z-index: 1
+          position: absolute
+          top: 48px
+          right: 0
+          display: none
+          margin-top: -48px
+          padding-top: 48px
+          border-radius: 10px
+          background-color: $white
+          box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12)
+        &-item
+          z-index: 2
+          position: relative
+          display: block
+          height: 48px
+          padding: 11px 40px 11px 15px
+          color: $black
+          cursor: pointer
+          background-color: $white
+          border-radius: 10px
+          text-align: right
+          text-decoration: none
+          white-space: nowrap
+          font:
+            size: 15px
+            weight: 500
+    &__sidebar
+      display: none
+    &__main
+      width: 100%
+      flex-flow: column nowrap
+    &__col
+      width: 100% !important
+      &:last-child
+        margin-bottom: -35px
+    &__card
+      width: calc(100% + 40px)
+      margin: 0 0 35px -20px !important
+      padding: 20px 10px
+    &__phone
+      flex-flow: column nowrap
+      &-col
+        align-items: flex-start
+        width: 100% !important
+      &-code
+        opacity: 0
+        margin-top: 10px
+      &-result
+        margin-top: 10px
+      &-resend
+        margin: 20px 0 0
+    &__email
+      &-approved
+        width: calc(100% - 130px)
+    &__qr
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: center
+      &-image
+        width: 130px
+        height: 130px
+        margin: 0 0 10px
+      &-desc
+        width: 100%
+        text-align: center
+    &__twofactor
+      flex-flow: row wrap
+      &-input
+        width: 100%
+        margin-bottom: 25px
+      &-btn
+        width: 100%
+      &-approved
+        width: calc(100% - 60px)

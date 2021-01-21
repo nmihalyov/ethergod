@@ -35,6 +35,7 @@ $('.js-input-max').on('click', e => {
 
 // tel dropdown
 $('.js-tel-dropdown').on('click', e => {
+  e.preventDefault();
   $(e.currentTarget).toggleClass('js-tel-dropdown--active').find('.js-tel-dropdown-inner').slideToggle(300);
 });
 

@@ -11,5 +11,6 @@ window.onload = () => {
   @@include('../components/group/group.js')
   @@include('../components/levels/levels.js')
   @@include('../components/vip/vip.js')
+  @@include('../components/settings/settings.js')
 
 }

@@ -22,5 +22,6 @@ $('.code__input').on('keyup', e => {
     $this.parent().addClass('code--entered');
     $this.parent().parent().find('.js-code-title').hide();
     $this.parent().parent().find('.js-code-result').show();
+    $this.blur();
   }
 });

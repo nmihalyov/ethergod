@@ -8,3 +8,10 @@
     border-radius: 10px
     background-color: $white
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1)
+
+@mixin gradient-text
+	color: mix(#D200FF, #00D1FF)
+	@supports (background-clip: text) and (-webkit-text-fill-color: transparent)
+		background-image: $gradient
+		background-clip: text
+		-webkit-text-fill-color: transparent
