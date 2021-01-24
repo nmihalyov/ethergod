@@ -46,17 +46,16 @@ mixin header
             a.header__context-menu-item(href="#", data-icon="dice") Партнёрская программа
             a.header__context-menu-item(href="#", data-icon="cards") Статистика
             a.header__context-menu-item(href="#", data-icon="roulette") Транзакции
-            a.header__context-menu-item(href="#")
-              span 13 
-              |Уведомления
             a.header__context-menu-item(href="#", data-icon="dice") Настройки
             a.header__context-menu-item(href="#", data-icon="cards") Поддержка
             a.header__context-menu-item(href="#", data-icon="dice") Сменить профиль
         .header__context
           .header__context-trigger.js-header-context(data-icon="chat")
-          .header__context-menu.js-header-context-menu
-            a.header__context-menu-item(href="#", data-icon="slots") Чат
-            a.header__context-menu-item(href="#", data-icon="rocket") Уведомления
+          .header__context-menu.header__context-menu--small.js-header-context-menu
+            a.header__context-menu-item.js-chat-open(href="javascript:void(0)", data-icon="slots") Чат
+            a.header__context-menu-item(href="#")
+              span 13 
+              |Уведомления
   .header-bar
     .header-bar__item.js-burger
       .header-bar__icon(data-icon="burger")

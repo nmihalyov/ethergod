@@ -1,0 +1,54 @@
+include ../button/button
+
+mixin chat
+  .chat.js-chat
+    .chat__header
+      p.chat__heading Чат
+      .chat__dropdown.js-chat-dropdown
+        .chat__dropdown-item.js-chat-dropdown-item(data-lang="rus") Русский
+        .chat__dropdown-inner.js-chat-dropdown-inner
+          .chat__dropdown-item.js-chat-dropdown-item(data-lang="eng") English
+      .chat__close.js-chat-close
+    .chat__messages.chat__messages--bottom
+      .chat__messages-scroll.js-chat-scroll
+      .chat__messages-wrapper.js-chat-messages
+        -for(let i = 1; i <= 10; i++)
+          .chat__messages-block
+            p.chat__messages-date воскресенье 02:54
+            -for(let i = 1; i <= 3; i++)
+              p.chat__messages-item
+                span.chat__messages-name selena45
+                |: Во окатило на ночь! Всем удачи и до завтра!
+      .chat__messages-actions.js-chat-mentions
+        .chat__messages-actions-wrapper
+          -for(let i = 1; i <= 6; i++)
+            a.chat__messages-actions-item.js-chat-mention(href="javascrip:void(0)") selena45
+            a.chat__messages-actions-item.js-chat-mention(href="javascrip:void(0)") selena452414
+            a.chat__messages-actions-item.js-chat-mention(href="javascrip:void(0)") 1521412445
+            a.chat__messages-actions-item.js-chat-mention(href="javascrip:void(0)") poooper45
+      .chat__messages-actions.js-chat-commands
+        .chat__messages-actions-wrapper
+          -for(let i = 1; i <= 6; i++)
+            a.chat__messages-actions-item.js-chat-command(href="javascrip:void(0)", data-command="user")
+              span /user @user
+              |&nbsp;Посмотреть данные игрока
+            a.chat__messages-actions-item.js-chat-command(href="javascrip:void(0)", data-command="ignore")
+              span /ignore @user
+              |&nbsp;Добавить в ЧС
+            a.chat__messages-actions-item.js-chat-command(href="javascrip:void(0)", data-command="unignore")
+              span /unignore @user
+              |&nbsp;Убрать из ЧС
+            a.chat__messages-actions-item.js-chat-command(href="javascrip:void(0)", data-command="command")
+              span /command @user
+              |&nbsp;Какая-то команда
+    form.chat__footer.js-chat-form(action="")
+      input.chat__footer-input.js-chat-input(name="chatInput", placeholder="Введите своё сообщение")
+      .chat__footer-input-counter.js-chat-counter 160
+      .chat__footer-actions
+        .chat__footer-info
+          p.chat__footer-online Онлайн: 5504
+          a.chat__footer-rules(href="#") Правила чата
+        .chat__footer-buttons
+          +button-quinary('link', '/', 'chat__footer-btn js-chat-commanding')
+          +button-quinary('link', '@', 'chat__footer-btn js-chat-mentioning')
+          +button-quoternary('submit', 'Отправить', 'chat__footer-send js-chat-send')

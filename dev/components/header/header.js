@@ -12,14 +12,14 @@ $(document).on('click', e => {
   }
   
   // hide context menu on outer click
-  if(!$this.closest('.header__context').length || $this.hasClass('js-open-popup')) {
+  if(!$this.closest('.header__context').length || $this.hasClass('js-open-popup') || $this.hasClass('js-chat-open')) {
     $('.js-header-context-menu').fadeOut(300);
   }
 });
 
 // header menu
 $('.js-burger').on('click', () => {
-  $('.js-menu').addClass('header__menu--active');
+  $('.js-menu').toggleClass('header__menu--active');
 
   if ($(window).innerWidth() < 1199) {
     hideOverflow();

@@ -8,11 +8,19 @@ mixin button-secondary(type, text, className, options)
   if type === 'link'
     a.button.button--secondary(class=`${className || ''}`, href=options.link)= text
 
-mixin button-tertiary(type, text, className, options)
+mixin button-tertiary(type, text, className)
   if type === 'submit'
     button.button.button--tertiary(type="submit", class=`${className || ''}`)= text
   else if type === 'button'
     button.button.button--tertiary(class=`${className || ''}`)= text
+
+mixin button-quoternary(type, text, className)
+  if type === 'submit'
+    button.button.button--quoternary(type="submit", class=`${className || ''}`)= text
+
+mixin button-quinary(type, text, className)
+  if type === 'link'
+    a.button.button--quinary(href="javascript:void(0)", class=`${className || ''}`)= text
 
 mixin button-close
   button.button.button--close

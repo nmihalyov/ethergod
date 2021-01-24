@@ -54,6 +54,24 @@
         size: contain
         position: center
         repeat: no-repeat
+  &--quoternary
+    height: 38px
+    padding-bottom: 4px
+    border: 1px solid $violet
+    color: $violet
+    &:active
+      transition: none
+      border-color: $green
+      color: $green
+  &--quinary
+    height: 38px
+    padding-bottom: 5px
+    border: 1px solid $grey
+    color: $grey
+    transition: all .3s ease
+    &:hover
+      border-color: $violet
+      color: $violet
 
 @media only screen and (max-width: $adaptive)
   .button
