@@ -18,12 +18,12 @@
     padding: 0 15px
     border-radius: 10px
     color: $grey
-    transition: background-color .2s ease
+    background-color: $grey-light
     font:
       size: 14px
       weight: 500
-    &:hover
-      background-color: $grey-light
+    &:not(:last-child)
+      margin-bottom: 10px
     .table__cell
       &:nth-child(1)
         position: relative
@@ -59,6 +59,21 @@
         font:
           size: 14px
           weight: 500
+      &:nth-child(2)
+        position: relative
+        padding-left: 22px
+        &:before
+          content: ''
+          position: absolute
+          top: 18px
+          left: 0
+          width: 14px
+          height: 14px
+          background:
+            image: url('../img/icons/stage-new.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
       &:nth-child(3),
       &:nth-child(4),
       &:nth-child(5),
@@ -86,12 +101,10 @@
         top: 3px
   &__cell
     padding: 15px 0
-    text-align: center
     &:nth-child(1)
-      width: 210px
-      text-align: left
+      width: 220px
     &:nth-child(2)
-      width: 250px
+      width: 240px
     &:nth-child(3)
       width: 160px
     &:nth-child(4)
