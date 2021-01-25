@@ -241,6 +241,64 @@
           weight: 500
       &-remove
         margin-left: auto
+  &__sessions
+    width: 100%
+    &-head
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 10px
+      &-cell
+        width: 190px
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+        &:last-child
+          text-align: right
+    &-item
+      padding: 10px 20px 10px 25px
+      border-radius: 10px
+      background-color: $grey-light
+      &:not(:last-child)
+        margin-bottom: 10px
+      &-inner
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: center
+      &-heads
+        display: none
+      &-browser
+        width: 160px
+        font:
+          size: 14px
+          weight: 500
+      &-region
+        width: 180px
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+      &-ip
+        width: 180px
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+      &-activity
+        width: 190px
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+      &-actions
+        width: 150px
+        margin-left: auto
+        text-align: right
+      &-remove
+        margin-left: auto
 
 @media only screen and (max-width: $adaptive)
   .settings
@@ -367,3 +425,31 @@
         width: 100%
       &-approved
         width: calc(100% - 60px)
+    &__sessions
+      &-head
+        display: none
+      &-item
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: flex-start
+        padding: 10px
+        &-heads
+          display: block
+          width: 50%
+        &-head
+          color: $grey
+          font:
+            size: 14px
+            weight: 500
+          &:not(:last-child)
+            margin-bottom: 10px
+        &-inner
+          flex-flow: column nowrap
+          width: 50%
+          & > *
+            width: 100%
+            text-align: right
+            color: $black
+            &:not(:last-child)
+              margin-bottom: 10px

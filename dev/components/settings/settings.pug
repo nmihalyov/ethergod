@@ -465,3 +465,88 @@ mixin settings-blacklist
                 p.settings__blacklist-item-user UserSODoaods
                 p.settings__blacklist-item-date 31/02/2021
                 +button-tertiary('button', 'Убрать из чёрного списка', 'settings__blacklist-item-remove')
+
+mixin settings-sessions
+  section.settings.container
+    .wrapper
+      p.settings__heading Настройки
+      .settings__head
+        p.settings__head-title Настройки
+        .settings__head-filter.js-settings-filter
+          a.settings__head-filter-item.js-settings-filter-item(href="seessions.html") Сессии
+          .settings__head-filter-inner.js-settings-filter-inner
+            a.settings__head-filter-item.js-settings-filter-item(href="settings.html") Общие
+            a.settings__head-filter-item.js-settings-filter-item(href="security.html") Безопасность
+            a.settings__head-filter-item.js-settings-filter-item(href="preferences.html") Предпочтения
+            a.settings__head-filter-item.js-settings-filter-item(href="blacklist.html") Чёрный список
+            a.settings__head-filter-item.js-settings-filter-item(href="verification.html") Верификация
+      .settings__grid
+        aside.settings__sidebar
+          .settings__filter
+            a.settings__link(href="settings.html") Общие
+            a.settings__link(href="security.html") Безопасность
+            a.settings__link(href="preferences.html") Предпочтения
+            a.settings__link(href="blacklist.html") Чёрный список
+            a.settings__link.settings__link--active(href="sessions.html") Сессии
+            a.settings__link(href="verification.html") Верификация
+        main.settings__main
+          .settings__card.settings__sessions
+            .settings__sessions-head
+              p.settings__sessions-head-cell Браузер/устройство
+              p.settings__sessions-head-cell Регион
+              p.settings__sessions-head-cell IP-адрес
+              p.settings__sessions-head-cell Последний актив
+              p.settings__sessions-head-cell Список действий
+            .settings__sessions-item
+              .settings__sessions-item-heads
+                p.settings__sessions-item-head Браузер
+                p.settings__sessions-item-head Регион
+                p.settings__sessions-item-head IP-адрес
+                p.settings__sessions-item-head Последний актив
+              .settings__sessions-item-inner
+                p.settings__sessions-item-browser Opera (Unknown)
+                p.settings__sessions-item-region SE Linkoping, Киргизия
+                p.settings__sessions-item-ip 77.111.247.224.32
+                p.settings__sessions-item-activity 2 минуты назад
+                p.settings__sessions-item-actions 
+                  +button-tertiary('button', 'Удалить', 'settings__sessions-item-remove')
+            -for (let i = 0; i < 4; i++)
+              .settings__sessions-item
+                .settings__sessions-item-heads
+                  p.settings__sessions-item-head Браузер
+                  p.settings__sessions-item-head Регион
+                  p.settings__sessions-item-head IP-адрес
+                  p.settings__sessions-item-head Последний актив
+                .settings__sessions-item-inner
+                  p.settings__sessions-item-browser Google Chrome 4004
+                  p.settings__sessions-item-region SE Linkoping, Киргизия
+                  p.settings__sessions-item-ip 77.111.247.224.32
+                  p.settings__sessions-item-activity 2 минуты назад
+                  p.settings__sessions-item-actions 
+                    +button-tertiary('button', 'Удалить', 'settings__sessions-item-remove')
+            .settings__sessions-item
+              .settings__sessions-item-heads
+                p.settings__sessions-item-head Браузер
+                p.settings__sessions-item-head Регион
+                p.settings__sessions-item-head IP-адрес
+                p.settings__sessions-item-head Последний актив
+              .settings__sessions-item-inner
+                p.settings__sessions-item-browser Google Chrome 4004
+                p.settings__sessions-item-region SE Linkoping, Киргизия
+                p.settings__sessions-item-ip 77.111.247.224.32
+                p.settings__sessions-item-activity 2 минуты назад
+                p.settings__sessions-item-actions Текущая сессия
+            -for (let i = 0; i < 4; i++)
+              .settings__sessions-item
+                .settings__sessions-item-heads
+                  p.settings__sessions-item-head Браузер
+                  p.settings__sessions-item-head Регион
+                  p.settings__sessions-item-head IP-адрес
+                  p.settings__sessions-item-head Последний актив
+                .settings__sessions-item-inner
+                  p.settings__sessions-item-browser Google Chrome 4004
+                  p.settings__sessions-item-region SE Linkoping, Киргизия
+                  p.settings__sessions-item-ip 77.111.247.224.32
+                  p.settings__sessions-item-activity 2 минуты назад
+                  p.settings__sessions-item-actions 
+                    +button-tertiary('button', 'Удалить', 'settings__sessions-item-remove')
