@@ -111,19 +111,19 @@
             <main class="settings__main">
               <div class="settings__col">
                 <form class="settings__card" action="">
-                  <label class="input settings__input    ">
+                  <label class="input settings__input     ">
                     <p class="input__label">Текущий пароль</p>
                     <div class="input__inner">
                       <input class="input__field" type="password" name="password" placeholder="Введите ваш текущий пароль" value="" step="any"/>
                     </div>
                   </label>
-                  <label class="input settings__input    ">
+                  <label class="input settings__input     ">
                     <p class="input__label">Новый пароль</p>
                     <div class="input__inner">
                       <input class="input__field" type="password" name="newPassword" placeholder="Введите новый пароль" value="" step="any"/>
                     </div>
                   </label>
-                  <label class="input settings__input    ">
+                  <label class="input settings__input     ">
                     <p class="input__label">Подтвердите пароль</p>
                     <div class="input__inner">
                       <input class="input__field" type="password" name="newPasswordRepeat" placeholder="Повторите новый пароль" value="" step="any"/>
@@ -134,7 +134,7 @@
               </div>
               <div class="settings__col">
                 <form class="settings__card" action="">
-                  <label class="input settings__input    ">
+                  <label class="input settings__input     ">
                     <p class="input__label">Код для активации 2ФА</p>
                     <div class="input__inner">
                       <input class="input__field input__field--copy" type="password" name="twoFactorCode" placeholder="" value="H5EUO4SPFZFCQ4CQNRRSY7JKONIHU6DSNRUDEVZ6NR6VER3TLZGA" readonly="readonly" step="any"/>
@@ -146,7 +146,7 @@
                     <p class="settings__qr-desc">Не показывайте и не отправляйте этот код никому - из-за этого к вашему профилю могут получить несанкционированный доступ злоумышленники</p>
                   </div>
                   <div class="settings__twofactor">
-                    <label class="input settings__input settings__twofactor-input    ">
+                    <label class="input settings__input settings__twofactor-input     ">
                       <p class="input__label">Введите пароль</p>
                       <div class="input__inner">
                         <input class="input__field" type="password" name="password" placeholder="Введите ваш пароль" value="" step="any"/>
@@ -156,7 +156,7 @@
                   </div>
                 </form>
                 <form class="settings__card" action="">
-                  <label class="input settings__input    ">
+                  <label class="input settings__input     ">
                     <p class="input__label">Токен</p>
                     <div class="input__inner">
                       <input class="input__field input__field--copy" type="password" name="token" placeholder="" value="3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY" readonly="readonly" step="any"/>
@@ -226,7 +226,7 @@
                             <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">BTC</div>
                           </div>
                         </div>
-                        <label class="input popup__input    ">
+                        <label class="input popup__input     ">
                           <p class="input__label">Ваш адрес для депозита ETH</p>
                           <div class="input__inner">
                             <input class="input__field input__field--copy" type="text" name="ethDepositWalletAddress" placeholder="" value="3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY" readonly="readonly" step="any"/>
@@ -244,14 +244,14 @@
                             <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
                           </div>
                         </div>
-                        <label class="input popup__input    ">
+                        <label class="input popup__input     input--error">
                           <p class="input__label">Ваш адрес ETH</p>
                           <div class="input__inner">
                             <input class="input__field" type="text" name="ethWithdrawalWalletAddress" placeholder="Введите адрес кошелька ETH для вывода" value="" step="any"/>
                             <p class="input__error">Неверные данные</p>
                           </div>
                         </label>
-                        <label class="input popup__input input--sum   ">
+                        <label class="input popup__input input--sum    input--error">
                           <p class="input__label">Сумма для вывода в ETH (минимум 0.0005 ETH)</p>
                           <div class="input__inner">
                             <input class="input__field" type="number" name="ethSumToWithdraw" placeholder="Введите сумму для вывода" value="" data-min="0.0005" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
@@ -291,14 +291,14 @@
                             <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
                           </div>
                         </div>
-                        <label class="input popup__input    ">
+                        <label class="input popup__input     input--error">
                           <p class="input__label">Имя получателя</p>
                           <div class="input__inner">
                             <input class="input__field" type="text" name="recipientName" placeholder="Введите имя получателя" value="" step="any"/>
                             <p class="input__error">Неверные данные</p>
                           </div>
                         </label>
-                        <label class="input popup__input input--sum   ">
+                        <label class="input popup__input input--sum    input--error">
                           <p class="input__label">Сумма перевода</p>
                           <div class="input__inner">
                             <input class="input__field" type="number" name="transferAmount" placeholder="Введите сумму перевода" value="" data-min="0" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>

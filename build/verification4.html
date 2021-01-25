@@ -100,74 +100,105 @@
           <p class="settings__heading">Настройки</p>
           <div class="settings__head">
             <p class="settings__head-title">Настройки</p>
-            <div class="settings__head-filter js-settings-filter"><a class="settings__head-filter-item js-settings-filter-item" href="settings.html">Общие</a>
-              <div class="settings__head-filter-inner js-settings-filter-inner"><a class="settings__head-filter-item js-settings-filter-item" href="security.html">Безопасность</a><a class="settings__head-filter-item js-settings-filter-item" href="preferences.html">Предпочтения</a><a class="settings__head-filter-item js-settings-filter-item" href="blacklist.html">Чёрный список</a><a class="settings__head-filter-item js-settings-filter-item" href="seessions.html">Сессии</a><a class="settings__head-filter-item js-settings-filter-item" href="verification.html">Верификация</a></div>
+            <div class="settings__head-filter js-settings-filter"><a class="settings__head-filter-item js-settings-filter-item" href="verification.html">Верификация</a>
+              <div class="settings__head-filter-inner js-settings-filter-inner"><a class="settings__head-filter-item js-settings-filter-item" href="settings.html">Общие</a><a class="settings__head-filter-item js-settings-filter-item" href="security.html">Безопасность</a><a class="settings__head-filter-item js-settings-filter-item" href="preferences.html">Предпочтения</a><a class="settings__head-filter-item js-settings-filter-item" href="blacklist.html">Чёрный список</a><a class="settings__head-filter-item js-settings-filter-item" href="seessions.html">Сессии</a></div>
             </div>
           </div>
           <div class="settings__grid">
             <aside class="settings__sidebar">
-              <div class="settings__filter"><a class="settings__link settings__link--active" href="settings.html">Общие</a><a class="settings__link" href="security.html">Безопасность</a><a class="settings__link" href="preferences.html">Предпочтения</a><a class="settings__link" href="blacklist.html">Чёрный список</a><a class="settings__link" href="sessions.html">Сессии</a><a class="settings__link" href="verification.html">Верификация</a></div>
+              <div class="settings__filter"><a class="settings__link" href="settings.html">Общие</a><a class="settings__link" href="security.html">Безопасность</a><a class="settings__link" href="preferences.html">Предпочтения</a><a class="settings__link" href="blacklist.html">Чёрный список</a><a class="settings__link" href="sessions.html">Сессии</a><a class="settings__link settings__link--active" href="verification.html">Верификация</a></div>
             </aside>
             <main class="settings__main">
-              <div class="settings__col">
-                <form class="settings__card" action="">
-                  <label class="input settings__input     ">
-                    <p class="input__label">Электронная почта</p>
-                    <div class="input__inner">
-                      <input class="input__field" type="email" name="email" placeholder="Введите e-mail" value="tellmeimamazing@gmail.com" step="any"/>
+              <div class="settings__verification">
+                <div class="settings__col">
+                  <div class="settings__subgrid">
+                    <div class="settings__card">
+                      <div class="settings__why">
+                        <p class="settings__why-heading">Зачем это всё?</p>
+                        <p class="settings__why-desc">Для повышения уровня вашего обслуживания мы просим предоставить идентифицирующие документы. <br><br>Это обезопасит вашу учетную запись в случае ее восстановления, а также обеспечит точную адресную доставку физических подарков.</p>
+                      </div>
                     </div>
-                  </label>
-                  <div class="settings__email">
-                    <p class="approved settings__email-approved">Подтверждена</p>
-                    <button class="button button--primary settings__email-change" type="submit">Изменить</button>
-                  </div>
-                </form>
-                <form class="settings__card" action="">
-                  <label class="input settings__input     ">
-                    <p class="input__label">Telegram</p>
-                    <div class="input__inner">
-                      <input class="input__field" type="text" name="telegram" placeholder="Имя пользователя Telegram" value="tellmeimamazing@gmail.com" step="any"/>
-                    </div>
-                  </label>
-                  <label class="input settings__input     ">
-                    <p class="input__label">Skype</p>
-                    <div class="input__inner">
-                      <input class="input__field" type="text" name="skype" placeholder="Skype ID" value="tellmeimamazing@gmail.com" step="any"/>
-                    </div>
-                  </label>
-                  <button class="button button--primary" type="submit">Сохранить изменения</button>
-                </form>
-              </div>
-              <div class="settings__col">
-                <form class="settings__card" action="">
-                  <div class="settings__phone">
-                    <div class="settings__phone-col">
-                      <label class="input settings__phone-input     ">
-                        <p class="input__label">Номер телефона</p>
+                    <div class="settings__card">
+                      <label class="input settings__input     ">
+                        <p class="input__label">Имя</p>
                         <div class="input__inner">
-                          <div class="input__tel">
-                            <div class="input__tel-dropdown js-tel-dropdown" data-icon="rus">
-                              <div class="input__tel-inner js-tel-dropdown-inner">
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="rus" data-mask="+7 (999) 999-99-99"><span>+7</span> Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+251 (999) 999-99-99"><span>+251</span> Not Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+4444 44444 999-99-99"><span>+4444 4444</span> Not Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="rus" data-mask="+7 (999) 999-99-99"><span>+7</span> Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+251 (999) 999-99-99"><span>+251</span> Not Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+4444 44444 999-99-99"><span>+4444 4444</span> Not Russia</div>
-                              </div>
-                            </div>
-                            <input class="input__field input__field--tel" data-mask="+7 (999) 999-99-99" type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7 (963) 495-04-00"/>
-                          </div>
+                          <input class="input__field" type="text" name="name" placeholder="Введите ваше имя" value="Олегсандр" step="any"/>
                         </div>
                       </label>
-                      <p class="settings__desc">Мы предоставляем услуги только в регионах, которые перечислены в списке кодов стран</p>
-                    </div>
-                    <div class="settings__phone-col">
-                      <p class="approved settings__phone-approved">Подтверждён</p>
-                      <button class="button button--primary" type="submit">Изменить</button>
+                      <label class="input settings__input     ">
+                        <p class="input__label">Имя</p>
+                        <div class="input__inner">
+                          <input class="input__field" type="text" name="surname" placeholder="Введите вашу фамилию" value="Чувырло" step="any"/>
+                        </div>
+                      </label>
+                      <label class="input settings__input     input--error">
+                        <p class="input__label">Дата рождения</p>
+                        <div class="input__inner">
+                          <input class="input__field" type="date" name="dateOfBirth" placeholder="Введите вашу дату рождения" value="1945-02-28" step="any"/>
+                          <p class="input__error">Вы младше 18 лет</p>
+                        </div>
+                      </label>
+                      <p class="settings__label">Пол</p>
+                      <div class="settings__dropdown js-settings-dropdown">
+                        <div class="settings__dropdown-item js-settings-dropdown-item">Мужчина</div>
+                        <div class="settings__dropdown-inner js-settings-dropdown-inner">
+                          <div class="settings__dropdown-item js-settings-dropdown-item">Женщина</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </form>
+                  <div class="settings__card">
+                    <p class="settings__verification-desc">К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.</p>
+                    <div class="settings__verification-actions">
+                      <p class="declined settings__verification-declined">Введённая информация недействительна</p>
+                      <button class="button button--primary" type="submit">Отправить снова</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings__col">
+                  <div class="settings__card">
+                    <label class="input settings__input     ">
+                      <p class="input__label">Лицевая сторона документа</p>
+                      <div class="input__inner">
+                        <p class="input__file">Выберите файл</p>
+                        <input class="input__field input__field--file" type="file" name="documentFirstPage" accept="image/*"/>
+                      </div>
+                    </label>
+                    <label class="input settings__input     ">
+                      <p class="input__label">Оборотная сторона документа</p>
+                      <div class="input__inner">
+                        <p class="input__file">Выберите файл</p>
+                        <input class="input__field input__field--file" type="file" name="documentSecondPage" accept="image/*"/>
+                      </div>
+                    </label>
+                    <label class="input settings__input     ">
+                      <p class="input__label">Номер документа</p>
+                      <div class="input__inner">
+                        <input class="input__field" type="text" name="document" placeholder="Введите номер документа" value="67 67 6000 4444" step="any"/>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="settings__card">
+                    <label class="input settings__input     ">
+                      <p class="input__label">Страна регистрации</p>
+                      <div class="input__inner">
+                        <input class="input__field" type="text" name="country" placeholder="Введите страну" value="Russia" step="any"/>
+                      </div>
+                    </label>
+                    <label class="input settings__input     ">
+                      <p class="input__label">Город регистрации</p>
+                      <div class="input__inner">
+                        <input class="input__field" type="text" name="city" placeholder="Введите город" value="Урюпинск" step="any"/>
+                      </div>
+                    </label>
+                    <label class="input settings__input     ">
+                      <p class="input__label">Источник дохода / место работы</p>
+                      <div class="input__inner">
+                        <input class="input__field" type="text" name="city" placeholder="Введите источник дохода" value="Газпром" step="any"/>
+                      </div>
+                    </label>
+                  </div>
+                </div>
               </div>
             </main>
           </div>

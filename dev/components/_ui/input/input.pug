@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin input(type, label, name, placeholder, value, className, options)
-  label.input(class=`${className || ''} ${(options && options.sum) ? 'input--sum' : ''} ${type === 'search' ? 'input--search' : ''} ${options && options.invalid ? 'input--invalid' : ''} ${options && options.valid ? 'input--valid' : ''}`)
+  label.input(class=`${className || ''} ${(options && options.sum) ? 'input--sum' : ''} ${type === 'search' ? 'input--search' : ''} ${options && options.invalid ? 'input--invalid' : ''} ${options && options.valid ? 'input--valid' : ''} ${(options && options.error) ? 'input--error' : ''}`)
     if type === 'search'
       .input__icon(data-icon="search")
     if label.length
@@ -18,6 +18,9 @@ mixin input(type, label, name, placeholder, value, className, options)
               .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+251 (999) 999-99-99") <span>+251</span> Not Russia
               .input__tel-item.js-tel-dropdown-item(data-icon="eng", data-mask="+4444 44444 999-99-99") <span>+4444 4444</span> Not Russia
           input.input__field.input__field--tel(data-mask="+7 (999) 999-99-99", type=type, name=name, required=required, placeholder=placeholder, value=value)
+      else if type === 'file'
+        p.input__file= placeholder
+        input.input__field.input__field--file(type=type, name=name, required=required, accept="image/*")
       else
         input.input__field(class=`${(options && options.copy) ? 'input__field--copy' : ''}`, type=type, name=name, required=required, placeholder=placeholder, value=value, readonly=options && options.copy, data-min=options && options.min, data-max=options && options.max, step="any")
       if options

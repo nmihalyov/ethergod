@@ -2,6 +2,7 @@ include ../_ui/button/button
 include ../_ui/input/input
 include ../_ui/code/code
 include ../_ui/approved/approved
+include ../_ui/declined/declined
 include ../_ui/checkbox/checkbox
 
 mixin settings
@@ -550,3 +551,219 @@ mixin settings-sessions
                   p.settings__sessions-item-activity 2 минуты назад
                   p.settings__sessions-item-actions 
                     +button-tertiary('button', 'Удалить', 'settings__sessions-item-remove')
+
+mixin settings-verification
+  section.settings.container
+    .wrapper
+      p.settings__heading Настройки
+      .settings__head
+        p.settings__head-title Настройки
+        .settings__head-filter.js-settings-filter
+          a.settings__head-filter-item.js-settings-filter-item(href="verification.html") Верификация
+          .settings__head-filter-inner.js-settings-filter-inner
+            a.settings__head-filter-item.js-settings-filter-item(href="settings.html") Общие
+            a.settings__head-filter-item.js-settings-filter-item(href="security.html") Безопасность
+            a.settings__head-filter-item.js-settings-filter-item(href="preferences.html") Предпочтения
+            a.settings__head-filter-item.js-settings-filter-item(href="blacklist.html") Чёрный список
+            a.settings__head-filter-item.js-settings-filter-item(href="seessions.html") Сессии
+      .settings__grid
+        aside.settings__sidebar
+          .settings__filter
+            a.settings__link(href="settings.html") Общие
+            a.settings__link(href="security.html") Безопасность
+            a.settings__link(href="preferences.html") Предпочтения
+            a.settings__link(href="blacklist.html") Чёрный список
+            a.settings__link(href="sessions.html") Сессии
+            a.settings__link.settings__link--active(href="verification.html") Верификация
+        main.settings__main
+          .settings__verification
+            .settings__col
+              .settings__subgrid
+                .settings__card
+                  .settings__why
+                    p.settings__why-heading Зачем это всё?
+                    p.settings__why-desc Для повышения уровня вашего обслуживания мы просим предоставить идентифицирующие документы. <br><br>Это обезопасит вашу учетную запись в случае ее восстановления, а также обеспечит точную адресную доставку физических подарков.
+                .settings__card
+                  +input('text', 'Имя', 'name', 'Введите ваше имя', 'Олегсандр', 'settings__input')
+                  +input('text', 'Имя', 'surname', 'Введите вашу фамилию', 'Чувырло', 'settings__input')
+                  +input('date', 'Дата рождения', 'dateOfBirth', 'Введите вашу дату рождения', '1945-02-28', 'settings__input', {error: 'Вы младше 18 лет'})
+                  p.settings__label Пол
+                  .settings__dropdown.js-settings-dropdown
+                    .settings__dropdown-item.js-settings-dropdown-item Мужчина
+                    .settings__dropdown-inner.js-settings-dropdown-inner
+                      .settings__dropdown-item.js-settings-dropdown-item Женщина
+              .settings__card
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                +button-primary('submit', 'Отправить на проверку')
+            .settings__col
+              .settings__card
+                +input('file', 'Лицевая сторона документа', 'documentFirstPage', 'Выберите файл', '', 'settings__input')
+                +input('file', 'Оборотная сторона документа', 'documentSecondPage', 'Выберите файл', '', 'settings__input')
+                +input('text', 'Номер документа', 'document', 'Введите номер документа', '67 67 6000 4444', 'settings__input')
+              .settings__card
+                +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
+                +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
+                +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+
+mixin settings-verification2
+  section.settings.container
+    .wrapper
+      p.settings__heading Настройки
+      .settings__head
+        p.settings__head-title Настройки
+        .settings__head-filter.js-settings-filter
+          a.settings__head-filter-item.js-settings-filter-item(href="verification.html") Верификация
+          .settings__head-filter-inner.js-settings-filter-inner
+            a.settings__head-filter-item.js-settings-filter-item(href="settings.html") Общие
+            a.settings__head-filter-item.js-settings-filter-item(href="security.html") Безопасность
+            a.settings__head-filter-item.js-settings-filter-item(href="preferences.html") Предпочтения
+            a.settings__head-filter-item.js-settings-filter-item(href="blacklist.html") Чёрный список
+            a.settings__head-filter-item.js-settings-filter-item(href="seessions.html") Сессии
+      .settings__grid
+        aside.settings__sidebar
+          .settings__filter
+            a.settings__link(href="settings.html") Общие
+            a.settings__link(href="security.html") Безопасность
+            a.settings__link(href="preferences.html") Предпочтения
+            a.settings__link(href="blacklist.html") Чёрный список
+            a.settings__link(href="sessions.html") Сессии
+            a.settings__link.settings__link--active(href="verification.html") Верификация
+        main.settings__main
+          .settings__verification
+            .settings__col
+              .settings__subgrid
+                .settings__card
+                  .settings__why
+                    p.settings__why-heading Зачем это всё?
+                    p.settings__why-desc Для повышения уровня вашего обслуживания мы просим предоставить идентифицирующие документы. <br><br>Это обезопасит вашу учетную запись в случае ее восстановления, а также обеспечит точную адресную доставку физических подарков.
+                .settings__card
+                  +input('text', 'Имя', 'name', 'Введите ваше имя', 'Олегсандр', 'settings__input')
+                  +input('text', 'Имя', 'surname', 'Введите вашу фамилию', 'Чувырло', 'settings__input')
+                  +input('date', 'Дата рождения', 'dateOfBirth', 'Введите вашу дату рождения', '1945-02-28', 'settings__input', {error: 'Вы младше 18 лет'})
+                  p.settings__label Пол
+                  .settings__dropdown.js-settings-dropdown
+                    .settings__dropdown-item.js-settings-dropdown-item Мужчина
+                    .settings__dropdown-inner.js-settings-dropdown-inner
+                      .settings__dropdown-item.js-settings-dropdown-item Женщина
+              .settings__card
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                p.settings__verification-check Ведётся проверка отправленных данных
+            .settings__col
+              .settings__card
+                +input('file', 'Лицевая сторона документа', 'documentFirstPage', 'Выберите файл', '', 'settings__input')
+                +input('file', 'Оборотная сторона документа', 'documentSecondPage', 'Выберите файл', '', 'settings__input')
+                +input('text', 'Номер документа', 'document', 'Введите номер документа', '67 67 6000 4444', 'settings__input')
+              .settings__card
+                +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
+                +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
+                +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+
+mixin settings-verification3
+  section.settings.container
+    .wrapper
+      p.settings__heading Настройки
+      .settings__head
+        p.settings__head-title Настройки
+        .settings__head-filter.js-settings-filter
+          a.settings__head-filter-item.js-settings-filter-item(href="verification.html") Верификация
+          .settings__head-filter-inner.js-settings-filter-inner
+            a.settings__head-filter-item.js-settings-filter-item(href="settings.html") Общие
+            a.settings__head-filter-item.js-settings-filter-item(href="security.html") Безопасность
+            a.settings__head-filter-item.js-settings-filter-item(href="preferences.html") Предпочтения
+            a.settings__head-filter-item.js-settings-filter-item(href="blacklist.html") Чёрный список
+            a.settings__head-filter-item.js-settings-filter-item(href="seessions.html") Сессии
+      .settings__grid
+        aside.settings__sidebar
+          .settings__filter
+            a.settings__link(href="settings.html") Общие
+            a.settings__link(href="security.html") Безопасность
+            a.settings__link(href="preferences.html") Предпочтения
+            a.settings__link(href="blacklist.html") Чёрный список
+            a.settings__link(href="sessions.html") Сессии
+            a.settings__link.settings__link--active(href="verification.html") Верификация
+        main.settings__main
+          .settings__verification
+            .settings__col
+              .settings__subgrid
+                .settings__card
+                  .settings__why
+                    p.settings__why-heading Зачем это всё?
+                    p.settings__why-desc Для повышения уровня вашего обслуживания мы просим предоставить идентифицирующие документы. <br><br>Это обезопасит вашу учетную запись в случае ее восстановления, а также обеспечит точную адресную доставку физических подарков.
+                .settings__card
+                  +input('text', 'Имя', 'name', 'Введите ваше имя', 'Олегсандр', 'settings__input')
+                  +input('text', 'Имя', 'surname', 'Введите вашу фамилию', 'Чувырло', 'settings__input')
+                  +input('date', 'Дата рождения', 'dateOfBirth', 'Введите вашу дату рождения', '1945-02-28', 'settings__input', {error: 'Вы младше 18 лет'})
+                  p.settings__label Пол
+                  .settings__dropdown.js-settings-dropdown
+                    .settings__dropdown-item.js-settings-dropdown-item Мужчина
+                    .settings__dropdown-inner.js-settings-dropdown-inner
+                      .settings__dropdown-item.js-settings-dropdown-item Женщина
+              .settings__card
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                .settings__verification-actions
+                  +approved('Данные подтверждены, верификация пройдена', 'settings__verification-approved')
+                  +button-primary('submit', 'Изменить')
+            .settings__col
+              .settings__card
+                +input('file', 'Лицевая сторона документа', 'documentFirstPage', 'Выберите файл', '', 'settings__input')
+                +input('file', 'Оборотная сторона документа', 'documentSecondPage', 'Выберите файл', '', 'settings__input')
+                +input('text', 'Номер документа', 'document', 'Введите номер документа', '67 67 6000 4444', 'settings__input')
+              .settings__card
+                +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
+                +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
+                +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+
+mixin settings-verification4
+  section.settings.container
+    .wrapper
+      p.settings__heading Настройки
+      .settings__head
+        p.settings__head-title Настройки
+        .settings__head-filter.js-settings-filter
+          a.settings__head-filter-item.js-settings-filter-item(href="verification.html") Верификация
+          .settings__head-filter-inner.js-settings-filter-inner
+            a.settings__head-filter-item.js-settings-filter-item(href="settings.html") Общие
+            a.settings__head-filter-item.js-settings-filter-item(href="security.html") Безопасность
+            a.settings__head-filter-item.js-settings-filter-item(href="preferences.html") Предпочтения
+            a.settings__head-filter-item.js-settings-filter-item(href="blacklist.html") Чёрный список
+            a.settings__head-filter-item.js-settings-filter-item(href="seessions.html") Сессии
+      .settings__grid
+        aside.settings__sidebar
+          .settings__filter
+            a.settings__link(href="settings.html") Общие
+            a.settings__link(href="security.html") Безопасность
+            a.settings__link(href="preferences.html") Предпочтения
+            a.settings__link(href="blacklist.html") Чёрный список
+            a.settings__link(href="sessions.html") Сессии
+            a.settings__link.settings__link--active(href="verification.html") Верификация
+        main.settings__main
+          .settings__verification
+            .settings__col
+              .settings__subgrid
+                .settings__card
+                  .settings__why
+                    p.settings__why-heading Зачем это всё?
+                    p.settings__why-desc Для повышения уровня вашего обслуживания мы просим предоставить идентифицирующие документы. <br><br>Это обезопасит вашу учетную запись в случае ее восстановления, а также обеспечит точную адресную доставку физических подарков.
+                .settings__card
+                  +input('text', 'Имя', 'name', 'Введите ваше имя', 'Олегсандр', 'settings__input')
+                  +input('text', 'Имя', 'surname', 'Введите вашу фамилию', 'Чувырло', 'settings__input')
+                  +input('date', 'Дата рождения', 'dateOfBirth', 'Введите вашу дату рождения', '1945-02-28', 'settings__input', {error: 'Вы младше 18 лет'})
+                  p.settings__label Пол
+                  .settings__dropdown.js-settings-dropdown
+                    .settings__dropdown-item.js-settings-dropdown-item Мужчина
+                    .settings__dropdown-inner.js-settings-dropdown-inner
+                      .settings__dropdown-item.js-settings-dropdown-item Женщина
+              .settings__card
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                .settings__verification-actions
+                  +declined('Введённая информация недействительна', 'settings__verification-declined')
+                  +button-primary('submit', 'Отправить снова')
+            .settings__col
+              .settings__card
+                +input('file', 'Лицевая сторона документа', 'documentFirstPage', 'Выберите файл', '', 'settings__input')
+                +input('file', 'Оборотная сторона документа', 'documentSecondPage', 'Выберите файл', '', 'settings__input')
+                +input('text', 'Номер документа', 'document', 'Введите номер документа', '67 67 6000 4444', 'settings__input')
+              .settings__card
+                +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
+                +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
+                +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')

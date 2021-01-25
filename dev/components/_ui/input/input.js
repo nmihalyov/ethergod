@@ -59,3 +59,11 @@ $('.js-input-toggle').on('click', e => {
 
   $inputField.attr('type', $inputField.attr('type') === 'password' ? 'text' : 'password');
 });
+
+// files handling
+$('input[type="file"]').on('change', e => {
+  const $this = $(e.currentTarget);
+  const fileName = $this.prop('files')[0].name;
+
+  $this.siblings('.input__file').addClass('input__file--uploaded').text(fileName);
+});
