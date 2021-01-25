@@ -1,0 +1,115 @@
+include ../_ui/game-card/game-card
+include ../_ui/tabs/tabs
+include ../_ui/button/button
+include ../table/table
+
+mixin player
+  section.player.container
+    .wrapper
+      .player__game
+        .player__game-inner
+          .player__game-overlay
+            .player__game-balance
+              p.player__game-balance-text Отображать баланс в
+              .player__game-dropdown.js-player-dropdown(data-dropdown)
+                .player__game-dropdown-item.js-player-dropdown-item(data-icon="eth") ETH
+                .player__game-dropdown-inner.js-player-dropdown-inner
+                  .player__game-dropdown-item.js-player-dropdown-item(data-icon="eth-grey") BTC
+            +button-primary('link', 'Реальная игра', 'player__game-btn js-play-real', {link: 'javascript:void(0)'})
+            a(href="javascript:void(0)").player__game-btn.js-play-entertain Игра для развлечения
+          img(src="img/inhtml/game.jpg", width="100%", height="675px").player__game-frame.js-player-frame
+        .player__game-menu.player__game-menu--disabled
+          .player__game-controls
+            a.player__game-control(href="javascript:void(0)", data-control="fullscreen")
+            a.player__game-control.js-open-popup(href="javascript:void(0)", data-control="statistics", data-popup="statistics")
+            a.player__game-control(href="javascript:void(0)", data-control="favorite")
+          .player__game-switch.js-game-switch
+            .player__game-switch-label Реальная игра
+            .player__game-switch-input
+      .player__about
+        .player__about-head
+          p.player__about-heading Monopoly with gnomes <a href="group.html" class="player__about-link">Pragmatic Play</a>
+        .player__about-content
+          .games__tabs
+            a.games__tab(href="#") Игры EtherGod
+            a.games__tab(href="#") Игры EtherGod
+            a.games__tab(href="#") Игры EtherGod
+            a.games__tab(href="#") Игры EtherGod
+          .player__about-grid
+            .player__about-statistics
+              +tabs([{title: 'Удачные выигрыши'}, {title: 'Крупные выигрыши'}])
+                .js-tabs-content(data-content="1")
+                  .player__about-table
+                    .player__about-table-head
+                      p.player__about-table-cell Пользователь
+                      p.player__about-table-cell Дата
+                      p.player__about-table-cell Ставка
+                      p.player__about-table-cell Коэффициент
+                      p.player__about-table-cell Выплата
+                    .player__about-table-row
+                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell 31.02.2005
+                      p.player__about-table-cell
+                        span 4.00000000
+                      p.player__about-table-cell 0,00×
+                      p.player__about-table-cell -4.00000000
+                    .player__about-table-row
+                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell 31.02.2005
+                      p.player__about-table-cell
+                        span 4.00000000
+                      p.player__about-table-cell 0,00×
+                      p.player__about-table-cell -4.00000000
+                    .player__about-table-row
+                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell 31.02.2005
+                      p.player__about-table-cell
+                        span 4.00000000
+                      p.player__about-table-cell 0,00×
+                      p.player__about-table-cell -4.00000000
+                .js-tabs-content(data-content="2")
+                  .player__about-table
+                    .player__about-table-head
+                      p.player__about-table-cell Пользователь
+                      p.player__about-table-cell Дата
+                      p.player__about-table-cell Ставка
+                      p.player__about-table-cell Коэффициент
+                      p.player__about-table-cell Выплата
+                    .player__about-table-row
+                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell 31.02.2005
+                      p.player__about-table-cell
+                        span 4.00000000
+                      p.player__about-table-cell 0,00×
+                      p.player__about-table-cell -4.00000000
+                    .player__about-table-row
+                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell 31.02.2005
+                      p.player__about-table-cell
+                        span 4.00000000
+                      p.player__about-table-cell 0,00×
+                      p.player__about-table-cell -4.00000000
+                    .player__about-table-row
+                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell 31.02.2005
+                      p.player__about-table-cell
+                        span 4.00000000
+                      p.player__about-table-cell 0,00×
+                      p.player__about-table-cell -4.00000000
+            .player__about-desc
+              p.player__about-desc-title Описание
+              p.player__about-desc-text Настало время привыкать к тюремной жизни! Заведите новых друзей за решеткой с нашими совершенно новыми слотами San Quentin! Не роняйте мыло! Не роняйте мыло!
+      .player__recommended
+        p.games__heading Игры EtherGod
+        .games__slider.js-games-slider
+          -for (let i = 1; i <= 10; i++)
+            +game-card
+        p.games__heading Провайдеры
+        .games__slider.games__slider--providers.js-games-slider
+          -for (let i = 1; i <= 10; i++)
+            a.games__provider(href="#") Pragmatic Play
+      .player__statistics
+        +tabs([{title: 'Казино'}, {title: 'Топ дня'}, {title: 'Турниры', online: true}], true)
+          -for (let i = 1; i <= 3; i++)
+            .js-tabs-content(data-content=i)
+              +table

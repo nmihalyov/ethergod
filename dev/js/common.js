@@ -13,5 +13,6 @@ window.onload = () => {
   @@include('../components/levels/levels.js')
   @@include('../components/vip/vip.js')
   @@include('../components/settings/settings.js')
+  @@include('../components/player/player.js')
 
 }

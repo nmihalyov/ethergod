@@ -37,6 +37,25 @@
     box-shadow: 0px 0px 12px -4px rgba(13, 13, 30, 0.3)
     border-radius: 10px
     cursor: auto
+    &-statistics
+      width: 280px
+  &__refresh
+    display: inline-block
+    width: 16px
+    height: 16px
+    margin: 0 0 -3px 8px
+    cursor: pointer
+    transition: all .3s ease
+    background:
+      image: url('../img/icons/refresh.svg')
+      position: center
+      size: contain
+      repeat: no-repeat
+    &:hover
+      background-image: url('../img/icons/refresh-violet.svg')
+    &--loading
+      animation: refresh 1s ease
+      background-image: url('../img/icons/refresh-violet.svg')
   &__content
     padding: 0 25px 25px
   &__head
@@ -59,10 +78,13 @@
       width: 16px
       height: 16px
       background:
-        image: url('../img/icons/eth.svg')
         size: contain
         position: center
         repeat: no-repeat
+    &[data-icon="default"]:before
+      background-image: url('../img/icons/eth.svg')
+    &[data-icon="statistics"]:before
+      background-image: url('../img/icons/statistics-violet.svg')
   &__close
     width: 20px
     height: 20px
@@ -162,7 +184,7 @@
       left: 0
       display: none
       padding-top: 40px
-      border-radius: 10px 0 10px 10px
+      border-radius: 10px
       background-color: $grey-light
       box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12)
   &__input
@@ -220,6 +242,116 @@
       font:
         size: 14px
         weight: 500
+  &__statistics
+    width: calc(100% + 20px)
+    margin-bottom: -10px
+    margin-left: -10px
+    &-heading
+      margin-bottom: 5px
+      font:
+        size: 16px
+        weight: 500
+    &-grid
+      margin-bottom: 20px
+    &-row
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: flex-start
+      &:not(:last-child)
+        margin-bottom: 10px
+    &-cell
+      padding: 10px
+      background-color: $grey-light
+      border-radius: 10px
+      &:first-child
+        width: 140px
+      &:last-child
+        width: 100px
+    &-subheading
+      color: $grey
+      font:
+        size: 14px
+        weight: 500
+    &-value
+      font:
+        size: 15px
+        weight: 500
+      span
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          right: -18px
+          top: 2px
+          width: 14px
+          height: 14px
+          border-radius: 50%
+          background-image: $gradient
+    &-win
+      color: $green
+      font:
+        size: 15px
+        weight: 500
+    &-lose
+      color: $red
+      font:
+        size: 15px
+        weight: 500
+    &-table
+      &-head
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 10px
+        .popup__statistics-table-cell
+          padding-right: 0 !important
+          color: $grey
+          font:
+            size: 14px
+            weight: 500
+          &:after
+            display: none
+      &-row
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        padding: 10px
+        border-radius: 10px
+        background-color: $grey-light
+        font:
+          size: 15px
+          weight: 500
+        &:not(:last-child)
+          margin-bottom: 10px
+      &-cell
+        &:first-child
+          overflow: hidden
+          text-overflow: ellipsis
+          width: 100px
+          white-space: nowrap
+        &:last-child
+          position: relative
+          padding-right: 18px
+          &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 5px
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            background-image: $gradient
+        &--win
+          color: $green
+
+@keyframes refresh
+  0%
+    transform: rotate(-360deg)
+  100%
+    transform: rotate(0)
 
 @media only screen and (max-width: $adaptive)
   .popup

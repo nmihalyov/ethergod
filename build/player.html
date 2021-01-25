@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">
   <head>
-    <title>Настройки | EtherGod</title>
+    <title>EtherGod</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="Page description">
@@ -95,86 +95,518 @@
           <div class="header-bar__icon" data-icon="profile"></div>
           <p class="header-bar__label">ЛК</p></a>
       </div>
-      <section class="settings container">
+      <section class="player container">
         <div class="wrapper">
-          <p class="settings__heading">Настройки</p>
-          <div class="settings__head">
-            <p class="settings__head-title">Настройки</p>
-            <div class="settings__head-filter js-settings-filter"><a class="settings__head-filter-item js-settings-filter-item" href="settings.html">Общие</a>
-              <div class="settings__head-filter-inner js-settings-filter-inner"><a class="settings__head-filter-item js-settings-filter-item" href="security.html">Безопасность</a><a class="settings__head-filter-item js-settings-filter-item" href="preferences.html">Предпочтения</a><a class="settings__head-filter-item js-settings-filter-item" href="blacklist.html">Чёрный список</a><a class="settings__head-filter-item js-settings-filter-item" href="seessions.html">Сессии</a><a class="settings__head-filter-item js-settings-filter-item" href="verification.html">Верификация</a></div>
+          <div class="player__game">
+            <div class="player__game-inner">
+              <div class="player__game-overlay">
+                <div class="player__game-balance">
+                  <p class="player__game-balance-text">Отображать баланс в</p>
+                  <div class="player__game-dropdown js-player-dropdown" data-dropdown="data-dropdown">
+                    <div class="player__game-dropdown-item js-player-dropdown-item" data-icon="eth">ETH</div>
+                    <div class="player__game-dropdown-inner js-player-dropdown-inner">
+                      <div class="player__game-dropdown-item js-player-dropdown-item" data-icon="eth-grey">BTC</div>
+                    </div>
+                  </div>
+                </div><a class="button button--primary player__game-btn js-play-real" href="javascript:void(0)">Реальная игра</a><a class="player__game-btn js-play-entertain" href="javascript:void(0)">Игра для развлечения</a>
+              </div><img class="player__game-frame js-player-frame" src="img/inhtml/game.jpg" width="100%" height="675px"/>
+            </div>
+            <div class="player__game-menu player__game-menu--disabled">
+              <div class="player__game-controls"><a class="player__game-control" href="javascript:void(0)" data-control="fullscreen"></a><a class="player__game-control js-open-popup" href="javascript:void(0)" data-control="statistics" data-popup="statistics"></a><a class="player__game-control" href="javascript:void(0)" data-control="favorite"></a></div>
+              <div class="player__game-switch js-game-switch">
+                <div class="player__game-switch-label">Реальная игра</div>
+                <div class="player__game-switch-input"></div>
+              </div>
             </div>
           </div>
-          <div class="settings__grid">
-            <aside class="settings__sidebar">
-              <div class="settings__filter"><a class="settings__link settings__link--active" href="settings.html">Общие</a><a class="settings__link" href="security.html">Безопасность</a><a class="settings__link" href="preferences.html">Предпочтения</a><a class="settings__link" href="blacklist.html">Чёрный список</a><a class="settings__link" href="sessions.html">Сессии</a><a class="settings__link" href="verification.html">Верификация</a></div>
-            </aside>
-            <main class="settings__main">
-              <div class="settings__col">
-                <form class="settings__card" action="">
-                  <label class="input settings__input    ">
-                    <p class="input__label">Электронная почта</p>
-                    <div class="input__inner">
-                      <input class="input__field" type="email" name="email" placeholder="Введите e-mail" value="tellmeimamazing@gmail.com" step="any"/>
+          <div class="player__about">
+            <div class="player__about-head">
+              <p class="player__about-heading">Monopoly with gnomes <a href="group.html" class="player__about-link">Pragmatic Play</a></p>
+            </div>
+            <div class="player__about-content">
+              <div class="games__tabs"><a class="games__tab" href="#">Игры EtherGod</a><a class="games__tab" href="#">Игры EtherGod</a><a class="games__tab" href="#">Игры EtherGod</a><a class="games__tab" href="#">Игры EtherGod</a></div>
+              <div class="player__about-grid">
+                <div class="player__about-statistics">
+                  <div class="tabs js-tabs">
+                    <div class="tabs__head">
+                      <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Удачные выигрыши</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Крупные выигрыши</a>
+                      </div>
                     </div>
-                  </label>
-                  <div class="settings__email">
-                    <p class="approved settings__email-approved">Подтверждена</p>
-                    <button class="button button--primary settings__email-change" type="submit">Изменить</button>
-                  </div>
-                </form>
-                <form class="settings__card" action="">
-                  <label class="input settings__input    ">
-                    <p class="input__label">Telegram</p>
-                    <div class="input__inner">
-                      <input class="input__field" type="text" name="telegram" placeholder="Имя пользователя Telegram" value="tellmeimamazing@gmail.com" step="any"/>
-                    </div>
-                  </label>
-                  <label class="input settings__input    ">
-                    <p class="input__label">Skype</p>
-                    <div class="input__inner">
-                      <input class="input__field" type="text" name="skype" placeholder="Skype ID" value="tellmeimamazing@gmail.com" step="any"/>
-                    </div>
-                  </label>
-                  <button class="button button--primary" type="submit">Сохранить изменения</button>
-                </form>
-              </div>
-              <div class="settings__col">
-                <form class="settings__card" action="">
-                  <div class="settings__phone">
-                    <div class="settings__phone-col">
-                      <label class="input settings__phone-input    ">
-                        <p class="input__label">Номер телефона</p>
-                        <div class="input__inner">
-                          <div class="input__tel">
-                            <div class="input__tel-dropdown js-tel-dropdown" data-icon="rus">
-                              <div class="input__tel-inner js-tel-dropdown-inner">
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="rus" data-mask="+7 (999) 999-99-99"><span>+7</span> Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+251 (999) 999-99-99"><span>+251</span> Not Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+4444 44444 999-99-99"><span>+4444 4444</span> Not Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="rus" data-mask="+7 (999) 999-99-99"><span>+7</span> Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+251 (999) 999-99-99"><span>+251</span> Not Russia</div>
-                                <div class="input__tel-item js-tel-dropdown-item" data-icon="eng" data-mask="+4444 44444 999-99-99"><span>+4444 4444</span> Not Russia</div>
-                              </div>
-                            </div>
-                            <input class="input__field input__field--tel" data-mask="+7 (999) 999-99-99" type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="+7 (963) 495-04-00"/>
+                    <div class="tabs__content">
+                      <div class="js-tabs-content" data-content="1">
+                        <div class="player__about-table">
+                          <div class="player__about-table-head">
+                            <p class="player__about-table-cell">Пользователь</p>
+                            <p class="player__about-table-cell">Дата</p>
+                            <p class="player__about-table-cell">Ставка</p>
+                            <p class="player__about-table-cell">Коэффициент</p>
+                            <p class="player__about-table-cell">Выплата</p>
+                          </div>
+                          <div class="player__about-table-row">
+                            <p class="player__about-table-cell">SeymourBusts</p>
+                            <p class="player__about-table-cell">31.02.2005</p>
+                            <p class="player__about-table-cell"><span>4.00000000</span></p>
+                            <p class="player__about-table-cell">0,00×</p>
+                            <p class="player__about-table-cell">-4.00000000</p>
+                          </div>
+                          <div class="player__about-table-row">
+                            <p class="player__about-table-cell">SeymourBusts</p>
+                            <p class="player__about-table-cell">31.02.2005</p>
+                            <p class="player__about-table-cell"><span>4.00000000</span></p>
+                            <p class="player__about-table-cell">0,00×</p>
+                            <p class="player__about-table-cell">-4.00000000</p>
+                          </div>
+                          <div class="player__about-table-row">
+                            <p class="player__about-table-cell">SeymourBusts</p>
+                            <p class="player__about-table-cell">31.02.2005</p>
+                            <p class="player__about-table-cell"><span>4.00000000</span></p>
+                            <p class="player__about-table-cell">0,00×</p>
+                            <p class="player__about-table-cell">-4.00000000</p>
                           </div>
                         </div>
-                      </label>
-                      <p class="settings__desc">Мы предоставляем услуги только в регионах, которые перечислены в списке кодов стран</p>
-                    </div>
-                    <div class="settings__phone-col">
-                      <p class="settings__phone-result settings__phone-result--failure" style="display: block"></p>
-                      <label class="input settings__phone-pass    ">
-                        <div class="input__inner">
-                          <input class="input__field" type="password" name="password" placeholder="Введите ваш пароль" value="" step="any"/>
+                      </div>
+                      <div class="js-tabs-content" data-content="2">
+                        <div class="player__about-table">
+                          <div class="player__about-table-head">
+                            <p class="player__about-table-cell">Пользователь</p>
+                            <p class="player__about-table-cell">Дата</p>
+                            <p class="player__about-table-cell">Ставка</p>
+                            <p class="player__about-table-cell">Коэффициент</p>
+                            <p class="player__about-table-cell">Выплата</p>
+                          </div>
+                          <div class="player__about-table-row">
+                            <p class="player__about-table-cell">SeymourBusts</p>
+                            <p class="player__about-table-cell">31.02.2005</p>
+                            <p class="player__about-table-cell"><span>4.00000000</span></p>
+                            <p class="player__about-table-cell">0,00×</p>
+                            <p class="player__about-table-cell">-4.00000000</p>
+                          </div>
+                          <div class="player__about-table-row">
+                            <p class="player__about-table-cell">SeymourBusts</p>
+                            <p class="player__about-table-cell">31.02.2005</p>
+                            <p class="player__about-table-cell"><span>4.00000000</span></p>
+                            <p class="player__about-table-cell">0,00×</p>
+                            <p class="player__about-table-cell">-4.00000000</p>
+                          </div>
+                          <div class="player__about-table-row">
+                            <p class="player__about-table-cell">SeymourBusts</p>
+                            <p class="player__about-table-cell">31.02.2005</p>
+                            <p class="player__about-table-cell"><span>4.00000000</span></p>
+                            <p class="player__about-table-cell">0,00×</p>
+                            <p class="player__about-table-cell">-4.00000000</p>
+                          </div>
                         </div>
-                      </label>
-                      <button class="button button--primary" type="submit">Отправить подтверждение</button>
+                      </div>
                     </div>
                   </div>
-                </form>
+                </div>
+                <div class="player__about-desc">
+                  <p class="player__about-desc-title">Описание</p>
+                  <p class="player__about-desc-text">Настало время привыкать к тюремной жизни! Заведите новых друзей за решеткой с нашими совершенно новыми слотами San Quentin! Не роняйте мыло! Не роняйте мыло!</p>
+                </div>
               </div>
-            </main>
+            </div>
+          </div>
+          <div class="player__recommended">
+            <p class="games__heading">Игры EtherGod</p>
+            <div class="games__slider js-games-slider"><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a><a class="game-card" href="#">
+                <div class="game-card__wrapper" style="background-image: url('img/inhtml/game-card.png');">
+                  <div class="game-card__inner">
+                    <p class="game-card__name">Super Black Jack soup</p>
+                    <div class="game-card__icon"></div>
+                    <div class="game-card__actions">
+                      <div class="game-card__provider">Игры EtherGod</div>
+                      <div class="game-card__info"></div>
+                    </div>
+                  </div>
+                </div></a>
+            </div>
+            <p class="games__heading">Провайдеры</p>
+            <div class="games__slider games__slider--providers js-games-slider"><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a><a class="games__provider" href="#">Pragmatic Play</a>
+            </div>
+          </div>
+          <div class="player__statistics">
+            <div class="tabs js-tabs">
+              <div class="tabs__head">
+                <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Казино</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Топ дня</a><a class="tabs__item js-tab  tabs__item--online" href="javascript:void(0)" data-content="3">Турниры</a>
+                </div>
+                <div class="tabs__dropdown js-tabs-dropdown">
+                  <div class="tabs__dropdown-item js-tabs-dropdown-item">10</div>
+                  <div class="tabs__dropdown-inner js-tabs-dropdown-inner">
+                    <div class="tabs__dropdown-item js-tabs-dropdown-item">20</div>
+                    <div class="tabs__dropdown-item js-tabs-dropdown-item">50</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__content">
+                <div class="js-tabs-content" data-content="1">
+                  <div class="table">
+                    <div class="table__head">
+                      <p class="table__cell">Игра</p>
+                      <p class="table__cell">Пользователь</p>
+                      <p class="table__cell">Время</p>
+                      <p class="table__cell">Ставка</p>
+                      <p class="table__cell">Коэффициент</p>
+                      <p class="table__cell">Выплата</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">SeymourBusts</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>4.00000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-4.00000000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">MrCoin73</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00302407</span></p>
+                      <p class="table__cell">100,00×</p>
+                      <p class="table__cell table__cell--win">0.30240700</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">apealunited</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.66360000</span></p>
+                      <p class="table__cell">100,00×</p>
+                      <p class="table__cell table__cell--win">0.67037143</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="slots">Fire Blaze River Empress</p>
+                      <p class="table__cell">Alynnt</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>5.33400000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-5.33400000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Parker123</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00027400</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-0.00027400</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="keno">Keno</p>
+                      <p class="table__cell table__cell--hidden"><span>Скрытый</span></p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00002211</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-0.00002211</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">SeymourBusts</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>4.00000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-4.00000000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Annealex</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>55.96577873</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-55.96577873</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Parker123</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00054800</span></p>
+                      <p class="table__cell">1,98×</p>
+                      <p class="table__cell table__cell--win">0.00108504</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Annealex</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>35.98000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-35.98000000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-tabs-content" data-content="2">
+                  <div class="table">
+                    <div class="table__head">
+                      <p class="table__cell">Игра</p>
+                      <p class="table__cell">Пользователь</p>
+                      <p class="table__cell">Время</p>
+                      <p class="table__cell">Ставка</p>
+                      <p class="table__cell">Коэффициент</p>
+                      <p class="table__cell">Выплата</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">SeymourBusts</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>4.00000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-4.00000000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">MrCoin73</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00302407</span></p>
+                      <p class="table__cell">100,00×</p>
+                      <p class="table__cell table__cell--win">0.30240700</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">apealunited</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.66360000</span></p>
+                      <p class="table__cell">100,00×</p>
+                      <p class="table__cell table__cell--win">0.67037143</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="slots">Fire Blaze River Empress</p>
+                      <p class="table__cell">Alynnt</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>5.33400000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-5.33400000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Parker123</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00027400</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-0.00027400</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="keno">Keno</p>
+                      <p class="table__cell table__cell--hidden"><span>Скрытый</span></p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00002211</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-0.00002211</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">SeymourBusts</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>4.00000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-4.00000000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Annealex</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>55.96577873</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-55.96577873</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Parker123</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00054800</span></p>
+                      <p class="table__cell">1,98×</p>
+                      <p class="table__cell table__cell--win">0.00108504</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Annealex</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>35.98000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-35.98000000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-tabs-content" data-content="3">
+                  <div class="table">
+                    <div class="table__head">
+                      <p class="table__cell">Игра</p>
+                      <p class="table__cell">Пользователь</p>
+                      <p class="table__cell">Время</p>
+                      <p class="table__cell">Ставка</p>
+                      <p class="table__cell">Коэффициент</p>
+                      <p class="table__cell">Выплата</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">SeymourBusts</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>4.00000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-4.00000000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">MrCoin73</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00302407</span></p>
+                      <p class="table__cell">100,00×</p>
+                      <p class="table__cell table__cell--win">0.30240700</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">apealunited</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.66360000</span></p>
+                      <p class="table__cell">100,00×</p>
+                      <p class="table__cell table__cell--win">0.67037143</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="slots">Fire Blaze River Empress</p>
+                      <p class="table__cell">Alynnt</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>5.33400000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-5.33400000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Parker123</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00027400</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-0.00027400</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="keno">Keno</p>
+                      <p class="table__cell table__cell--hidden"><span>Скрытый</span></p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00002211</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-0.00002211</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">SeymourBusts</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>4.00000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-4.00000000</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Annealex</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>55.96577873</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-55.96577873</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Parker123</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>0.00054800</span></p>
+                      <p class="table__cell">1,98×</p>
+                      <p class="table__cell table__cell--win">0.00108504</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__cell" data-icon="dice">Dice</p>
+                      <p class="table__cell">Annealex</p>
+                      <p class="table__cell">03:35:24</p>
+                      <p class="table__cell"><span>35.98000000</span></p>
+                      <p class="table__cell">0,00×</p>
+                      <p class="table__cell">-35.98000000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -414,6 +846,73 @@
                         </div>
                       </div><a class="button button--primary" href="#">Узнать больше о вип-программе EtherGod</a>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="statistics">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__window-statistics">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="statistics">Текущая статистика<a class="popup__refresh js-popup-refresh" href="javascript:void(0)"></a></p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__statistics">
+                <p class="popup__statistics-heading">Глобальная статистика</p>
+                <div class="popup__statistics-grid">
+                  <div class="popup__statistics-row">
+                    <div class="popup__statistics-cell">
+                      <p class="popup__statistics-subheading">Прибыль</p>
+                      <p class="popup__statistics-value"> <span>0.000000000</span></p>
+                    </div>
+                    <div class="popup__statistics-cell">
+                      <p class="popup__statistics-subheading">Выиграно</p>
+                      <p class="popup__statistics-win">15000</p>
+                    </div>
+                  </div>
+                  <div class="popup__statistics-row">
+                    <div class="popup__statistics-cell">
+                      <p class="popup__statistics-subheading">Оборот</p>
+                      <p class="popup__statistics-value"> <span>100.000000000</span></p>
+                    </div>
+                    <div class="popup__statistics-cell">
+                      <p class="popup__statistics-subheading">Проиграно</p>
+                      <p class="popup__statistics-lose">15000</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="popup__statistics-heading">Последние результаты</p>
+                <div class="popup__statistics-table">
+                  <div class="popup__statistics-table-head">
+                    <p class="popup__statistics-table-cell">Игра</p>
+                    <p class="popup__statistics-table-cell">Выплата</p>
+                  </div>
+                  <div class="popup__statistics-table-row">
+                    <p class="popup__statistics-table-cell">Monopoly with gnomes</p>
+                    <p class="popup__statistics-table-cell">-5.00000000</p>
+                  </div>
+                  <div class="popup__statistics-table-row">
+                    <p class="popup__statistics-table-cell">Monopoly with gnomes</p>
+                    <p class="popup__statistics-table-cell popup__statistics-table-cell--win">100.00000000</p>
+                  </div>
+                  <div class="popup__statistics-table-row">
+                    <p class="popup__statistics-table-cell">Monopoly with gnomes</p>
+                    <p class="popup__statistics-table-cell popup__statistics-table-cell--win">100.00000000</p>
+                  </div>
+                  <div class="popup__statistics-table-row">
+                    <p class="popup__statistics-table-cell">Monopoly with gnomes</p>
+                    <p class="popup__statistics-table-cell">-10.00000000</p>
+                  </div>
+                  <div class="popup__statistics-table-row">
+                    <p class="popup__statistics-table-cell">Monopoly with gnomes</p>
+                    <p class="popup__statistics-table-cell popup__statistics-table-cell--win">100.00000000</p>
                   </div>
                 </div>
               </div>

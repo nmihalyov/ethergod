@@ -10,12 +10,15 @@ mixin popup(type, unverified)
     .popup__backdrop
     .popup__container
       .popup__wrapper
-        .popup__window
+        .popup__window(class=`${type === 'statistics' ? 'popup__window-statistics' : ''}`)
           .popup__head
             if type === 'wallet'
-              p.popup__title Кошелёк
+              p.popup__title(data-icon="default") Кошелёк
             if type === 'vip'
-              p.popup__title Вип-программа
+              p.popup__title(data-icon="default") Вип-программа
+            if type === 'statistics'
+              p.popup__title(data-icon="statistics") Текущая статистика
+                a(href="javascript:void(0)").popup__refresh.js-popup-refresh
             .popup__close.js-close-popup
           .popup__content
             if type === 'wallet'
@@ -72,14 +75,54 @@ mixin popup(type, unverified)
                   p.popup__wallet-auth-text У вас отключена 2ФА. Подключите её для повышения безопасности
                   +button-secondary('link', 'Включить двухфакторную аутентификацию', '', {link: '#'})
             if type === 'vip'
-                +tabs([{title: 'Прогресс'}, {title: 'Привилегии'}])
-                  .js-tabs-content(data-content="1")
-                    .popup__vip.popup__vip--progress
-                      img(src="img/inhtml/vip.png", alt="").popup__vip-image
-                      +progress(true, true)
-                      p.popup__vip-desc Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание
-                      +button-primary('link', 'Узнать больше о вип-программе EtherGod', '', {link: '#'})
-                  .js-tabs-content(data-content="2")
-                    .popup__vip
-                      +levels
-                      +button-primary('link', 'Узнать больше о вип-программе EtherGod', '', {link: '#'})
+              +tabs([{title: 'Прогресс'}, {title: 'Привилегии'}])
+                .js-tabs-content(data-content="1")
+                  .popup__vip.popup__vip--progress
+                    img(src="img/inhtml/vip.png", alt="").popup__vip-image
+                    +progress(true, true)
+                    p.popup__vip-desc Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание
+                    +button-primary('link', 'Узнать больше о вип-программе EtherGod', '', {link: '#'})
+                .js-tabs-content(data-content="2")
+                  .popup__vip
+                    +levels
+                    +button-primary('link', 'Узнать больше о вип-программе EtherGod', '', {link: '#'})
+            if type === 'statistics'
+              .popup__statistics
+                p.popup__statistics-heading Глобальная статистика
+                .popup__statistics-grid
+                  .popup__statistics-row
+                    .popup__statistics-cell
+                      p.popup__statistics-subheading Прибыль
+                      p.popup__statistics-value 
+                        span 0.000000000
+                    .popup__statistics-cell
+                      p.popup__statistics-subheading Выиграно
+                      p.popup__statistics-win 15000
+                  .popup__statistics-row
+                    .popup__statistics-cell
+                      p.popup__statistics-subheading Оборот
+                      p.popup__statistics-value 
+                        span 100.000000000
+                    .popup__statistics-cell
+                      p.popup__statistics-subheading Проиграно
+                      p.popup__statistics-lose 15000
+                p.popup__statistics-heading Последние результаты
+                .popup__statistics-table
+                  .popup__statistics-table-head
+                    p.popup__statistics-table-cell Игра
+                    p.popup__statistics-table-cell Выплата
+                  .popup__statistics-table-row
+                    p.popup__statistics-table-cell Monopoly with gnomes
+                    p.popup__statistics-table-cell -5.00000000
+                  .popup__statistics-table-row
+                    p.popup__statistics-table-cell Monopoly with gnomes
+                    p.popup__statistics-table-cell.popup__statistics-table-cell--win 100.00000000
+                  .popup__statistics-table-row
+                    p.popup__statistics-table-cell Monopoly with gnomes
+                    p.popup__statistics-table-cell.popup__statistics-table-cell--win 100.00000000
+                  .popup__statistics-table-row
+                    p.popup__statistics-table-cell Monopoly with gnomes
+                    p.popup__statistics-table-cell -10.00000000
+                  .popup__statistics-table-row
+                    p.popup__statistics-table-cell Monopoly with gnomes
+                    p.popup__statistics-table-cell.popup__statistics-table-cell--win 100.00000000

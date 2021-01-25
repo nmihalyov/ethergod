@@ -1,0 +1,22 @@
+include ../components/_ui/popup/popup
+include ../components/_ui/chat/chat
+include ../components/header/header
+include ../components/player/player
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title EtherGod
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +player
+      +footer
+    +popup('wallet')
+    +popup('vip')
+    +popup('statistics')
+    +chat

@@ -109,3 +109,13 @@ $('.js-form-transfer').on('submit', e => {
     // send form
   }
 });
+
+// refresh statistics handler
+$('.js-popup-refresh').on('click', e => {
+  const $this = $(e.currentTarget);
+
+  $this.addClass('popup__refresh--loading');
+  setTimeout(() => {
+    $this.removeClass('popup__refresh--loading');
+  }, 1000);
+});
