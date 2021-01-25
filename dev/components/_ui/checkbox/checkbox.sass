@@ -1,7 +1,7 @@
 .checkbox
   display: flex
   flex-flow: row nowrap
-  align-items: center
+  align-items: flex-start
   cursor: pointer
   &__input
     opacity: 0
@@ -43,7 +43,7 @@
       z-index: 2
       transition: opacity .3s ease-in
   &__text
-    margin-left: 10px
+    margin: -4px 0 0 10px
     font:
       size: 16px
       weight: 500
@@ -55,3 +55,11 @@
   100%
     opacity: 0
     transform: scale(3)
+
+@media only screen and (max-width: $adaptive)
+  .checkbox
+    &__box
+      &:before,
+      &:after
+        top: calc(50% - 4px)
+        left: calc(50% - 5px)
