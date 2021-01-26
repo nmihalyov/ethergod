@@ -592,7 +592,7 @@ mixin settings-verification
                     .settings__dropdown-item.js-settings-dropdown-item Мужчина
                     .settings__dropdown-inner.js-settings-dropdown-inner
                       .settings__dropdown-item.js-settings-dropdown-item Женщина
-              .settings__card
+              .settings__card.settings__card--desktop
                 p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
                 +button-primary('submit', 'Отправить на проверку')
             .settings__col
@@ -604,6 +604,9 @@ mixin settings-verification
                 +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
                 +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
                 +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+              .settings__card.settings__card--mobile
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                +button-primary('submit', 'Отправить на проверку')
 
 mixin settings-verification2
   section.settings.container
@@ -645,7 +648,7 @@ mixin settings-verification2
                     .settings__dropdown-item.js-settings-dropdown-item Мужчина
                     .settings__dropdown-inner.js-settings-dropdown-inner
                       .settings__dropdown-item.js-settings-dropdown-item Женщина
-              .settings__card
+              .settings__card.settings__card--desktop
                 p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
                 p.settings__verification-check Ведётся проверка отправленных данных
             .settings__col
@@ -657,6 +660,9 @@ mixin settings-verification2
                 +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
                 +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
                 +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+              .settings__card.settings__card--mobile
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                p.settings__verification-check Ведётся проверка отправленных данных
 
 mixin settings-verification3
   section.settings.container
@@ -698,7 +704,7 @@ mixin settings-verification3
                     .settings__dropdown-item.js-settings-dropdown-item Мужчина
                     .settings__dropdown-inner.js-settings-dropdown-inner
                       .settings__dropdown-item.js-settings-dropdown-item Женщина
-              .settings__card
+              .settings__card.settings__card--desktop
                 p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
                 .settings__verification-actions
                   +approved('Данные подтверждены, верификация пройдена', 'settings__verification-approved')
@@ -712,6 +718,11 @@ mixin settings-verification3
                 +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
                 +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
                 +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+              .settings__card.settings__card--mobile
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                .settings__verification-actions
+                  +approved('Данные подтверждены, верификация пройдена', 'settings__verification-approved')
+                  +button-primary('submit', 'Изменить')
 
 mixin settings-verification4
   section.settings.container
@@ -753,7 +764,7 @@ mixin settings-verification4
                     .settings__dropdown-item.js-settings-dropdown-item Мужчина
                     .settings__dropdown-inner.js-settings-dropdown-inner
                       .settings__dropdown-item.js-settings-dropdown-item Женщина
-              .settings__card
+              .settings__card.settings__card--desktop
                 p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
                 .settings__verification-actions
                   +declined('Введённая информация недействительна', 'settings__verification-declined')
@@ -767,3 +778,8 @@ mixin settings-verification4
                 +input('text', 'Страна регистрации', 'country', 'Введите страну', 'Russia', 'settings__input')
                 +input('text', 'Город регистрации', 'city', 'Введите город', 'Урюпинск', 'settings__input')
                 +input('text', 'Источник дохода / место работы', 'city', 'Введите источник дохода', 'Газпром', 'settings__input')
+              .settings__card.settings__card--mobile
+                p.settings__verification-desc К приемлемым способам верификации является предоставление фотографии вашего удостоверения личности, водительских прав или паспорта. По завершении данного процесса мы оповестим вас по электронной почте.
+                .settings__verification-actions
+                  +declined('Введённая информация недействительна', 'settings__verification-declined')
+                  +button-primary('submit', 'Отправить снова')

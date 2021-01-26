@@ -201,6 +201,8 @@
     background-color: $white
     &:not(:last-child)
       margin-bottom: 35px
+    &--mobile
+      display: none
   &__input
     &:not(:last-child)
       margin-bottom: 25px
@@ -515,6 +517,10 @@
       width: calc(100% + 40px)
       margin: 0 0 35px -20px !important
       padding: 20px 10px
+      &--desktop
+        display: none
+      &--mobile
+        display: block
     &__phone
       flex-flow: column nowrap
       &-col
@@ -592,3 +598,20 @@
             color: $black
             &:not(:last-child)
               margin-bottom: 10px
+    &__verification
+      flex-flow: column nowrap
+      width: 100%
+      &-desc
+        width: 100%
+      &-actions
+        flex-flow: column nowrap
+      &-approved,
+      &-declined
+        width: 100%
+        margin: 0 0 25px
+    &__subgrid
+      flex-flow: column nowrap
+      .settings__card
+        width: calc(100% + 40px) !important
+        &:not(:last-child)
+          margin-bottom: 25px !important
