@@ -14,5 +14,6 @@ window.onload = () => {
   @@include('../components/vip/vip.js')
   @@include('../components/settings/settings.js')
   @@include('../components/player/player.js')
+  @@include('../components/search/search.js')
 
 }

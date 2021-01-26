@@ -42,7 +42,6 @@
     &:hover
       opacity: 0.7
     &--active
-      pointer-events: none
       background-image: $gradient
       color: $white
       &:before
@@ -71,7 +70,9 @@
         repeat: no-repeat
   &__slider
     position: relative
-    margin: 0 0 35px -8px
+    margin-left: -8px
+    &:not(:last-child)
+      margin-bottom: 35px
     &-arrow
       position: absolute
       top: -35px

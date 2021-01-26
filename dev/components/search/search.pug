@@ -1,0 +1,65 @@
+include ../_ui/input/input
+include ../_ui/game-card/game-card
+
+mixin search
+  section.search.container
+    .wrapper
+      +input('search', '', 'search', 'Найди свой идеал в нашем каталоге игр', '', 'search__field js-search-input')
+      .search__block
+        .search__result
+          p.search__result-text.js-search-text Введите как минимум 3 символа
+          .search__result-output.js-search-output
+            p.search__result-text По запросу ничего не найдено
+        .search__recommended
+          p.search__recommended-heading Недавние запросы
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Монополия
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Не монополия
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Полноценное казино
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Ягода кизил
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Как собрать стул
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") 17 мгновений весны
+        p.games__heading Рекомендуемые игры
+        .games__slider.js-games-slider
+          -for (let i = 1; i <= 10; i++)
+            +game-card
+
+mixin search-results
+  section.search.container
+    .wrapper
+      +input('search', '', 'search', 'Найди свой идеал в нашем каталоге игр', '', 'search__field js-search-input')
+      .search__block
+        .search__result
+          p.search__result-text.js-search-text Введите как минимум 3 символа
+          .search__result-output.js-search-output
+            .search__result-item
+              +game-card('search__result-card')
+              .search__result-item-info
+                p.search__result-item-heading Monopoly with gnomes
+                p.search__result-item-provider Evolution gaming
+                .search__result-item-buttons
+                  a.games__tab.games__tab--active(href="#") Игры EtherGod
+                  a.games__tab(href="#") Игры EtherGod
+                  a.games__tab(href="#") Игры EtherGod
+                  a.games__tab(href="#") Игры EtherGod
+            .search__result-item
+              +game-card('search__result-card')
+              .search__result-item-info
+                p.search__result-item-heading Monopoly with gnomes
+                p.search__result-item-provider Evolution gaming
+                .search__result-item-buttons
+                  a.games__tab.games__tab--active(href="#") Игры EtherGod
+                  a.games__tab(href="#") Игры EtherGod
+                  a.games__tab(href="#") Игры EtherGod
+                  a.games__tab(href="#") Игры EtherGod
+        .search__recommended
+          p.search__recommended-heading Недавние запросы
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Монополия
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Не монополия
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Полноценное казино
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Ягода кизил
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") Как собрать стул
+          a.search__recommended-item.js-search-recommend(href="javascript:void(0)") 17 мгновений весны
+        p.games__heading Рекомендуемые игры
+        .games__slider.js-games-slider
+          -for (let i = 1; i <= 10; i++)
+            +game-card
