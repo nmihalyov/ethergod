@@ -47,7 +47,7 @@ mixin chat
       .chat__footer-actions
         .chat__footer-info
           p.chat__footer-online Онлайн: 5504
-          a.chat__footer-rules(href="#") Правила чата
+          a.chat__footer-rules.js-open-popup(href="javascript:void(0)", data-popup="chatrules") Правила чата
         .chat__footer-buttons
           +button-quinary('link', '/', 'chat__footer-btn js-chat-commanding')
           +button-quinary('link', '@', 'chat__footer-btn js-chat-mentioning')

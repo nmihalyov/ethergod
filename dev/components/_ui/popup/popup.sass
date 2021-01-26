@@ -31,14 +31,27 @@
     justify-content: center
     align-items: center
   &__window
+    overflow: hidden
     position: relative
     width: 600px
     background-color: #fff
     box-shadow: 0px 0px 12px -4px rgba(13, 13, 30, 0.3)
     border-radius: 10px
     cursor: auto
-    &-statistics
+    &--statistics
       width: 280px
+    &--auth
+      width: 680px
+      padding-right: 340px
+      background:
+        position: center
+        size: cover
+        repeat: no-repeat
+      .popup__close
+        margin-right: -340px
+        background-image: url('../img/icons/close-white.svg')
+    &--chatrules
+      width: 320px
   &__refresh
     display: inline-block
     width: 16px
@@ -58,12 +71,14 @@
       background-image: url('../img/icons/refresh-violet.svg')
   &__content
     padding: 0 25px 25px
+    background-color: $white
   &__head
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
     align-items: center
     padding: 7px 5px 7px 15px
+    background-color: $white
   &__title
     position: relative
     padding-left: 25px
@@ -346,6 +361,57 @@
             background-image: $gradient
         &--win
           color: $green
+  &__auth
+    &-form
+      padding-top: 25px
+      .popup__checkbox
+        .checkbox__text
+          font-size: 13px
+          a
+            color: $violet
+            text-decoration: none
+    &-actions
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+    &-google
+      flex-shrink: 0
+      display: block
+      width: 48px
+      height: 48px
+      margin-left: 10px
+      border-radius: 10px
+      background-color: $red
+      background:
+        image: url('../img/icons/google.svg')
+        position: center
+        repeat: no-repeat
+    &-forget
+      display: block
+      margin-top: 25px
+      color: $violet
+      text-align: center
+      text-decoration: none
+      font:
+        size: 14px
+        weight: 500
+  &__chatrules
+    padding: 10px 10px 0
+    &-item
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      &:not(:last-child)
+        margin-bottom: 15px
+    &-counter
+      flex-shrink: 0
+      width: 15px
+      color: $grey
+      font-size: 14px
+    &-text
+      font-size: 14px
 
 @keyframes refresh
   0%
@@ -360,6 +426,12 @@
     &__window
       max-width: 370px
       width: calc(100% - 20px)
+      &--auth
+        width: calc(100% - 20px)
+        padding-right: 0
+        .popup__close
+          margin-right: 0
+          background-image: url('../img/icons/close.svg')
     &__content
       padding-left: 10px
       padding-right: 10px

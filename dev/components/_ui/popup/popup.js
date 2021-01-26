@@ -36,6 +36,8 @@ const closePopup = (e, $this) => {
 
 const openPopup = $popup => {
   hideOverflow();
+
+  $('.js-popup').hide(0);
   
   $popup.fadeIn(300);
 };

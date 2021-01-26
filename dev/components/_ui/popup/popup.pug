@@ -10,12 +10,18 @@ mixin popup(type, unverified)
     .popup__backdrop
     .popup__container
       .popup__wrapper
-        .popup__window(class=`${type === 'statistics' ? 'popup__window-statistics' : ''}`)
+        .popup__window(class=`${type === 'statistics' ? 'popup__window--statistics' : type === 'auth' || type === 'password' ? 'popup__window--auth' : type === 'chatrules' ? 'popup__window--chatrules' : ''}`, style=`${type === 'auth' || type === 'password' ? 'background-image: url("img/inhtml/login-bg.png");' : ''}`)
           .popup__head
             if type === 'wallet'
               p.popup__title(data-icon="default") Кошелёк
             if type === 'vip'
               p.popup__title(data-icon="default") Вип-программа
+            if type === 'auth'
+              p.popup__title(data-icon="default") Добро пожаловать
+            if type === 'password'
+              p.popup__title(data-icon="default") Забыли пароль?
+            if type === 'chatrules'
+              p.popup__title(data-icon="default") Правила чата
             if type === 'statistics'
               p.popup__title(data-icon="statistics") Текущая статистика
                 a(href="javascript:void(0)").popup__refresh.js-popup-refresh
@@ -126,3 +132,48 @@ mixin popup(type, unverified)
                   .popup__statistics-table-row
                     p.popup__statistics-table-cell Monopoly with gnomes
                     p.popup__statistics-table-cell.popup__statistics-table-cell--win 100.00000000
+            if type === 'auth'
+              .popup__auth
+                +tabs([{title: 'Вход'}, {title: 'Регистрация'}])
+                  .js-tabs-content(data-content="1")
+                    form.popup__auth-form(action="")
+                      +input('text', 'Электронная почта или логин', 'login', '', '', 'popup__input')
+                      +input('password', 'Пароль', 'password', '', '', 'popup__input')
+                      .popup__auth-actions
+                        +button-primary('submit', 'Играть сейчас', 'popup__auth-btn')
+                        a.popup__auth-google(href="javascript:void(0)")
+                      a.popup__auth-forget.js-open-popup(href="javascript:void(0)", data-popup="password") Забыли пароль?
+                  .js-tabs-content(data-content="2")
+                    form.popup__auth-form(action="")
+                      +input('text', 'Имя пользователя', 'userName', '', '', 'popup__input')
+                      +input('email', 'Электронная почта', 'email', '', '', 'popup__input')
+                      +input('password', 'Пароль', 'password', '', '', 'popup__input')
+                      +checkbox('policy', 'popup__checkbox', false, false, 'Мне исполнилось 18 лет, и я принимаю <a href="#">условия предоставления услуг</a>')
+                      .popup__auth-actions
+                        +button-primary('submit', 'Играть сейчас', 'popup__auth-btn')
+                        a.popup__auth-google(href="javascript:void(0)")
+            if type === 'password'
+              .popup__auth
+                form.popup__auth-form(action="")
+                  +input('email', 'Электронная почта', 'email', '', '', 'popup__input')
+                  +button-primary('submit', 'Восстановить пароль', 'popup__auth-btn')
+            if type === 'chatrules'
+              .popup__chatrules
+                .popup__chatrules-item
+                  p.popup__chatrules-counter 1
+                  p.popup__chatrules-text Не спамьте, не раздражайте и не оскорбляйте других пользователей. Также избегайте использования только заглавных букв.
+                .popup__chatrules-item
+                  p.popup__chatrules-counter 2
+                  p.popup__chatrules-text Не попрошайничайте и не просите займы, дожди, переводы и не обещайте удвоения криптовалюты.
+                .popup__chatrules-item
+                  p.popup__chatrules-counter 3
+                  p.popup__chatrules-text Не ведите себя подозрительно, ваши действия могут расценить как мошеннические.
+                .popup__chatrules-item
+                  p.popup__chatrules-counter 4
+                  p.popup__chatrules-text Не разрешается размещение сообщений с рекламой, предложением обмена, купли-продажи и прочих услуг в любой форме.
+                .popup__chatrules-item
+                  p.popup__chatrules-counter 5
+                  p.popup__chatrules-text Не используйте сервис коротких ссылок URL. Всегда размещайте реальные ссылки.
+                .popup__chatrules-item
+                  p.popup__chatrules-counter 6
+                  p.popup__chatrules-text Ипользуйте определенные языковые каналы соответственно.

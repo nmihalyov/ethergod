@@ -463,6 +463,47 @@
         </div>
       </div>
     </div>
+    <div class="popup js-popup js-close-popup" data-popup="chatrules">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__window--chatrules">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Правила чата</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__chatrules">
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">1</p>
+                  <p class="popup__chatrules-text">Не спамьте, не раздражайте и не оскорбляйте других пользователей. Также избегайте использования только заглавных букв.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">2</p>
+                  <p class="popup__chatrules-text">Не попрошайничайте и не просите займы, дожди, переводы и не обещайте удвоения криптовалюты.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">3</p>
+                  <p class="popup__chatrules-text">Не ведите себя подозрительно, ваши действия могут расценить как мошеннические.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">4</p>
+                  <p class="popup__chatrules-text">Не разрешается размещение сообщений с рекламой, предложением обмена, купли-продажи и прочих услуг в любой форме.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">5</p>
+                  <p class="popup__chatrules-text">Не используйте сервис коротких ссылок URL. Всегда размещайте реальные ссылки.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">6</p>
+                  <p class="popup__chatrules-text">Ипользуйте определенные языковые каналы соответственно.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="chat js-chat">
       <div class="chat__header">
         <p class="chat__heading">Чат</p>
@@ -552,7 +593,7 @@
         <div class="chat__footer-input-counter js-chat-counter">160</div>
         <div class="chat__footer-actions">
           <div class="chat__footer-info">
-            <p class="chat__footer-online">Онлайн: 5504</p><a class="chat__footer-rules" href="#">Правила чата</a>
+            <p class="chat__footer-online">Онлайн: 5504</p><a class="chat__footer-rules js-open-popup" href="javascript:void(0)" data-popup="chatrules">Правила чата</a>
           </div>
           <div class="chat__footer-buttons"><a class="button button--quinary chat__footer-btn js-chat-commanding" href="javascript:void(0)">/</a><a class="button button--quinary chat__footer-btn js-chat-mentioning" href="javascript:void(0)">@</a>
             <button class="button button--quoternary chat__footer-send js-chat-send" type="submit">Отправить</button>

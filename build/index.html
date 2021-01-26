@@ -36,6 +36,7 @@
       <section class="container">
         <div class="wrapper">
           <ol>
+            <li><a class="js-open-popup" href="javascript:void(0)" data-popup="auth">Вход/регистрация</a></li>
             <li><a href="main.html">Главная</a></li>
             <li><a href="main-unverified.html">Главная (почта не подтверждена)</a></li>
             <li><a href="games.html">Игры</a></li>
@@ -57,13 +58,113 @@
             <li><a href="preferences.html">Настройки – Предпочтения</a></li>
             <li><a href="blacklist.html">Настройки – Чёрный список</a></li>
             <li><a href="sessions.html">Настройки – Сессии</a></li>
-            <li><a href="verification.html">Настройки – Верификация</a></li>
+            <li><a href="verification.html">Настройки – Верификация (состояние 1)</a></li>
             <li><a href="verification2.html">Настройки – Верификация (состояние 2)</a></li>
             <li><a href="verification3.html">Настройки – Верификация (состояние 3)</a></li>
             <li><a href="verification4.html">Настройки – Верификация (состояние 4)</a></li>
           </ol>
         </div>
       </section>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="auth">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__window--auth" style="background-image: url(&quot;img/inhtml/login-bg.png&quot;);">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Добро пожаловать</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__auth">
+                <div class="tabs js-tabs">
+                  <div class="tabs__head">
+                    <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Вход</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Регистрация</a>
+                    </div>
+                  </div>
+                  <div class="tabs__content">
+                    <div class="js-tabs-content" data-content="1">
+                      <form class="popup__auth-form" action="">
+                        <label class="input popup__input     ">
+                          <p class="input__label">Электронная почта или логин</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="text" name="login" placeholder="" value="" step="any"/>
+                          </div>
+                        </label>
+                        <label class="input popup__input     ">
+                          <p class="input__label">Пароль</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="password" name="password" placeholder="" value="" step="any"/>
+                          </div>
+                        </label>
+                        <div class="popup__auth-actions">
+                          <button class="button button--primary popup__auth-btn" type="submit">Играть сейчас</button><a class="popup__auth-google" href="javascript:void(0)"></a>
+                        </div><a class="popup__auth-forget js-open-popup" href="javascript:void(0)" data-popup="password">Забыли пароль?</a>
+                      </form>
+                    </div>
+                    <div class="js-tabs-content" data-content="2">
+                      <form class="popup__auth-form" action="">
+                        <label class="input popup__input     ">
+                          <p class="input__label">Имя пользователя</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="text" name="userName" placeholder="" value="" step="any"/>
+                          </div>
+                        </label>
+                        <label class="input popup__input     ">
+                          <p class="input__label">Электронная почта</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="email" name="email" placeholder="" value="" step="any"/>
+                          </div>
+                        </label>
+                        <label class="input popup__input     ">
+                          <p class="input__label">Пароль</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="password" name="password" placeholder="" value="" step="any"/>
+                          </div>
+                        </label>
+                        <label class="checkbox popup__checkbox">
+                          <input class="checkbox__input" type="checkbox" name="policy"/>
+                          <div class="checkbox__box"></div>
+                          <p class="checkbox__text">Мне исполнилось 18 лет, и я принимаю <a href="#">условия предоставления услуг</a></p>
+                        </label>
+                        <div class="popup__auth-actions">
+                          <button class="button button--primary popup__auth-btn" type="submit">Играть сейчас</button><a class="popup__auth-google" href="javascript:void(0)"></a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="password">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__window--auth" style="background-image: url(&quot;img/inhtml/login-bg.png&quot;);">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Забыли пароль?</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__auth">
+                <form class="popup__auth-form" action="">
+                  <label class="input popup__input     ">
+                    <p class="input__label">Электронная почта</p>
+                    <div class="input__inner">
+                      <input class="input__field" type="email" name="email" placeholder="" value="" step="any"/>
+                    </div>
+                  </label>
+                  <button class="button button--primary popup__auth-btn" type="submit">Восстановить пароль</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

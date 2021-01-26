@@ -1,3 +1,5 @@
+include ../components/_ui/popup/popup
+
 doctype
 html(lang="ru", prefix="og: http://ogp.me/ns#")
   head
@@ -10,6 +12,8 @@ html(lang="ru", prefix="og: http://ogp.me/ns#")
       section.container
         .wrapper
           ol
+            li
+              a.js-open-popup(href="javascript:void(0)", data-popup="auth") Вход/регистрация
             li
               a(href="main.html") Главная
             li
@@ -53,10 +57,12 @@ html(lang="ru", prefix="og: http://ogp.me/ns#")
             li
               a(href="sessions.html") Настройки – Сессии
             li
-              a(href="verification.html") Настройки – Верификация
+              a(href="verification.html") Настройки – Верификация (состояние 1)
             li
               a(href="verification2.html") Настройки – Верификация (состояние 2)
             li
               a(href="verification3.html") Настройки – Верификация (состояние 3)
             li
               a(href="verification4.html") Настройки – Верификация (состояние 4)
+    +popup('auth', false)
+    +popup('password', false)
