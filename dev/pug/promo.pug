@@ -1,0 +1,21 @@
+include ../components/_ui/popup/popup
+include ../components/_ui/chat/chat
+include ../components/header/header
+include ../components/promo/promo
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Промо | EtherGod
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +promo
+      +footer
+    +popup('wallet')
+    +popup('vip')
+    +chat

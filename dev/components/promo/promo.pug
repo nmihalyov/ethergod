@@ -1,0 +1,10 @@
+mixin promo
+  section.promo.container
+    .wrapper
+      -for (let i=1; i <= 4; i++)
+        .promo__card
+          .promo__card-info
+            p.promo__card-heading Структура вип-программы
+            p.promo__card-desc Отслеживайте свой прогресс, зарабатывайте новые уровни, чтобы получить уникальные бонусы
+            +button-primary('link', 'Узнать больше', 'promo__card-btn', {link: '#'})
+          .promo__card-image(style="background-image: url('img/inhtml/promo-image.jpg');")
