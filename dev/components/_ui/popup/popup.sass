@@ -412,6 +412,130 @@
       font-size: 14px
     &-text
       font-size: 14px
+  &__user
+    &-info
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: center
+      padding: 30px 0 20px
+    &-name
+      position: relative
+      margin-bottom: 6px
+      padding-left: 22px
+      font:
+        size: 14px
+        weight: 500
+      &:before
+        content: ''
+        position: absolute
+        top: 3px
+        left: 0
+        width: 14px
+        height: 14px
+        background:
+          image: url('../img/icons/stage-new.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-registered
+      margin-bottom: 15px
+      color: $grey
+      font-size: 14px
+    &-actions
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+    &-action
+      margin: 0 13px
+      cursor: pointer
+      background:
+        position: center
+        repeat: no-repeat
+      &--active[data-action="blacklist"]
+        background-image: url('../img/icons/blacklist-violet.svg') !important
+      &[data-action="transfer"]
+        width: 12px
+        height: 12px
+        background-image: url('../img/icons/wallet-violet.svg')
+      &[data-action="blacklist"]
+        width: 16px
+        height: 16px
+        background-image: url('../img/icons/blacklist.svg')
+    &-table
+      &--statistics .popup__user-table
+        &-cell
+          &:nth-child(1)
+            width: 118px
+          &:nth-child(2)
+            width: 146px
+          &:nth-child(3)
+            width: 120px
+      &--tournament .popup__user-table
+        &-cell
+          &:nth-child(1)
+            width: 220px
+          &:nth-child(2)
+            width: 114px
+          &:nth-child(3)
+            width: 70px
+      &-head
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: center
+        color: $grey
+        font:
+          size: 14px
+          weight: 500
+        .popup__user-table-cell
+          padding-right: 0 !important
+          color: $grey !important
+          &:after
+            display: none
+      &-row
+        width: calc(100% + 30px)
+        margin-left: -15px
+        padding: 0 15px
+        border-radius: 10px
+        color: $grey
+        background-color: $grey-light
+        font:
+          size: 14px
+          weight: 500
+        &:not(:last-child)
+          margin-bottom: 10px
+        &-heads
+          display: none
+        &-inner
+          display: flex
+          flex-flow: row nowrap
+          justify-content: flex-start
+          align-items: center
+      &-cell
+        padding: 15px 0
+        &:nth-child(4)
+          position: relative
+          width: 166px
+          padding-right: 20px
+          text-align: right
+          color: $black
+          &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 18px
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            background-image: $gradient
+        &--win
+          color: $green !important
+        &--lose
+          color: $red !important
+        &--place
+          color: $violet !important
 
 @keyframes refresh
   0%
@@ -432,6 +556,8 @@
         .popup__close
           margin-right: 0
           background-image: url('../img/icons/close.svg')
+      &--statistics
+        width: 280px
     &__content
       padding-left: 10px
       padding-right: 10px
@@ -440,3 +566,45 @@
     &__vip
       &-desc
         width: 100%
+    &__statistics
+      width: calc(100% - 10px)
+      margin-left: auto
+      margin-right: auto
+    &__user
+      &-table
+        padding-top: 25px
+        // &--statistics .popup__user-table
+        &-head
+          display: none
+        &-row
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          align-items: flex-start
+          width: 100%
+          margin-left: 0
+          padding: 10px 10px 0
+          &-heads
+            display: flex
+            flex-flow: column nowrap
+            width: 130px
+          &-head
+            margin-bottom: 10px
+            color: $grey
+            font:
+              size: 14px
+              weight: 500
+          &-inner
+            flex-flow: column nowrap
+            width: calc(100% - 130px)
+            & > *
+              width: 100% !important
+              margin-bottom: 10px
+              padding: 0
+              text-align: right
+              color: $black
+            .popup__user-table-cell
+              &:nth-child(4)
+                padding-right: 20px
+                &:after
+                  top: 4px

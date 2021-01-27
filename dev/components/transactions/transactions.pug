@@ -1,0 +1,168 @@
+include ../_ui/tabs/tabs
+
+mixin transactions
+  section.transactions.container
+    .wrapper
+      p.transactions__heading Транзакции
+      .transactions__content
+        +tabs([{title: 'Депозиты'}, {title: 'Вывод средств'}, {title: 'Переводы'}, {title: 'Хранилище'}, {title: 'Игровая статистика'}])
+          .js-tabs-content(data-content="1")
+            .transactions__table
+              .transactions__table-head
+                p.transactions__table-cell Дата и время
+                p.transactions__table-cell Адрес пополнения
+                p.transactions__table-cell Код операции
+                p.transactions__table-cell Сумма
+              -for (let i =1; i <= 5; i++)
+                .transactions__table-row
+                  .transactions__table-row-heads
+                    p.transactions__table-row-head Дата и время
+                    p.transactions__table-row-head Адрес пополнения
+                    p.transactions__table-row-head Код операции
+                    p.transactions__table-row-head Сумма
+                  .transactions__table-row-inner
+                    p.transactions__table-cell 31.02.2005 19:26
+                    p.transactions__table-cell 3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J
+                    p.transactions__table-cell ka5kaksdk5kkakk
+                    p.transactions__table-cell 4.00000000
+            +button-tertiary('button', 'Показать больше', 'transaction__more')
+          .js-tabs-content(data-content="2")
+            .transactions__table
+              .transactions__table-head
+                p.transactions__table-cell Дата и время
+                p.transactions__table-cell Адрес вывода
+                p.transactions__table-cell Код операции
+                p.transactions__table-cell Сумма
+              -for (let i =1; i <= 5; i++)
+                .transactions__table-row
+                  .transactions__table-row-heads
+                    p.transactions__table-row-head Дата и время
+                    p.transactions__table-row-head Адрес вывода
+                    p.transactions__table-row-head Код операции
+                    p.transactions__table-row-head Сумма
+                  .transactions__table-row-inner
+                    p.transactions__table-cell 31.02.2005 19:26
+                    p.transactions__table-cell 3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J
+                    p.transactions__table-cell ka5kaksdk5kkakk
+                    p.transactions__table-cell 4.00000000
+            +button-tertiary('button', 'Показать больше', 'transaction__more')
+          .js-tabs-content(data-content="3")
+            .transactions__table
+              .transactions__table-head
+                p.transactions__table-cell Дата и время
+                p.transactions__table-cell Получатель
+                p.transactions__table-cell Код операции
+                p.transactions__table-cell Сумма
+              -for (let i =1; i <= 5; i++)
+                .transactions__table-row
+                  .transactions__table-row-heads
+                    p.transactions__table-row-head Дата и время
+                    p.transactions__table-row-head Получатель
+                    p.transactions__table-row-head Код операции
+                    p.transactions__table-row-head Сумма
+                  .transactions__table-row-inner
+                    p.transactions__table-cell 31.02.2005 19:26
+                    p.transactions__table-cell
+                      a(href="javascript:void(0)", data-popup="user").js-open-popup segoeui111
+                    p.transactions__table-cell ka5kaksdk5kkakk
+                    p.transactions__table-cell 4.00000000
+            +button-tertiary('button', 'Показать больше', 'transaction__more')
+          .js-tabs-content(data-content="4")
+            .transactions__table
+              .transactions__table-head
+                p.transactions__table-cell Дата и время
+                p.transactions__table-cell Тип операции
+                p.transactions__table-cell Код операции
+                p.transactions__table-cell Сумма
+              -for (let i =1; i <= 5; i++)
+                .transactions__table-row
+                  .transactions__table-row-heads
+                    p.transactions__table-row-head Дата и время
+                    p.transactions__table-row-head Тип операции
+                    p.transactions__table-row-head Код операции
+                    p.transactions__table-row-head Сумма
+                  .transactions__table-row-inner
+                    p.transactions__table-cell 31.02.2005 19:26
+                    p.transactions__table-cell.transactions__table-cell--operations Депозит
+                    p.transactions__table-cell ka5kaksdk5kkakk
+                    p.transactions__table-cell 4.00000000
+            +button-tertiary('button', 'Показать больше', 'transaction__more')
+          .js-tabs-content(data-content="5")
+            .transactions__table.transactions__table--stats
+              .transactions__table-head
+                p.transactions__table-cell Дата и время
+                p.transactions__table-cell Тип операции
+                p.transactions__table-cell Код операции
+                p.transactions__table-cell Игра
+                p.transactions__table-cell Сумма
+              .transactions__table-row
+                .transactions__table-row-heads
+                  p.transactions__table-row-head Дата и время
+                  p.transactions__table-row-head Тип операции
+                  p.transactions__table-row-head Код операции
+                  p.transactions__table-row-head Игра
+                  p.transactions__table-row-head Сумма
+                .transactions__table-row-inner
+                  p.transactions__table-cell 31.02.2005 19:26
+                  p.transactions__table-cell.transactions__table-cell--win Выигрыш
+                  p.transactions__table-cell ka5kaksdk5kkakk
+                  p.transactions__table-cell
+                    a(href="#") Monopoly with gnomes
+                  p.transactions__table-cell 4.00000000
+              .transactions__table-row
+                .transactions__table-row-heads
+                  p.transactions__table-row-head Дата и время
+                  p.transactions__table-row-head Тип операции
+                  p.transactions__table-row-head Код операции
+                  p.transactions__table-row-head Игра
+                  p.transactions__table-row-head Сумма
+                .transactions__table-row-inner
+                  p.transactions__table-cell 31.02.2005 19:26
+                  p.transactions__table-cell.transactions__table-cell--lose Проигрыш
+                  p.transactions__table-cell ka5kaksdk5kkakk
+                  p.transactions__table-cell
+                    a(href="#") Monopoly with gnomes
+                  p.transactions__table-cell 4.00000000
+              .transactions__table-row
+                .transactions__table-row-heads
+                  p.transactions__table-row-head Дата и время
+                  p.transactions__table-row-head Тип операции
+                  p.transactions__table-row-head Код операции
+                  p.transactions__table-row-head Игра
+                  p.transactions__table-row-head Сумма
+                .transactions__table-row-inner
+                  p.transactions__table-cell 31.02.2005 19:26
+                  p.transactions__table-cell.transactions__table-cell--win Выигрыш
+                  p.transactions__table-cell ka5kaksdk5kkakk
+                  p.transactions__table-cell
+                    a(href="#") Monopoly with gnomes
+                  p.transactions__table-cell 4.00000000
+              .transactions__table-row
+                .transactions__table-row-heads
+                  p.transactions__table-row-head Дата и время
+                  p.transactions__table-row-head Тип операции
+                  p.transactions__table-row-head Код операции
+                  p.transactions__table-row-head Игра
+                  p.transactions__table-row-head Сумма
+                .transactions__table-row-inner
+                  p.transactions__table-cell 31.02.2005 19:26
+                  p.transactions__table-cell.transactions__table-cell--win Выигрыш
+                  p.transactions__table-cell ka5kaksdk5kkakk
+                  p.transactions__table-cell
+                    a(href="#") Monopoly with gnomes
+                  p.transactions__table-cell 4.00000000
+              .transactions__table-row
+                .transactions__table-row-heads
+                  p.transactions__table-row-head Дата и время
+                  p.transactions__table-row-head Тип операции
+                  p.transactions__table-row-head Код операции
+                  p.transactions__table-row-head Игра
+                  p.transactions__table-row-head Сумма
+                .transactions__table-row-inner
+                  p.transactions__table-cell 31.02.2005 19:26
+                  p.transactions__table-cell.transactions__table-cell--lose Проигрыш
+                  p.transactions__table-cell ka5kaksdk5kkakk
+                  p.transactions__table-cell
+                    a(href="#") Monopoly with gnomes
+                  p.transactions__table-cell 4.00000000
+            +button-tertiary('button', 'Показать больше', 'transaction__more')

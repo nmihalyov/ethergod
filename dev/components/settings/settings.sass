@@ -310,7 +310,7 @@
     align-items: flex-end
     &-input
       width: 275px
-      margin-bottom: 0
+      margin-bottom: 0 !important
     &-approved
       width: 200px
     &-btn
@@ -360,6 +360,12 @@
         font:
           size: 14px
           weight: 500
+        a
+          color: $black
+          text-decoration: none
+          transition: color .3s ease
+          &:hover
+            color: $violet
       &-date
         width: 170px
         color: $grey

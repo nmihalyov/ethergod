@@ -3,6 +3,11 @@ $(document).on('click', e => {
   if(!$(e.target).closest('.js-player-dropdown').length) {
     $('.js-player-dropdown').removeClass('js-player-dropdown--active').find('.js-player-dropdown-inner').slideUp(300);
   }
+
+  // hide tags bubble on outer click
+  if(!$(e.target).closest('.js-player-bubble').length && !$(e.target).closest('[data-control="info"]').length) {
+    $('.js-player-bubble').fadeOut(300);
+  }
 });
 
 // player about scripts
@@ -49,6 +54,15 @@ $('[data-control="favorite"]').on('click', e => {
   $(e.currentTarget).toggleClass('player__game-control--active');
 });
 
+// tags bubble handler
+$('[data-control="info"]').on('click', () => {
+  $('.js-player-bubble').css('display', 'flex').hide(0).fadeIn(300);
+});
+
+$('.js-player-bubble-close').on('click', () => {
+  $('.js-player-bubble').fadeOut(300);
+});
+
 // overlay hide handlers
 $('.js-play-real').on('click', () => {
   $('.player__game-switch-input').addClass('player__game-switch-input--active');
@@ -59,6 +73,7 @@ $('.js-play-real').on('click', () => {
 $('.js-play-entertain').on('click', () => {
   $('.player__game-switch-input').removeClass('player__game-switch-input--active');
   $('.player__game-overlay').fadeOut(300);
+  $('.player__game-menu').removeClass('player__game-menu--disabled');
 });
 
 // player dropdown

@@ -121,3 +121,15 @@ $('.js-popup-refresh').on('click', e => {
     $this.removeClass('popup__refresh--loading');
   }, 1000);
 });
+
+// user actions handlers
+$('.popup__user-action[data-action="transfer"]').on('click', e => {
+  const name = $(e.currentTarget).parent().siblings('.popup__user-name').text();
+
+  $('[data-popup="wallet"] .js-tab:last-child').click();
+  $('[data-popup="wallet"] input[name="recipientName"]').val(name);
+});
+
+$('.popup__user-action[data-action="blacklist"]').on('click', e => {
+  $(e.currentTarget).toggleClass('popup__user-action--active');
+});

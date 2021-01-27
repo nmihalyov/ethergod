@@ -22,11 +22,38 @@ mixin popup(type, unverified)
               p.popup__title(data-icon="default") Забыли пароль?
             if type === 'chatrules'
               p.popup__title(data-icon="default") Правила чата
+            if type === 'storage'
+              p.popup__title(data-icon="default") Хранилище
+            if type === 'user'
+              p.popup__title(data-icon="default") SeymourBusts
             if type === 'statistics'
               p.popup__title(data-icon="statistics") Текущая статистика
                 a(href="javascript:void(0)").popup__refresh.js-popup-refresh
             .popup__close.js-close-popup
           .popup__content
+            if type === 'storage'
+              .popup__wallet
+                +tabs([{title: 'Депозит'}, {title: 'Вывод'}])
+                  .js-tabs-content(data-content="1")
+                    form.popup__wallet-content.js-form-storage-deposit(action="")
+                      .popup__dropdown.js-popup-dropdown(data-dropdown)
+                        .popup__dropdown-item.js-popup-dropdown-item(data-icon="eth") 0.00000000
+                        .popup__dropdown-inner.js-popup-dropdown-inner
+                          .popup__dropdown-item.js-popup-dropdown-item(data-icon="eth-grey") 1.22342420
+                      +input('number', 'Сумма перевода', 'ethSumToStorageDeposit', 'Введите сумму для депозита', '', 'popup__input', {error: 'Недостаточно средств', sum: true, min: 0.0005, max: 1.2234242})
+                      +button-primary('submit', 'Перевести в хранилище')
+                  .js-tabs-content(data-content="2")
+                    form.popup__wallet-content.js-form-storage-withdraw(action="")
+                      .popup__dropdown.js-popup-dropdown(data-dropdown)
+                        .popup__dropdown-item.js-popup-dropdown-item(data-icon="eth") 0.00000000
+                        .popup__dropdown-inner.js-popup-dropdown-inner
+                          .popup__dropdown-item.js-popup-dropdown-item(data-icon="eth-grey") 1.22342420
+                      +input('number', 'Сумма перевода', 'ethSumToStorageWithdraw', 'Введите сумму для вывода', '', 'popup__input', {error: 'Недостаточно средств', sum: true, min: 0, max: 1.2234242})
+                      +input('password', 'Пароль', 'password', 'Введите пароль', '', 'popup__input')
+                      +button-primary('submit', 'Вывести из хранилища')
+                .popup__wallet-auth
+                  p.popup__wallet-auth-text У вас отключена 2ФА. Подключите её для повышения безопасности
+                  +button-secondary('link', 'Включить двухфакторную аутентификацию', '', {link: '#'})
             if type === 'wallet'
               .popup__wallet
                 +tabs([{title: 'Депозит'}, {title: 'Вывод'}, {title: 'Обмен'}, {title: 'Перевод'}])
@@ -177,3 +204,50 @@ mixin popup(type, unverified)
                 .popup__chatrules-item
                   p.popup__chatrules-counter 6
                   p.popup__chatrules-text Ипользуйте определенные языковые каналы соответственно.
+            if type === 'user'
+              .popup__user
+                .popup__user-info
+                  p.popup__user-name SeymourBusts
+                  p.popup__user-registered Зарегистрировался 31.02.2005
+                  .popup__user-actions
+                    .popup__user-action.js-open-popup(data-action="transfer", data-popup="wallet")
+                    .popup__user-action(data-action="blacklist")
+                +tabs([{title: 'Статистика'}, {title: 'Турнир'}])
+                  .js-tabs-content(data-content="1")
+                    .popup__user-table.popup__user-table--statistics
+                      .popup__user-table-head
+                        p.popup__user-table-cell Ставки
+                        p.popup__user-table-cell Выигрыши
+                        p.popup__user-table-cell Проигрыши
+                        p.popup__user-table-cell Оборот
+                      -for (let i = 1; i < 5; i++)
+                        .popup__user-table-row
+                          .popup__user-table-row-heads
+                            p.popup__user-table-row-head Ставки
+                            p.popup__user-table-row-head Выигрыши
+                            p.popup__user-table-row-head Проигрыши
+                            p.popup__user-table-row-head Оборот
+                          .popup__user-table-row-inner
+                            p.popup__user-table-cell 8 077 343
+                            p.popup__user-table-cell.popup__user-table-cell--win 2 175 239
+                            p.popup__user-table-cell.popup__user-table-cell--lose 5 902 096
+                            p.popup__user-table-cell 100.00000000
+                  .js-tabs-content(data-content="2")
+                    .popup__user-table.popup__user-table--tournament
+                      .popup__user-table-head
+                        p.popup__user-table-cell Наименование турнира
+                        p.popup__user-table-cell Дата
+                        p.popup__user-table-cell Место
+                        p.popup__user-table-cell Приз
+                      -for (let i = 1; i < 5; i++)
+                        .popup__user-table-row
+                          .popup__user-table-row-heads
+                            p.popup__user-table-row-head Название турнира
+                            p.popup__user-table-row-head Дата
+                            p.popup__user-table-row-head Место
+                            p.popup__user-table-row-head Приз
+                          .popup__user-table-row-inner
+                            p.popup__user-table-cell $10,000 - 24 hours
+                            p.popup__user-table-cell 2 175 239
+                            p.popup__user-table-cell.popup__user-table-cell--place 5 902 096
+                            p.popup__user-table-cell 100.00000000

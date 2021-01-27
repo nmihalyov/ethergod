@@ -1,11 +1,39 @@
 include ../_ui/game-card/game-card
 include ../_ui/tabs/tabs
 include ../_ui/button/button
+include ../_ui/game-card/game-card
 include ../table/table
 
 mixin player
   section.player.container
     .wrapper
+      .player__mobile
+        .player__mobile-main
+          +game-card('player__mobile-card')
+          .player__mobile-info
+            p.player__mobile-heading Monopoly with gnomes
+            p.player__mobile-desc Evolution gaming
+            .player__mobile-actions
+              a.player__game-control(href="javascript:void(0)", data-control="info")
+              a.player__game-control(href="javascript:void(0)", data-control="favorite")
+              a.player__game-control.js-open-popup(href="javascript:void(0)", data-control="statistics", data-popup="statistics")
+              .player__mobile-bubble.js-player-bubble
+                .player__mobile-bubble-close.js-player-bubble-close
+                p.player__mobile-bubble-tag Игры EtherGod
+                p.player__mobile-bubble-tag Lorem ipsum dolor sit amet.
+                p.player__mobile-bubble-tag Lorem ipsum.
+                p.player__mobile-bubble-tag Игры EtherGod
+                p.player__mobile-bubble-tag Lorem ipsum dolor sit.
+                p.player__mobile-bubble-tag Игры EtherGod
+                p.player__mobile-bubble-tag Игры EtherGod
+        .player__mobile-balance
+          p.player__game-balance-text Отображать баланс в
+          .player__game-dropdown.js-player-dropdown(data-dropdown)
+            .player__game-dropdown-item.js-player-dropdown-item(data-icon="eth") ETH
+            .player__game-dropdown-inner.js-player-dropdown-inner
+              .player__game-dropdown-item.js-player-dropdown-item(data-icon="eth-grey") BTC
+        +button-primary('link', 'Реальная игра', 'player__game-btn js-play-real', {link: 'javascript:void(0)'})
+        a(href="javascript:void(0)").player__game-btn.js-play-entertain Игра для развлечения
       .player__game
         .player__game-inner
           .player__game-overlay
@@ -47,21 +75,24 @@ mixin player
                       p.player__about-table-cell Коэффициент
                       p.player__about-table-cell Выплата
                     .player__about-table-row
-                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell
+                        a(href="javascript:void(0)", data-popup="user").js-open-popup SeymourBusts
                       p.player__about-table-cell 31.02.2005
                       p.player__about-table-cell
                         span 4.00000000
                       p.player__about-table-cell 0,00×
                       p.player__about-table-cell -4.00000000
                     .player__about-table-row
-                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell
+                        a(href="javascript:void(0)", data-popup="user").js-open-popup SeymourBusts
                       p.player__about-table-cell 31.02.2005
                       p.player__about-table-cell
                         span 4.00000000
                       p.player__about-table-cell 0,00×
                       p.player__about-table-cell -4.00000000
                     .player__about-table-row
-                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell
+                        a(href="javascript:void(0)", data-popup="user").js-open-popup SeymourBusts
                       p.player__about-table-cell 31.02.2005
                       p.player__about-table-cell
                         span 4.00000000
@@ -76,21 +107,24 @@ mixin player
                       p.player__about-table-cell Коэффициент
                       p.player__about-table-cell Выплата
                     .player__about-table-row
-                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell
+                        a(href="javascript:void(0)", data-popup="user").js-open-popup SeymourBusts
                       p.player__about-table-cell 31.02.2005
                       p.player__about-table-cell
                         span 4.00000000
                       p.player__about-table-cell 0,00×
                       p.player__about-table-cell -4.00000000
                     .player__about-table-row
-                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell
+                        a(href="javascript:void(0)", data-popup="user").js-open-popup SeymourBusts
                       p.player__about-table-cell 31.02.2005
                       p.player__about-table-cell
                         span 4.00000000
                       p.player__about-table-cell 0,00×
                       p.player__about-table-cell -4.00000000
                     .player__about-table-row
-                      p.player__about-table-cell SeymourBusts
+                      p.player__about-table-cell
+                        a(href="javascript:void(0)", data-popup="user").js-open-popup SeymourBusts
                       p.player__about-table-cell 31.02.2005
                       p.player__about-table-cell
                         span 4.00000000

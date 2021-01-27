@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>Транзакции | EtherGod</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Page description">
+    <meta name="keywords" content="page, keywords">
+    <meta name="theme-color" content="#000000">
+    <meta name="copyright" content="Author">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Application Name">
+    <meta name="msapplication-TileImage" content="img/favicons/144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+        <meta property="og:title" content="">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="">
+    <style>*,:after,:before{box-sizing:border-box}:after,:before{text-decoration:inherit;vertical-align:inherit}html{line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-break:break-word}body{margin:0}a{background-color:transparent}img{vertical-align:middle}img{border-style:none}button,input{margin:0}button{overflow:visible;text-transform:none}[type=submit],button{-webkit-appearance:button}input{overflow:visible}[type=checkbox]{padding:0}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}::-moz-focus-inner{border-style:none;padding:0}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}a,button,input,label{-ms-touch-action:manipulation}button,input{background-color:transparent;border:1px solid WindowFrame;color:inherit;font:inherit;letter-spacing:inherit;padding:.25em .375em}::-ms-expand{display:none}:-ms-input-placeholder{color:rgba(0,0,0,.54)}@font-face{font-family:Segoe UI;src:url(../../fonts/SegoeUI/SegoeUI-Light.woff) format("woff");font-weight:100;font-style:normal}@font-face{font-family:Segoe UI;src:url(../../fonts/SegoeUI/SegoeUI.woff) format("woff");font-weight:300;font-style:normal}@font-face{font-family:Segoe UI;src:url(../../fonts/SegoeUI/SegoeUI-Semibold.woff) format("woff");font-weight:500;font-style:normal}@font-face{font-family:Segoe UI;src:url(../../fonts/SegoeUI/SegoeUI-Bold.woff) format("woff");font-weight:700;font-style:normal}*{box-sizing:border-box}body{width:100%;padding-top:62px;background-color:#f3f4f8;color:#2f2f44;line-height:1.5;font-family:Segoe UI,Helvetica,sans-serif;font-size:16px;font-weight:300}p{margin:0}.container{width:100%}.container .wrapper{max-width:1280px;width:100%;margin:0 auto;padding:0 15px}.button{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;width:100%;height:48px;padding-bottom:3px;border-radius:10px;border:none;text-decoration:none;color:#fff;outline:0;text-align:center;font-size:14px}.button--primary{background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff)}.button--secondary{background-color:#28bc00}.button--tertiary{width:auto;height:auto;color:#6969ff;font-size:14px;font-weight:500}.button--quoternary{height:38px;padding-bottom:4px;border:1px solid #6969ff;color:#6969ff}.button--quinary{height:38px;padding-bottom:5px;border:1px solid #7b7b8f;color:#7b7b8f}.tabs__head{-ms-flex-pack:justify;justify-content:space-between}.tabs__grid,.tabs__head{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-align:center;align-items:center}.tabs__grid{z-index:1;position:relative;-ms-flex-pack:start;justify-content:flex-start;width:1010px}.tabs__grid:after{z-index:1;content:"";position:absolute;bottom:0;left:0;width:100%;height:2px;border-radius:2px;background-color:#f3f4f8}.tabs__item{z-index:2;position:relative;display:block;padding:10px 20px;color:#2f2f44;text-decoration:none}.tabs__item:before{z-index:2;content:"";position:absolute;bottom:0;left:50%;width:0;height:2px;border-radius:2px;background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff)}.tabs__item--active:before{left:0;width:100%}.tabs .js-tabs-content:not(:first-child){display:none}.popup{z-index:7;position:fixed;top:0;left:0;display:none;width:100%;height:100%}.popup__container{position:relative;width:100%;height:100%;padding:50px 0;overflow:scroll}.popup__backdrop{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;background-color:hsla(0,0%,100%,.7)}.popup__wrapper{z-index:2;position:relative;min-height:100%;width:100%;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}.popup__window{overflow:hidden;position:relative;width:600px;background-color:#fff;box-shadow:0 0 12px -4px rgba(13,13,30,.3);border-radius:10px}.popup__window--chatrules{width:320px}.popup__content{padding:0 25px 25px;background-color:#fff}.popup__head{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;padding:7px 5px 7px 15px;background-color:#fff}.popup__title{position:relative;padding-left:25px;font-size:14px;font-weight:500}.popup__title:before{content:"";position:absolute;top:3px;left:0;width:16px;height:16px;background-size:contain;background-position:50%;background-repeat:no-repeat}.popup__title[data-icon=default]:before{background-image:url(../../img/icons/eth.svg)}.popup__close{width:20px;height:20px;background-image:url(../../img/icons/close.svg);background-position:50%;background-repeat:no-repeat}.popup__wallet-content{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.popup__wallet-content{position:relative;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:start;justify-content:flex-start;padding-top:25px}.popup__wallet-auth{margin-top:35px;border-radius:10px 10px 0 0;background-color:#f3f4f8}.popup__wallet-auth-text{padding:12px 0;text-align:center;font-size:14px;font-weight:500}.popup__dropdown{position:relative;display:inline-block;margin-bottom:25px}.popup__dropdown--reverse>.popup__dropdown-item:after{left:auto!important;right:-24px}.popup__dropdown>.popup__dropdown-item{background-color:#f3f4f8}.popup__dropdown>.popup__dropdown-item:after{content:"";position:absolute;left:-24px;top:10px;width:24px;height:24px;background-image:url(../../img/icons/caret.svg);background-position:50%;background-repeat:no-repeat}.popup__dropdown-item{z-index:2;position:relative;padding:9px 10px 9px 35px;border-radius:10px;white-space:nowrap;font-size:15px;font-weight:500}.popup__dropdown-item:before{content:"";position:absolute;left:12px;top:12px;width:16px;height:16px;background-size:contain;background-position:50%;background-repeat:no-repeat}.popup__dropdown-item[data-icon=eth]:before{background-image:url(../../img/icons/eth.svg)}.popup__dropdown-item[data-icon=eth-grey]:before{background-image:url(../../img/icons/eth-grey.svg)}.popup__dropdown-inner{z-index:1;position:absolute;top:0;left:0;display:none;padding-top:40px;border-radius:10px;background-color:#f3f4f8;box-shadow:0 0 18px rgba(0,0,0,.12)}.popup__input{margin-bottom:20px}.popup__qr{width:130px;height:130px;margin-bottom:10px}.popup__desc{color:#7b7b8f;text-align:center;line-height:1.33;font-size:14px;font-weight:500}.popup__checkbox,.popup__desc:not(:last-child){margin-bottom:25px}.popup__checkbox{-ms-flex-item-align:start;align-self:flex-start}.popup__dropdowns{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;margin-bottom:25px}.popup__dropdowns .popup__dropdown{margin-bottom:0}.popup__swap{width:20px;height:20px;margin:0 15px;background-image:url(../../img/icons/swap.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.popup__vip{padding-top:25px}.popup__vip--progress{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center}.popup__vip-image{width:100%;height:auto;margin-bottom:10px}.popup__vip-desc{width:515px;margin-bottom:25px;color:#7b7b8f;text-align:center;line-height:1.33;font-size:14px;font-weight:500}.popup__chatrules{padding:10px 10px 0}.popup__chatrules-item{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:start;align-items:flex-start}.popup__chatrules-item:not(:last-child){margin-bottom:15px}.popup__chatrules-counter{-ms-flex-negative:0;flex-shrink:0;width:15px;color:#7b7b8f;font-size:14px}.popup__chatrules-text{font-size:14px}.popup__user-info{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;padding:30px 0 20px}.popup__user-name{position:relative;margin-bottom:6px;padding-left:22px;font-size:14px;font-weight:500}.popup__user-name:before{content:"";position:absolute;top:3px;left:0;width:14px;height:14px;background-image:url(../../img/icons/stage-new.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.popup__user-registered{margin-bottom:15px;color:#7b7b8f;font-size:14px}.popup__user-actions{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}.popup__user-action{margin:0 13px;background-position:50%;background-repeat:no-repeat}.popup__user-action[data-action=transfer]{width:12px;height:12px;background-image:url(../../img/icons/wallet-violet.svg)}.popup__user-action[data-action=blacklist]{width:16px;height:16px;background-image:url(../../img/icons/blacklist.svg)}.popup__user-table--statistics .popup__user-table-cell:first-child{width:118px}.popup__user-table--statistics .popup__user-table-cell:nth-child(2){width:146px}.popup__user-table--statistics .popup__user-table-cell:nth-child(3){width:120px}.popup__user-table--tournament .popup__user-table-cell:first-child{width:220px}.popup__user-table--tournament .popup__user-table-cell:nth-child(2){width:114px}.popup__user-table--tournament .popup__user-table-cell:nth-child(3){width:70px}.popup__user-table-head{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center;color:#7b7b8f;font-size:14px;font-weight:500}.popup__user-table-head .popup__user-table-cell{padding-right:0!important;color:#7b7b8f!important}.popup__user-table-head .popup__user-table-cell:after{display:none}.popup__user-table-row{width:calc(100% + 30px);margin-left:-15px;padding:0 15px;border-radius:10px;color:#7b7b8f;background-color:#f3f4f8;font-size:14px;font-weight:500}.popup__user-table-row:not(:last-child){margin-bottom:10px}.popup__user-table-row-heads{display:none}.popup__user-table-row-inner{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center}.popup__user-table-cell{padding:15px 0}.popup__user-table-cell:nth-child(4){position:relative;width:166px;padding-right:20px;text-align:right;color:#2f2f44}.popup__user-table-cell:nth-child(4):after{content:"";position:absolute;right:0;top:18px;width:14px;height:14px;border-radius:50%;background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff)}.popup__user-table-cell--win{color:#28bc00!important}.popup__user-table-cell--lose{color:#ff564e!important}.popup__user-table-cell--place{color:#6969ff!important}.input{position:relative;display:block;width:100%}.input--error .input__error{display:block}.input--sum .input__field{padding-right:150px}.input--sum .input__error{right:140px}.input__label{margin-bottom:10px}.input__label{color:#7b7b8f;line-height:1.33;font-size:14px;font-weight:500}.input__field{display:block;width:100%;height:48px;padding:13px 25px 13px 16px;border:none;border-radius:10px;background-color:#f3f4f8;outline:0;line-height:1.33;word-break:keep-all;-webkit-appearance:none;font-family:Segoe UI,Helvetica,sans-serif;font-size:14px;font-weight:500}.input__field::-webkit-calendar-picker-indicator,.input__field::-webkit-inner-spin-button{opacity:0;-webkit-appearance:none}.input__field::-ms-input-placeholder{opacity:1;color:#7b7b8f}.input__field::-webkit-input-placeholder{opacity:1;color:#7b7b8f}.input__field::-moz-placeholder{opacity:1;color:#7b7b8f}.input__field:-ms-input-placeholder{opacity:1;color:#7b7b8f}.input__field:-moz-placeholder{opacity:1;color:#7b7b8f}.input__field--copy{padding-right:60px}.input__field[type=number]::-webkit-inner-spin-button,.input__field[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.input__copy{-webkit-appearance:none;position:absolute;right:0;bottom:0;width:48px;height:48px;border:none;border-left:2px solid #fff;border-radius:0 10px 10px 0;outline:0;box-shadow:none;background-image:url(../../img/icons/copy.svg);background-color:#f3f4f8;background-position:50%;background-repeat:no-repeat}.input__max{position:absolute;width:125px;bottom:0;right:0}.input__inner{position:relative}.input__error{display:none;top:0;height:48px;padding:13px 10px;border-radius:0 10px 10px 0;background-color:rgba(243,244,248,.7);-webkit-backdrop-filter:blur(1.5px);backdrop-filter:blur(1.5px);color:#ff564e}.input__additional,.input__error{position:absolute;right:0;line-height:1.33;font-size:14px;font-weight:500}.input__additional{top:-28px;color:#7b7b8f}.checkbox{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-align:start;align-items:flex-start}.checkbox__input{opacity:0;visibility:hidden;width:0;height:0;margin:0}.checkbox__box{position:relative;-ms-flex-negative:0;flex-shrink:0;width:15px;height:15px;margin-top:1px;border-radius:4px;background-color:#f3f4f8}.checkbox__box:after,.checkbox__box:before{opacity:0;content:"";position:absolute;top:calc(50% - 3px);left:calc(50% - 6px);width:11px;height:7px;background-image:url(../../img/icons/checkbox-mark.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.checkbox__box:before{z-index:1;transform-origin:center}.checkbox__box:after{z-index:2}.checkbox__text{margin:-4px 0 0 10px;font-size:16px;font-weight:500}.chat{z-index:4;position:fixed;bottom:0;right:50px;display:none;max-height:calc(100vh - 100px);width:360px;height:900px;box-shadow:0 0 18px rgba(0,0,0,.12);background-color:#fff}.chat__header{position:relative;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center;padding:10px 20px}.chat__header:after{content:"";position:absolute;bottom:0;left:10px;width:calc(100% - 20px);height:2px;border-radius:2px;background-color:#f3f4f8}.chat__heading{color:#7b7b8f;line-height:1.33;font-size:18px;font-weight:500}.chat__dropdown{position:relative;width:130px}.chat__dropdown>.chat__dropdown-item:after{content:"";position:absolute;right:12px;top:14px;width:14px;height:8px;background-image:url(../../img/icons/caret.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.chat__dropdown-inner{z-index:1;position:absolute;display:none;width:100%;margin-top:-34px;padding-top:34px;border-radius:10px;background-color:#f3f4f8;box-shadow:0 0 18px rgba(0,0,0,.12)}.chat__dropdown-item{z-index:2;position:relative;padding:5px 30px;color:#2f2f44;border-radius:10px;font-size:16px;font-weight:500}.chat__dropdown-item[data-lang=rus]:before{background-image:url(../../img/icons/rus.svg)}.chat__dropdown-item[data-lang=eng]:before{background-image:url(../../img/icons/eng.svg)}.chat__dropdown-item:before{content:"";position:absolute;left:13px;top:11px;width:12px;height:12px;background-size:contain}.chat__close,.chat__dropdown-item:before{background-position:50%;background-repeat:no-repeat}.chat__close{width:24px;height:24px;margin-left:auto;background-image:url(../../img/icons/close.svg)}.chat__messages{position:relative;height:calc(100% - 180px)}.chat__messages:after{content:"";position:absolute;bottom:0;left:0;width:100%;height:50px;background-image:linear-gradient(1turn,#fff 20%,hsla(0,0%,100%,0))}.chat__messages--bottom .chat__messages-scroll,.chat__messages--bottom:after{display:none}.chat__messages-scroll{z-index:2;position:absolute;bottom:15px;left:calc(50% - 18px);width:36px;height:36px;border-radius:50%;box-shadow:0 0 30px -7px rgba(0,0,0,.25);background-color:#b8b8c4;background-image:url(../../img/icons/arrow.svg);background-position:50%;background-repeat:no-repeat}.chat__messages-wrapper{overflow:auto;height:100%;padding:0 10px 10px;-ms-overflow-style:none;scrollbar-width:none}.chat__messages-wrapper::-webkit-scrollbar{display:none}.chat__messages-block{margin-top:10px}.chat__messages-date{color:#7b7b8f;font-size:10px}.chat__messages-item{padding:10px;border-radius:10px;background-color:#f3f4f8;line-height:1.33;font-size:14px}.chat__messages-item:not(:last-child){margin-bottom:5px}.chat__messages-name{position:relative;padding-left:15px;color:#7b7b8f;text-decoration:none}.chat__messages-name:before{content:"";position:absolute;top:5px;left:0;width:10px;height:10px;background-image:url(../../img/icons/stage-new.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.chat__messages-actions{z-index:3;position:absolute;bottom:0;left:0;display:none;width:100%;max-height:calc(100% - 50px);height:400px;padding:10px 7px 10px 25px;border-bottom:1px solid #fff;border-radius:10px 10px 0 0;background-color:#f3f4f8;box-shadow:0 -5px 24px -13px rgba(0,0,0,.25)}.chat__messages-actions-wrapper{overflow:auto;height:100%;padding-right:40px}.chat__messages-actions-wrapper::-webkit-scrollbar{width:6px}.chat__messages-actions-wrapper::-webkit-scrollbar-track{background:#e4e4ea;border-radius:10px}.chat__messages-actions-wrapper::-webkit-scrollbar-thumb{border-radius:10px;background-color:#fff}.chat__messages-actions-item{display:block;padding:7px 0;color:#7b7b8f;text-decoration:none;line-height:1.3;font-size:15px}.chat__messages-actions-item:not(:last-child){border-bottom:1px solid #fff}.chat__messages-actions-item[data-command]{color:#2f2f44}.chat__messages-actions-item[data-command] span{color:#7b7b8f}.chat__footer{position:relative;padding:10px 10px 25px;background-color:#f3f4f8}.chat__footer-input{display:block;width:100%;height:36px;margin-bottom:10px;padding:8px 35px 9px 10px;border:1px solid #ddd;border-radius:10px;background-color:#fff;outline:0;line-height:1.33;word-break:keep-all;-webkit-appearance:none;font-family:Segoe UI,Helvetica,sans-serif;font-size:14px;font-weight:500}.chat__footer-input-counter{position:absolute;top:19px;right:20px;color:#ddd;font-size:12px}.chat__footer-actions{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;padding-left:10px}.chat__footer-online{position:relative;padding-left:15px;font-size:14px}.chat__footer-online:before{content:"";position:absolute;top:7px;left:0;width:8px;height:8px;border-radius:50%;background-color:#28bc00}.chat__footer-rules{color:#6969ff;text-decoration:none;font-size:14px}.chat__footer-buttons{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-align:center;align-items:center}.chat__footer-btn{width:38px;margin-right:10px}.chat__footer-send{width:95px}.header{z-index:6;position:fixed;width:100%;padding:8px 0;box-shadow:0 0 10px rgba(0,0,0,.1)}.header,.header__menu{top:0;left:0;background-color:#fff}.header__menu{z-index:5;position:absolute;overflow-y:auto;width:240px;height:100vh;padding:20px 15px 40px;border-bottom-right-radius:10px;box-shadow:0 0 18px rgba(0,0,0,.12);transform:translateX(-100%)}.header__menu-head{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;padding:0 0 20px 15px}.header__menu-title{color:#7b7b8f;font-size:18px;font-weight:500}.header__menu-close{width:24px;height:24px;margin-right:-6px;background-image:url(../../img/icons/close.svg);background-position:50%;background-repeat:no-repeat}.header__menu-block{position:relative;padding:20px 0}.header__menu-block:before{content:"";position:absolute;top:0;left:15px;width:calc(100% - 50px);height:2px;border-radius:2px;background-color:#f3f4f8}.header__menu-item{position:relative;display:block;height:37px;padding:6px 0 0 30px;border-radius:10px;color:#2f2f44;text-decoration:none;font-size:16px;font-weight:500}.header__menu-item--highlighted{background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff);color:#fff}.header__menu-item:before{content:"";position:absolute;left:11px;top:11px;width:14px;height:14px;background-position:50%;background-repeat:no-repeat}.header__menu-item:not(:last-child){margin-bottom:4px}.header__menu-item[data-icon=star]:before{background-image:url(../../img/icons/star.svg)}.header__menu-item[data-icon=recent]:before{background-image:url(../../img/icons/recent.svg)}.header__menu-item[data-icon=fire]:before{background-image:url(../../img/icons/fire.svg)}.header__menu-item[data-icon=slots]:before{background-image:url(../../img/icons/slots.svg)}.header__menu-item[data-icon=rocket]:before{background-image:url(../../img/icons/rocket.svg)}.header__menu-item[data-icon=rapid]:before{background-image:url(../../img/icons/rapid.svg)}.header__menu-item[data-icon=dice]:before{background-image:url(../../img/icons/dice.svg)}.header__menu-item[data-icon=cards]:before{background-image:url(../../img/icons/cards.svg)}.header__menu-item[data-icon=roulette]:before{background-image:url(../../img/icons/roulette.svg)}.header__menu-item[data-icon=support]:before{background-image:url(../../img/icons/support.svg)}.header__menu-dropdown{position:relative;width:130px}.header__menu-dropdown>.header__menu-dropdown-item:after{content:"";position:absolute;right:12px;top:14px;width:14px;height:8px;background-image:url(../../img/icons/caret.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.header__menu-dropdown-inner{z-index:1;position:absolute;display:none;width:100%;margin-top:-34px;padding-top:34px;border-radius:10px;background-color:#f3f4f8;box-shadow:0 0 18px rgba(0,0,0,.12)}.header__menu-dropdown-item{z-index:2;position:relative;padding:5px 30px;color:#2f2f44;border-radius:10px;font-size:16px;font-weight:500}.header__menu-dropdown-item[data-lang=rus]:before{background-image:url(../../img/icons/rus.svg)}.header__menu-dropdown-item[data-lang=eng]:before{background-image:url(../../img/icons/eng.svg)}.header__menu-dropdown-item:before{content:"";position:absolute;left:13px;top:11px;width:12px;height:12px;background-size:contain;background-position:50%;background-repeat:no-repeat}.header__wrapper{-ms-flex-pack:justify;justify-content:space-between}.header__col,.header__wrapper{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-align:center;align-items:center}.header__col{-ms-flex-pack:start;justify-content:flex-start}.header__burger{width:24px;height:24px;margin:0 16px 0 -6px;background-image:url(../../img/icons/burger.svg);background-position:50%;background-repeat:no-repeat}.header__search{position:relative;margin-right:20px;padding-left:17px;text-decoration:none;color:#2f2f44;font-size:15px;font-weight:500}.header__search:before{content:"";position:absolute;left:0;top:7px;width:10px;height:10px;background-image:url(../../img/icons/search.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.header__context{position:relative;width:24px;height:24px}.header__context:not(:last-child){margin-right:12px}.header__context-trigger{width:24px;height:24px;background-position:50%;background-repeat:no-repeat}.header__context-trigger[data-icon=profile]{background-image:url(../../img/icons/profile.svg)}.header__context-trigger[data-icon=chat]{background-image:url(../../img/icons/chat.svg)}.header__context-menu{position:absolute;top:35px;right:-10px;display:none;width:235px;padding:10px 0;border-radius:10px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.2)}.header__context-menu:before{content:"";position:absolute;top:-25px;right:6px;width:34px;height:34px;background-image:url(../../img/icons/bubble-arrow.png);background-position:50%;background-size:contain;background-repeat:no-repeat}.header__context-menu--small{width:145px}.header__context-menu-head{position:relative;padding:0 10px 10px;font-size:14px;font-weight:500}.header__context-menu-head:after{content:"";position:absolute;bottom:0;left:10px;width:calc(100% - 20px);height:2px;border-radius:2px;background-color:#f3f4f8}.header__context-menu-head span{color:#7b7b8f}.header__context-menu-item{position:relative;display:block;padding-top:8px;height:40px;padding-left:30px;text-decoration:none;color:#2f2f44;font-size:14px;font-weight:500}.header__context-menu-item:before{content:"";position:absolute;left:11px;top:12px;width:14px;height:14px;background-position:50%;background-repeat:no-repeat}.header__context-menu-item[data-icon=slots]:before{background-image:url(../../img/icons/slots.svg)}.header__context-menu-item[data-icon=rocket]:before{background-image:url(../../img/icons/rocket.svg)}.header__context-menu-item[data-icon=rapid]:before{background-image:url(../../img/icons/rapid.svg)}.header__context-menu-item[data-icon=dice]:before{background-image:url(../../img/icons/dice.svg)}.header__context-menu-item[data-icon=cards]:before{background-image:url(../../img/icons/cards.svg)}.header__context-menu-item[data-icon=roulette]:before{background-image:url(../../img/icons/roulette.svg)}.header__context-menu-item span{position:absolute;left:7px;top:10px;width:18px;height:18px;border-radius:50%;background-color:#ff564e;color:#fff;text-align:center;line-height:18px;font-size:10px;font-weight:500}.header__crypto{position:relative}.header__crypto>.header__crypto-item{border-radius:10px 0 0 10px;background-color:#f3f4f8}.header__crypto>.header__crypto-item:after{content:"";position:absolute;left:-24px;top:10px;width:24px;height:24px;background-image:url(../../img/icons/caret.svg);background-position:50%;background-repeat:no-repeat}.header__crypto-item{z-index:2;position:relative;min-width:125px;padding:9px 10px 9px 35px;border-radius:10px;font-size:15px;font-weight:500}.header__crypto-item:before{content:"";position:absolute;left:12px;top:12px;width:16px;height:16px;background-size:contain;background-position:50%;background-repeat:no-repeat}.header__crypto-item[data-icon=eth]:before{background-image:url(../../img/icons/eth.svg)}.header__crypto-item[data-icon=eth-grey]:before{background-image:url(../../img/icons/eth-grey.svg)}.header__crypto-inner{z-index:1;position:absolute;top:0;left:0;display:none;width:100%;padding-top:40px;border-radius:10px 0 10px 10px;background-color:#f3f4f8;box-shadow:0 0 18px rgba(0,0,0,.12)}.header__crypto-label{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center;padding:10px 15px 15px}.header__crypto-label-text{margin-right:10px;color:#7b7b8f;line-height:1.33;font-size:14px}.header__crypto-label-switch{position:relative;width:24px;height:12px;border-radius:20px;background-color:#b8b8c4}.header__crypto-label-switch:before{content:"";position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-radius:50%;background-color:#fff;box-shadow:0 0 5px -3px rgba(0,0,0,.25)}.header__wallet{position:relative;display:block;width:110px;height:40px;padding:9px 0 0 35px;border-radius:0 10px 10px 0;background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff);color:#fff;text-decoration:none;font-size:14px;font-weight:500}.header__wallet:before{content:"";position:absolute;top:12px;left:15px;width:14px;height:14px;background-image:url(../../img/icons/wallet.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.header-bar{display:none}.progress--grey .progress__progress-bar{background-color:#f3f4f8}.progress__progress{width:450px;padding:20px 0 30px}.progress__progress-bar{height:12px;border-radius:10px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.01)}.progress__progress-bar-fill{height:100%;border-radius:10px;background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff)}.progress__progress-carets{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start;padding:3px 2px;margin-bottom:10px}.progress__progress-caret{width:13px;height:13px;background-size:contain;background-position:50%;background-repeat:no-repeat}.progress__progress-caret[data-caret=blue]{background-image:url(../../img/icons/progress-caret-blue.svg)}.progress__progress-caret[data-caret=grey]{background-image:url(../../img/icons/progress-caret-grey.svg)}.progress__progress-stages{-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start}.progress__progress-stage,.progress__progress-stages{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap}.progress__progress-stage{-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center}.progress__progress-stage-icon{width:12px;height:12px;margin-right:8px;background-size:contain;background-position:50%;background-repeat:no-repeat}.progress__progress-stage-icon[data-stage=new]{background-image:url(../../img/icons/stage-new.svg)}.progress__progress-stage-icon[data-stage=bronze]{background-image:url(../../img/icons/stage-bronze.svg)}.levels__item{width:100%;margin-bottom:10px;border-radius:10px;background-color:#f3f4f8}.levels__item-head{position:relative;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center;padding:15px}.levels__item-head:after{content:"";position:absolute;right:20px;top:calc(50% - 12px);width:24px;height:24px;background-image:url(../../img/icons/caret.svg);background-position:50%;background-repeat:no-repeat}.levels__item-icon{width:12px;height:12px;margin-right:8px;background-size:contain;background-position:50%;background-repeat:no-repeat}.levels__item-icon[data-stage=new]{background-image:url(../../img/icons/stage-new.svg)}.levels__item-icon[data-stage=bronze]{background-image:url(../../img/icons/stage-bronze.svg)}.levels__item-icon[data-stage=silver]{background-image:url(../../img/icons/stage-silver.svg)}.levels__item-icon[data-stage=gold]{background-image:url(../../img/icons/stage-gold.svg)}.levels__item-icon[data-stage=platinum]{background-image:url(../../img/icons/stage-platinum.svg)}.levels__item-desc,.levels__item-title{font-size:14px;font-weight:500}.levels__item-desc{display:none;padding:15px 80px 20px 20px;border-top:2px solid #fff;color:#7b7b8f;line-height:1.3}.transactions__heading{position:relative;padding:30px 0 25px 25px;font-size:18px;font-weight:500}.transactions__heading:before{content:"";position:absolute;top:35px;left:0;width:16px;height:17px;background-image:url(../../img/icons/gear-gradient.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.transactions__content{padding:15px 25px 25px;border-radius:10px;background-color:#fff}.transactions__content .tabs__grid{width:100%}.transactions__table--stats .transactions__table-cell:nth-child(2){width:200px}.transactions__table--stats .transactions__table-cell:nth-child(3){width:245px}.transactions__table--stats .transactions__table-cell:nth-child(4){width:330px;text-align:left}.transactions__table--stats .transactions__table-cell:nth-child(4):after{display:none}.transactions__table--stats .transactions__table-cell:nth-child(5){position:relative;width:200px;padding-right:20px;text-align:right;color:#2f2f44}.transactions__table--stats .transactions__table-cell:nth-child(5):after{content:"";position:absolute;right:0;top:18px;width:14px;height:14px;border-radius:50%;background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff)}.transactions__table-head{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center;color:#7b7b8f;font-size:14px;font-weight:500}.transactions__table-head .transactions__table-cell{padding-right:0!important;color:#7b7b8f!important}.transactions__table-head .transactions__table-cell:after{display:none}.transactions__table-row{width:calc(100% + 30px);margin-bottom:10px;margin-left:-15px;padding:0 15px;border-radius:10px;color:#7b7b8f;background-color:#f3f4f8;font-size:14px;font-weight:500}.transactions__table-row-heads{display:none}.transactions__table-row-inner{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:center;align-items:center}.transactions__table-cell{padding:15px 0}.transactions__table-cell:first-child{width:225px}.transactions__table-cell:nth-child(2){width:470px}.transactions__table-cell:nth-child(3){width:305px}.transactions__table-cell:nth-child(4){position:relative;width:200px;padding-right:20px;color:#2f2f44;text-align:right}.transactions__table-cell:nth-child(4):after{content:"";position:absolute;right:0;top:18px;width:14px;height:14px;border-radius:50%;background-image:linear-gradient(278.2deg,#d200ff 2.55%,#00d1ff)}.transactions__table-cell--win{color:#28bc00!important}.transactions__table-cell--lose{color:#ff564e!important}.transactions__table-cell--operations{color:#2f2f44}.transactions__table-cell a{color:#2f2f44;text-decoration:none}.footer__logo{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;padding:30px 0}.footer__logo-img{width:162px;height:auto}.footer__inner{padding:70px 130px 100px;border-radius:10px 10px 0 0;background-color:#fff}.footer__table{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start;margin-bottom:65px}.footer__col{width:175px}.footer__title{margin-bottom:10px;font-weight:500}.footer__link{display:block;color:#7b7b8f;text-decoration:none;font-weight:100}.footer__link:not(:last-child){margin-bottom:10px}.footer__info{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start;-ms-flex-align:stretch;align-items:stretch;color:#7b7b8f;font-weight:100}.footer__about,.footer__info{display:-ms-flexbox;display:flex}.footer__about{-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start}.footer__age{width:70px;height:70px;margin:0 25px 0 auto;background-image:url(../../img/icons/age.svg);background-size:contain;background-position:50%;background-repeat:no-repeat}.footer__disclaimer{width:465px}@media only screen and (max-width:1279px){body{padding-top:64px;padding-bottom:59px}.container .wrapper{max-width:370px;padding:0 20px}.button{font-size:13px}.tabs__head{display:block;position:relative;white-space:nowrap;overflow:auto;width:calc(100% + 20px);margin:0 -10px;padding:0 10px;-ms-overflow-style:none;scrollbar-width:none}.tabs__head::-webkit-scrollbar{display:none}.tabs__grid{display:-ms-inline-flexbox;display:inline-flex;min-width:100%;width:auto}.popup__container{padding:30px 0}.popup__window{max-width:370px;width:calc(100% - 20px)}.popup__content{padding-left:10px;padding-right:10px}.popup__wallet-auth-text{font-size:13px}.popup__vip-desc{width:100%}.popup__user-table{padding-top:25px}.popup__user-table-head{display:none}.popup__user-table-row{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start;width:100%;margin-left:0;padding:10px 10px 0}.popup__user-table-row-heads{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;width:130px}.popup__user-table-row-head{margin-bottom:10px;color:#7b7b8f;font-size:14px;font-weight:500}.popup__user-table-row-inner{-ms-flex-flow:column nowrap;flex-flow:column nowrap;width:calc(100% - 130px)}.popup__user-table-row-inner>*{width:100%!important;margin-bottom:10px;padding:0;text-align:right;color:#2f2f44}.popup__user-table-row-inner .popup__user-table-cell:nth-child(4){padding-right:20px}.popup__user-table-row-inner .popup__user-table-cell:nth-child(4):after{top:4px}.input--sum .input__field{padding-right:25px}.input__max{position:static;width:100%;margin-top:25px}.input__error{top:0!important;right:0!important}.checkbox__box:after,.checkbox__box:before{top:calc(50% - 4px);left:calc(50% - 5px)}.header{padding:12px 0}.header__wrapper{padding:0 10px!important}.header__burger,.header__col:last-child{display:none}.header__logo{width:100px;height:auto}.header__crypto>.header__crypto-item:after{top:8px}.header__crypto-item{min-width:110px;width:110px;padding:9px 5px 10px 30px;font-size:14px}.header__crypto-item:before{left:8px}.header__crypto-label-text{font-size:11px}.header__wallet{width:42px;font-size:0}.header__menu{position:fixed;width:100%;height:100%}.header-bar{z-index:4;position:fixed;bottom:0;left:0;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:start;align-items:flex-start;width:100%;padding:10px;border-top:1px solid #f3f4f8;background-color:#fff}.header-bar__item{width:52px;text-decoration:none}.header-bar__item:not(:last-child){margin-right:10px}.header-bar__icon{width:12px;height:12px;margin:0 auto 5px;background-size:contain;background-position:50%;background-repeat:no-repeat}.header-bar__icon[data-icon=burger]{background-image:url(../../img/icons/burger-black.svg)}.header-bar__icon[data-icon=search]{background-image:url(../../img/icons/search.svg)}.header-bar__icon[data-icon=chat]{background-image:url(../../img/icons/chat-simple.svg)}.header-bar__icon[data-icon=hot]{background-image:url(../../img/icons/hot.svg)}.header-bar__icon[data-icon=profile]{background-image:url(../../img/icons/profile.svg)}.header-bar__label{text-align:center;color:#2f2f44;font-size:14px;font-weight:500}.progress{width:100%}.progress__progress{width:100%;padding:20px 0}.transactions{padding-top:25px}.transactions__heading{position:relative;display:inline-block;margin-left:-10px;margin-bottom:25px;padding:15px 20px 15px 40px;border-radius:10px;background-color:#fff;line-height:1.33;font-size:14px;font-weight:500}.transactions__heading:before{content:"";position:absolute;top:calc(50% - 6px);left:20px;width:12px;height:12px}.transactions__content{width:calc(100% + 40px);margin-left:-20px;padding:10px 10px 20px}.transactions__content .tabs__grid{width:auto}.transactions__table{padding-top:25px}.transactions__table--stats .transactions__table-row-head:nth-child(2){-ms-flex-order:1;order:1}.transactions__table--stats .transactions__table-row-head:nth-child(4){-ms-flex-order:2;order:2}.transactions__table--stats .transactions__table-cell{padding-right:0}.transactions__table--stats .transactions__table-cell:nth-child(2){-ms-flex-order:1;order:1}.transactions__table--stats .transactions__table-cell:nth-child(4){-ms-flex-order:2;order:2;text-align:right}.transactions__table--stats .transactions__table-cell:nth-child(5):after{top:4px}.transactions__table-head{display:none}.transactions__table-row{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start;width:100%;margin-left:0;padding:10px 10px 0}.transactions__table-row-heads{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;width:130px}.transactions__table-row-head{margin-bottom:10px;color:#7b7b8f;font-size:14px;font-weight:500}.transactions__table-row-head:nth-child(2){-ms-flex-order:1;order:1}.transactions__table-row-inner{-ms-flex-flow:column nowrap;flex-flow:column nowrap;width:calc(100% - 130px)}.transactions__table-row-inner>*{width:100%!important;margin-bottom:10px;padding:0;text-align:right;color:#2f2f44}.transactions__table-row-inner .transactions__table-cell{padding-left:5px}.transactions__table-row-inner .transactions__table-cell:nth-child(2){-ms-flex-order:2;order:2}.transactions__table-row-inner .transactions__table-cell:nth-child(4):after{top:4px}.footer__inner{width:calc(100% + 40px);margin-left:-20px;padding:20px 20px 45px}.footer__table{-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:0}.footer__col{margin-bottom:30px}.footer__col:first-child{-ms-flex-order:1;order:1;width:130px;margin-right:35px}.footer__col:nth-child(2){-ms-flex-order:3;order:3;width:100%}.footer__col:nth-child(3){-ms-flex-order:2;order:2;width:110px}.footer__col:nth-child(4){-ms-flex-order:4;order:4;width:100%}.footer__info{-ms-flex-flow:column nowrap;flex-flow:column nowrap}.footer__about{-ms-flex-order:1;order:1}.footer__copyright{margin-bottom:25px}.footer__age{-ms-flex-order:3;order:3;margin:0 auto}.footer__disclaimer{-ms-flex-order:2;order:2;width:100%;margin-bottom:25px}}</style>
+    <link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'">
+    <link rel="shortcut icon" href="img/favicons/64x64.png" type="image/png">
+    <link rel="icon" href="img/favicons/152x152.png" type="image/png" sizes="152x152">
+    <link rel="icon" href="img/favicons/256x256.png" type="image/png" sizes="256x256">
+    <link rel="icon" href="img/favicons/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="img/favicons/152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="img/favicons/256x256.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="img/favicons/512x512.png" sizes="512x512">
+    <link rel="manifest" href="manifest.json">
+    <script defer="" src="js/libs.min.js"></script>
+    <script defer="" src="js/common.min.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header container">
+        <div class="header__menu js-menu">
+          <div class="header__menu-head">
+            <p class="header__menu-title">Ether God</p>
+            <div class="header__menu-close js-menu-close"></div>
+          </div>
+          <div class="header__menu-block"><a class="header__menu-item" href="#" data-icon="star">Избранное</a><a class="header__menu-item" href="#" data-icon="recent">Недавние</a></div>
+          <div class="header__menu-block"><a class="header__menu-item header__menu-item--highlighted" href="#" data-icon="fire">Игры EtherGod</a><a class="header__menu-item" href="#" data-icon="slots">Слоты</a><a class="header__menu-item" href="#" data-icon="rocket">Новинки</a><a class="header__menu-item" href="#" data-icon="rapid">Быстрые</a><a class="header__menu-item" href="#" data-icon="dice">Кости</a><a class="header__menu-item" href="#" data-icon="cards">Блек-джек</a><a class="header__menu-item" href="#" data-icon="roulette">Рулетки</a></div>
+          <div class="header__menu-block"><a class="header__menu-item" href="#" data-icon="support">Поддержка</a>
+            <div class="header__menu-dropdown js-header-dropdown">
+              <div class="header__menu-dropdown-item js-header-dropdown-item" data-lang="rus">Русский</div>
+              <div class="header__menu-dropdown-inner js-header-dropdown-inner">
+                <div class="header__menu-dropdown-item js-header-dropdown-item" data-lang="eng">English</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper header__wrapper">
+          <div class="header__col">
+            <div class="header__burger js-burger"></div><img class="header__logo" src="img/logo.svg" alt=""/>
+          </div>
+          <div class="header__col">
+            <div class="header__crypto js-header-dropdown" data-dropdown="data-dropdown">
+              <div class="header__crypto-item js-header-dropdown-item" data-currency="1" data-crypto="1.22342420" data-cash="2500.052" data-icon="eth">1.22342420</div>
+              <div class="header__crypto-inner js-header-dropdown-inner">
+                <div class="header__crypto-item js-header-dropdown-item" data-currency="2" data-crypto="1.22342420" data-cash="2500.052" data-icon="eth-grey">1.22342420</div>
+                <div class="header__crypto-label js-header-switch" data-type="crypto">
+                  <p class="header__crypto-label-text">View in $
+                    <div class="header__crypto-label-switch"></div>
+                  </p>
+                </div>
+              </div>
+            </div><a class="header__wallet js-open-popup" href="javascript:void(0)" data-popup="wallet">Кошелёк</a>
+          </div>
+          <div class="header__col"><a class="header__search" href="#">Поиск</a>
+            <div class="header__context">
+              <div class="header__context-trigger js-header-context" data-icon="profile"></div>
+              <div class="header__context-menu js-header-context-menu">
+                <p class="header__context-menu-head">Привет, <span>longusername123</span></p><a class="header__context-menu-item" href="#" data-icon="slots">Кошелёк</a><a class="header__context-menu-item js-open-popup" href="javascript:void(0)" data-popup="storage" data-icon="rocket">Хранилище</a><a class="header__context-menu-item js-open-popup" href="javascript:void(0)" data-popup="vip" data-icon="rapid">Вип-программа</a><a class="header__context-menu-item" href="#" data-icon="dice">Партнёрская программа</a><a class="header__context-menu-item" href="#" data-icon="cards">Статистика</a><a class="header__context-menu-item" href="#" data-icon="roulette">Транзакции</a><a class="header__context-menu-item" href="#" data-icon="dice">Настройки</a><a class="header__context-menu-item" href="#" data-icon="cards">Поддержка</a><a class="header__context-menu-item" href="#" data-icon="dice">Сменить профиль</a>
+              </div>
+            </div>
+            <div class="header__context">
+              <div class="header__context-trigger js-header-context" data-icon="chat"></div>
+              <div class="header__context-menu header__context-menu--small js-header-context-menu"><a class="header__context-menu-item js-chat-open" href="javascript:void(0)" data-icon="slots">Чат</a><a class="header__context-menu-item" href="#"><span>13 </span>Уведомления</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="header-bar">
+        <div class="header-bar__item js-burger">
+          <div class="header-bar__icon" data-icon="burger"></div>
+          <p class="header-bar__label">Меню</p>
+        </div><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="search"></div>
+          <p class="header-bar__label">Поиск</p></a><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="chat"></div>
+          <p class="header-bar__label">Чат</p></a><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="hot"></div>
+          <p class="header-bar__label">Игры</p></a><a class="header-bar__item" href="#">
+          <div class="header-bar__icon" data-icon="profile"></div>
+          <p class="header-bar__label">ЛК</p></a>
+      </div>
+      <section class="transactions container">
+        <div class="wrapper">
+          <p class="transactions__heading">Транзакции</p>
+          <div class="transactions__content">
+            <div class="tabs js-tabs">
+              <div class="tabs__head">
+                <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Депозиты</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Вывод средств</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="3">Переводы</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="4">Хранилище</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="5">Игровая статистика</a>
+                </div>
+              </div>
+              <div class="tabs__content">
+                <div class="js-tabs-content" data-content="1">
+                  <div class="transactions__table">
+                    <div class="transactions__table-head">
+                      <p class="transactions__table-cell">Дата и время</p>
+                      <p class="transactions__table-cell">Адрес пополнения</p>
+                      <p class="transactions__table-cell">Код операции</p>
+                      <p class="transactions__table-cell">Сумма</p>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес пополнения</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес пополнения</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес пополнения</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес пополнения</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес пополнения</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button button--tertiary transaction__more">Показать больше</button>
+                </div>
+                <div class="js-tabs-content" data-content="2">
+                  <div class="transactions__table">
+                    <div class="transactions__table-head">
+                      <p class="transactions__table-cell">Дата и время</p>
+                      <p class="transactions__table-cell">Адрес вывода</p>
+                      <p class="transactions__table-cell">Код операции</p>
+                      <p class="transactions__table-cell">Сумма</p>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес вывода</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес вывода</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес вывода</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес вывода</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Адрес вывода</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell">3GQkbgmfkBEXJtncqSMMNgLKNMEav2LU6J</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button button--tertiary transaction__more">Показать больше</button>
+                </div>
+                <div class="js-tabs-content" data-content="3">
+                  <div class="transactions__table">
+                    <div class="transactions__table-head">
+                      <p class="transactions__table-cell">Дата и время</p>
+                      <p class="transactions__table-cell">Получатель</p>
+                      <p class="transactions__table-cell">Код операции</p>
+                      <p class="transactions__table-cell">Сумма</p>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Получатель</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell"><a class="js-open-popup" href="javascript:void(0)" data-popup="user">segoeui111</a></p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Получатель</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell"><a class="js-open-popup" href="javascript:void(0)" data-popup="user">segoeui111</a></p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Получатель</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell"><a class="js-open-popup" href="javascript:void(0)" data-popup="user">segoeui111</a></p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Получатель</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell"><a class="js-open-popup" href="javascript:void(0)" data-popup="user">segoeui111</a></p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Получатель</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell"><a class="js-open-popup" href="javascript:void(0)" data-popup="user">segoeui111</a></p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button button--tertiary transaction__more">Показать больше</button>
+                </div>
+                <div class="js-tabs-content" data-content="4">
+                  <div class="transactions__table">
+                    <div class="transactions__table-head">
+                      <p class="transactions__table-cell">Дата и время</p>
+                      <p class="transactions__table-cell">Тип операции</p>
+                      <p class="transactions__table-cell">Код операции</p>
+                      <p class="transactions__table-cell">Сумма</p>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--operations">Депозит</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--operations">Депозит</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--operations">Депозит</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--operations">Депозит</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--operations">Депозит</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button button--tertiary transaction__more">Показать больше</button>
+                </div>
+                <div class="js-tabs-content" data-content="5">
+                  <div class="transactions__table transactions__table--stats">
+                    <div class="transactions__table-head">
+                      <p class="transactions__table-cell">Дата и время</p>
+                      <p class="transactions__table-cell">Тип операции</p>
+                      <p class="transactions__table-cell">Код операции</p>
+                      <p class="transactions__table-cell">Игра</p>
+                      <p class="transactions__table-cell">Сумма</p>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Игра</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--win">Выигрыш</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell"><a href="#">Monopoly with gnomes</a></p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Игра</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--lose">Проигрыш</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell"><a href="#">Monopoly with gnomes</a></p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Игра</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--win">Выигрыш</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell"><a href="#">Monopoly with gnomes</a></p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Игра</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--win">Выигрыш</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell"><a href="#">Monopoly with gnomes</a></p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                    <div class="transactions__table-row">
+                      <div class="transactions__table-row-heads">
+                        <p class="transactions__table-row-head">Дата и время</p>
+                        <p class="transactions__table-row-head">Тип операции</p>
+                        <p class="transactions__table-row-head">Код операции</p>
+                        <p class="transactions__table-row-head">Игра</p>
+                        <p class="transactions__table-row-head">Сумма</p>
+                      </div>
+                      <div class="transactions__table-row-inner">
+                        <p class="transactions__table-cell">31.02.2005 19:26</p>
+                        <p class="transactions__table-cell transactions__table-cell--lose">Проигрыш</p>
+                        <p class="transactions__table-cell">ka5kaksdk5kkakk</p>
+                        <p class="transactions__table-cell"><a href="#">Monopoly with gnomes</a></p>
+                        <p class="transactions__table-cell">4.00000000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button button--tertiary transaction__more">Показать больше</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer container">
+        <div class="wrapper">
+          <div class="footer__logo"><img class="footer__logo-img" src="img/logo-text.svg" alt=""/></div>
+          <div class="footer__inner">
+            <div class="footer__table">
+              <div class="footer__col">
+                <p class="footer__title">Казино</p><a class="footer__link" href="#">Игры</a><a class="footer__link" href="#">Вип-клуб</a><a class="footer__link" href="#">Акции</a><a class="footer__link" href="#">Главная страница</a>
+              </div>
+              <div class="footer__col">
+                <p class="footer__title">Помощь</p><a class="footer__link" href="#">Информация о рисках азартных игр</a><a class="footer__link" href="#">Контроль качества игр</a><a class="footer__link" href="#">Партнёрская программа</a>
+              </div>
+              <div class="footer__col">
+                <p class="footer__title">Сообщество</p><a class="footer__link" href="#">Форум</a><a class="footer__link" href="#">Facebook</a><a class="footer__link" href="#">Instagram</a><a class="footer__link" href="#">Vkontakte</a>
+              </div>
+              <div class="footer__col">
+                <p class="footer__title">О нас</p><a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Условия предоставляемых услуг</a><a class="footer__link" href="#">Самоисключение</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <div class="footer__about">
+                <p class="footer__copyright">EtherGod&trade; is operated by Gambling Club Ltd.</p>
+                <p class="footer__copyright">&copy; 2020 EtherGod. All right reserved.</p>
+              </div>
+              <div class="footer__age"></div>
+              <p class="footer__disclaimer">Азартные игры призваны развлекать. Помните, что Вы рискуете деньгами, когда делаете ставки. Не тратьте больше, чем можете позволить себе проиграть!</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="wallet">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Кошелёк</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__wallet">
+                <div class="tabs js-tabs">
+                  <div class="tabs__head">
+                    <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Депозит</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Вывод</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="3">Обмен</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="4">Перевод</a>
+                    </div>
+                  </div>
+                  <div class="tabs__content">
+                    <div class="js-tabs-content" data-content="1">
+                      <form class="popup__wallet-content" action="">
+                        <div class="popup__dropdown js-popup-dropdown" data-dropdown="data-dropdown">
+                          <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">ETH</div>
+                          <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">BTC</div>
+                          </div>
+                        </div>
+                        <label class="input popup__input     ">
+                          <p class="input__label">Ваш адрес для депозита ETH</p>
+                          <div class="input__inner">
+                            <input class="input__field input__field--copy" type="text" name="ethDepositWalletAddress" placeholder="" value="3AzDfas5sKcnbsksxC3eMdMbr3mXnzvgQY" readonly="readonly" step="any"/>
+                            <button class="input__copy js-input-copy"></button>
+                          </div>
+                        </label><img class="popup__qr" src="img/inhtml/qr.png" alt=""/>
+                        <p class="popup__desc">Отправляйте деньги только на этот адрес<br>Количество подтверждений - 1</p>
+                      </form>
+                    </div>
+                    <div class="js-tabs-content" data-content="2">
+                      <form class="popup__wallet-content js-form-withdraw" action="">
+                        <div class="popup__dropdown js-popup-dropdown" data-dropdown="data-dropdown">
+                          <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">0.00000000</div>
+                          <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
+                          </div>
+                        </div>
+                        <label class="input popup__input     input--error">
+                          <p class="input__label">Ваш адрес ETH</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="text" name="ethWithdrawalWalletAddress" placeholder="Введите адрес кошелька ETH для вывода" value="" step="any"/>
+                            <p class="input__error">Неверные данные</p>
+                          </div>
+                        </label>
+                        <label class="input popup__input input--sum    input--error">
+                          <p class="input__label">Сумма для вывода в ETH (минимум 0.0005 ETH)</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="number" name="ethSumToWithdraw" placeholder="Введите сумму для вывода" value="" data-min="0.0005" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
+                            <p class="input__error">Недостаточно средств</p>
+                          </div>
+                        </label>
+                        <p class="popup__desc">При переводе из вашего остающегося баланса будет вычтено <br>0.0001 ETH в качестве комиссии за обработку операции</p>
+                        <button class="button button--primary" type="submit">Вывести</button>
+                      </form>
+                    </div>
+                    <div class="js-tabs-content" data-content="3">
+                      <div class="popup__wallet-content">
+                        <p class="popup__desc">Внесите депозит в любой из поддерживаемых альтернатиных валют, доступных на Coinswitch, а затем автоматически конвертируйте его в валюту, доступную на EtherGod</p>
+                        <div class="popup__dropdowns">
+                          <div class="popup__dropdown js-popup-dropdown" data-dropdown="data-dropdown">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">USDT</div>
+                            <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                              <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">RUB</div>
+                            </div>
+                          </div>
+                          <div class="popup__swap"></div>
+                          <div class="popup__dropdown popup__dropdown--reverse js-popup-dropdown" data-dropdown="data-dropdown">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">ETH</div>
+                            <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                              <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">BTC</div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="popup__desc">Транзакции Coinswitch могут занять от 5 до 30 минут</p><a class="button button--primary" href="#">Посмотреть курс обмена</a>
+                      </div>
+                    </div>
+                    <div class="js-tabs-content" data-content="4">
+                      <form class="popup__wallet-content js-form-transfer" action="">
+                        <div class="popup__dropdown js-popup-dropdown" data-dropdown="data-dropdown">
+                          <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">0.00000000</div>
+                          <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
+                          </div>
+                        </div>
+                        <label class="input popup__input     input--error">
+                          <p class="input__label">Имя получателя</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="text" name="recipientName" placeholder="Введите имя получателя" value="" step="any"/>
+                            <p class="input__error">Неверные данные</p>
+                          </div>
+                        </label>
+                        <label class="input popup__input input--sum    input--error">
+                          <p class="input__label">Сумма перевода</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="number" name="transferAmount" placeholder="Введите сумму перевода" value="" data-min="0" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
+                            <p class="input__error">Недостаточно средств</p>
+                            <p class="input__additional">$300.00</p>
+                          </div>
+                        </label>
+                        <label class="checkbox popup__checkbox">
+                          <input class="checkbox__input" type="checkbox" name="showInChat"/>
+                          <div class="checkbox__box"></div>
+                          <p class="checkbox__text">Отобразить перевод в чате</p>
+                        </label>
+                        <button class="button button--primary" type="submit">Перевести</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__wallet-auth">
+                  <p class="popup__wallet-auth-text">У вас отключена 2ФА. Подключите её для повышения безопасности</p><a class="button button--secondary" href="#">Включить двухфакторную аутентификацию</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="vip">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Вип-программа</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="tabs js-tabs">
+                <div class="tabs__head">
+                  <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Прогресс</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Привилегии</a>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="js-tabs-content" data-content="1">
+                    <div class="popup__vip popup__vip--progress"><img class="popup__vip-image" src="img/inhtml/vip.png" alt=""/>
+                      <div class="progress progress--grey">
+                        <div class="progress__progress">
+                          <div class="progress__progress-bar">
+                            <div class="progress__progress-bar-fill" style="width: 64%"></div>
+                          </div>
+                          <div class="progress__progress-carets">
+                            <div class="progress__progress-caret" data-caret="blue"></div>
+                            <div class="progress__progress-caret" data-caret="grey"></div>
+                          </div>
+                          <div class="progress__progress-stages">
+                            <div class="progress__progress-stage">
+                              <div class="progress__progress-stage-icon" data-stage="new"></div>
+                              <p class="progress__progress-stage-text">Начинающий</p>
+                            </div>
+                            <div class="progress__progress-stage">
+                              <div class="progress__progress-stage-icon" data-stage="bronze"></div>
+                              <p class="progress__progress-stage-text">Бронза</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="popup__vip-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p><a class="button button--primary" href="#">Узнать больше о вип-программе EtherGod</a>
+                    </div>
+                  </div>
+                  <div class="js-tabs-content" data-content="2">
+                    <div class="popup__vip">
+                      <div class="levels">
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="new"></div>
+                            <p class="levels__item-title">Начинающий</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="bronze"></div>
+                            <p class="levels__item-title">Бронза</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="silver"></div>
+                            <p class="levels__item-title">Серебро</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="gold"></div>
+                            <p class="levels__item-title">Золото</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                        <div class="levels__item">
+                          <div class="levels__item-head">
+                            <div class="levels__item-icon" data-stage="platinum"></div>
+                            <p class="levels__item-title">Платина</p>
+                          </div>
+                          <p class="levels__item-desc">Ваш прогресс рассчитывается исходя из суммы вашего оборота в казино. Переход на более высокий уровень даёт вам право на повышенные бонусы и эксклюзивное ВИП-обслуживание</p>
+                        </div>
+                      </div><a class="button button--primary" href="#">Узнать больше о вип-программе EtherGod</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="chatrules">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__window--chatrules">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Правила чата</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__chatrules">
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">1</p>
+                  <p class="popup__chatrules-text">Не спамьте, не раздражайте и не оскорбляйте других пользователей. Также избегайте использования только заглавных букв.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">2</p>
+                  <p class="popup__chatrules-text">Не попрошайничайте и не просите займы, дожди, переводы и не обещайте удвоения криптовалюты.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">3</p>
+                  <p class="popup__chatrules-text">Не ведите себя подозрительно, ваши действия могут расценить как мошеннические.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">4</p>
+                  <p class="popup__chatrules-text">Не разрешается размещение сообщений с рекламой, предложением обмена, купли-продажи и прочих услуг в любой форме.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">5</p>
+                  <p class="popup__chatrules-text">Не используйте сервис коротких ссылок URL. Всегда размещайте реальные ссылки.</p>
+                </div>
+                <div class="popup__chatrules-item">
+                  <p class="popup__chatrules-counter">6</p>
+                  <p class="popup__chatrules-text">Ипользуйте определенные языковые каналы соответственно.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="storage">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">Хранилище</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__wallet">
+                <div class="tabs js-tabs">
+                  <div class="tabs__head">
+                    <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Депозит</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Вывод</a>
+                    </div>
+                  </div>
+                  <div class="tabs__content">
+                    <div class="js-tabs-content" data-content="1">
+                      <form class="popup__wallet-content js-form-storage-deposit" action="">
+                        <div class="popup__dropdown js-popup-dropdown" data-dropdown="data-dropdown">
+                          <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">0.00000000</div>
+                          <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
+                          </div>
+                        </div>
+                        <label class="input popup__input input--sum    input--error">
+                          <p class="input__label">Сумма перевода</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="number" name="ethSumToStorageDeposit" placeholder="Введите сумму для депозита" value="" data-min="0.0005" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
+                            <p class="input__error">Недостаточно средств</p>
+                          </div>
+                        </label>
+                        <button class="button button--primary" type="submit">Перевести в хранилище</button>
+                      </form>
+                    </div>
+                    <div class="js-tabs-content" data-content="2">
+                      <form class="popup__wallet-content js-form-storage-withdraw" action="">
+                        <div class="popup__dropdown js-popup-dropdown" data-dropdown="data-dropdown">
+                          <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth">0.00000000</div>
+                          <div class="popup__dropdown-inner js-popup-dropdown-inner">
+                            <div class="popup__dropdown-item js-popup-dropdown-item" data-icon="eth-grey">1.22342420</div>
+                          </div>
+                        </div>
+                        <label class="input popup__input input--sum    input--error">
+                          <p class="input__label">Сумма перевода</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="number" name="ethSumToStorageWithdraw" placeholder="Введите сумму для вывода" value="" data-min="0" data-max="1.2234242" step="any"/><a class="button button--primary input__max js-input-max" href="javascript:void(0)">Максимум</a>
+                            <p class="input__error">Недостаточно средств</p>
+                          </div>
+                        </label>
+                        <label class="input popup__input     ">
+                          <p class="input__label">Пароль</p>
+                          <div class="input__inner">
+                            <input class="input__field" type="password" name="password" placeholder="Введите пароль" value="" step="any"/>
+                          </div>
+                        </label>
+                        <button class="button button--primary" type="submit">Вывести из хранилища</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__wallet-auth">
+                  <p class="popup__wallet-auth-text">У вас отключена 2ФА. Подключите её для повышения безопасности</p><a class="button button--secondary" href="#">Включить двухфакторную аутентификацию</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="user">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window">
+            <div class="popup__head">
+              <p class="popup__title" data-icon="default">SeymourBusts</p>
+              <div class="popup__close js-close-popup"></div>
+            </div>
+            <div class="popup__content">
+              <div class="popup__user">
+                <div class="popup__user-info">
+                  <p class="popup__user-name">SeymourBusts</p>
+                  <p class="popup__user-registered">Зарегистрировался 31.02.2005</p>
+                  <div class="popup__user-actions">
+                    <div class="popup__user-action js-open-popup" data-action="transfer" data-popup="wallet"></div>
+                    <div class="popup__user-action" data-action="blacklist"></div>
+                  </div>
+                </div>
+                <div class="tabs js-tabs">
+                  <div class="tabs__head">
+                    <div class="tabs__grid"><a class="tabs__item js-tab tabs__item--active " href="javascript:void(0)" data-content="1">Статистика</a><a class="tabs__item js-tab  " href="javascript:void(0)" data-content="2">Турнир</a>
+                    </div>
+                  </div>
+                  <div class="tabs__content">
+                    <div class="js-tabs-content" data-content="1">
+                      <div class="popup__user-table popup__user-table--statistics">
+                        <div class="popup__user-table-head">
+                          <p class="popup__user-table-cell">Ставки</p>
+                          <p class="popup__user-table-cell">Выигрыши</p>
+                          <p class="popup__user-table-cell">Проигрыши</p>
+                          <p class="popup__user-table-cell">Оборот</p>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Ставки</p>
+                            <p class="popup__user-table-row-head">Выигрыши</p>
+                            <p class="popup__user-table-row-head">Проигрыши</p>
+                            <p class="popup__user-table-row-head">Оборот</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">8 077 343</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--win">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--lose">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Ставки</p>
+                            <p class="popup__user-table-row-head">Выигрыши</p>
+                            <p class="popup__user-table-row-head">Проигрыши</p>
+                            <p class="popup__user-table-row-head">Оборот</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">8 077 343</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--win">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--lose">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Ставки</p>
+                            <p class="popup__user-table-row-head">Выигрыши</p>
+                            <p class="popup__user-table-row-head">Проигрыши</p>
+                            <p class="popup__user-table-row-head">Оборот</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">8 077 343</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--win">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--lose">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Ставки</p>
+                            <p class="popup__user-table-row-head">Выигрыши</p>
+                            <p class="popup__user-table-row-head">Проигрыши</p>
+                            <p class="popup__user-table-row-head">Оборот</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">8 077 343</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--win">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--lose">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="js-tabs-content" data-content="2">
+                      <div class="popup__user-table popup__user-table--tournament">
+                        <div class="popup__user-table-head">
+                          <p class="popup__user-table-cell">Наименование турнира</p>
+                          <p class="popup__user-table-cell">Дата</p>
+                          <p class="popup__user-table-cell">Место</p>
+                          <p class="popup__user-table-cell">Приз</p>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Название турнира</p>
+                            <p class="popup__user-table-row-head">Дата</p>
+                            <p class="popup__user-table-row-head">Место</p>
+                            <p class="popup__user-table-row-head">Приз</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">$10,000 - 24 hours</p>
+                            <p class="popup__user-table-cell">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--place">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Название турнира</p>
+                            <p class="popup__user-table-row-head">Дата</p>
+                            <p class="popup__user-table-row-head">Место</p>
+                            <p class="popup__user-table-row-head">Приз</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">$10,000 - 24 hours</p>
+                            <p class="popup__user-table-cell">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--place">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Название турнира</p>
+                            <p class="popup__user-table-row-head">Дата</p>
+                            <p class="popup__user-table-row-head">Место</p>
+                            <p class="popup__user-table-row-head">Приз</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">$10,000 - 24 hours</p>
+                            <p class="popup__user-table-cell">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--place">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                        <div class="popup__user-table-row">
+                          <div class="popup__user-table-row-heads">
+                            <p class="popup__user-table-row-head">Название турнира</p>
+                            <p class="popup__user-table-row-head">Дата</p>
+                            <p class="popup__user-table-row-head">Место</p>
+                            <p class="popup__user-table-row-head">Приз</p>
+                          </div>
+                          <div class="popup__user-table-row-inner">
+                            <p class="popup__user-table-cell">$10,000 - 24 hours</p>
+                            <p class="popup__user-table-cell">2 175 239</p>
+                            <p class="popup__user-table-cell popup__user-table-cell--place">5 902 096</p>
+                            <p class="popup__user-table-cell">100.00000000</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat js-chat">
+      <div class="chat__header">
+        <p class="chat__heading">Чат</p>
+        <div class="chat__dropdown js-chat-dropdown">
+          <div class="chat__dropdown-item js-chat-dropdown-item" data-lang="rus">Русский</div>
+          <div class="chat__dropdown-inner js-chat-dropdown-inner">
+            <div class="chat__dropdown-item js-chat-dropdown-item" data-lang="eng">English</div>
+          </div>
+        </div>
+        <div class="chat__close js-chat-close"></div>
+      </div>
+      <div class="chat__messages chat__messages--bottom">
+        <div class="chat__messages-scroll js-chat-scroll"></div>
+        <div class="chat__messages-wrapper js-chat-messages">
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+          <div class="chat__messages-block">
+            <p class="chat__messages-date">воскресенье 02:54</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+            <p class="chat__messages-item"><span class="chat__messages-name">selena45</span>: Во окатило на ночь! Всем удачи и до завтра!</p>
+          </div>
+        </div>
+        <div class="chat__messages-actions js-chat-mentions">
+          <div class="chat__messages-actions-wrapper"><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena452414</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">1521412445</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">poooper45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena452414</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">1521412445</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">poooper45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena452414</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">1521412445</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">poooper45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena452414</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">1521412445</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">poooper45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena452414</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">1521412445</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">poooper45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena45</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">selena452414</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">1521412445</a><a class="chat__messages-actions-item js-chat-mention" href="javascrip:void(0)">poooper45</a>
+          </div>
+        </div>
+        <div class="chat__messages-actions js-chat-commands">
+          <div class="chat__messages-actions-wrapper"><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="user"><span>/user @user</span>&nbsp;Посмотреть данные игрока</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="ignore"><span>/ignore @user</span>&nbsp;Добавить в ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="unignore"><span>/unignore @user</span>&nbsp;Убрать из ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="command"><span>/command @user</span>&nbsp;Какая-то команда</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="user"><span>/user @user</span>&nbsp;Посмотреть данные игрока</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="ignore"><span>/ignore @user</span>&nbsp;Добавить в ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="unignore"><span>/unignore @user</span>&nbsp;Убрать из ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="command"><span>/command @user</span>&nbsp;Какая-то команда</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="user"><span>/user @user</span>&nbsp;Посмотреть данные игрока</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="ignore"><span>/ignore @user</span>&nbsp;Добавить в ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="unignore"><span>/unignore @user</span>&nbsp;Убрать из ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="command"><span>/command @user</span>&nbsp;Какая-то команда</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="user"><span>/user @user</span>&nbsp;Посмотреть данные игрока</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="ignore"><span>/ignore @user</span>&nbsp;Добавить в ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="unignore"><span>/unignore @user</span>&nbsp;Убрать из ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="command"><span>/command @user</span>&nbsp;Какая-то команда</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="user"><span>/user @user</span>&nbsp;Посмотреть данные игрока</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="ignore"><span>/ignore @user</span>&nbsp;Добавить в ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="unignore"><span>/unignore @user</span>&nbsp;Убрать из ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="command"><span>/command @user</span>&nbsp;Какая-то команда</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="user"><span>/user @user</span>&nbsp;Посмотреть данные игрока</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="ignore"><span>/ignore @user</span>&nbsp;Добавить в ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="unignore"><span>/unignore @user</span>&nbsp;Убрать из ЧС</a><a class="chat__messages-actions-item js-chat-command" href="javascrip:void(0)" data-command="command"><span>/command @user</span>&nbsp;Какая-то команда</a>
+          </div>
+        </div>
+      </div>
+      <form class="chat__footer js-chat-form" action="">
+        <input class="chat__footer-input js-chat-input" name="chatInput" placeholder="Введите своё сообщение"/>
+        <div class="chat__footer-input-counter js-chat-counter">160</div>
+        <div class="chat__footer-actions">
+          <div class="chat__footer-info">
+            <p class="chat__footer-online">Онлайн: 5504</p><a class="chat__footer-rules js-open-popup" href="javascript:void(0)" data-popup="chatrules">Правила чата</a>
+          </div>
+          <div class="chat__footer-buttons"><a class="button button--quinary chat__footer-btn js-chat-commanding" href="javascript:void(0)">/</a><a class="button button--quinary chat__footer-btn js-chat-mentioning" href="javascript:void(0)">@</a>
+            <button class="button button--quoternary chat__footer-send js-chat-send" type="submit">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+  </body>
+</html>

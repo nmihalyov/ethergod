@@ -13,12 +13,7 @@ mixin group
           form.group__form(action="")
             +input('search', '', 'search', 'Найди свой идеал в нашем каталоге игр', '', '', 'group__form-search')
           .group__actions
-            .group__dropdown.js-group-dropdown
-              .group__dropdown-item.js-group-dropdown-item Популярное
-              .group__dropdown-inner.js-group-dropdown-inner
-                .group__dropdown-item.js-group-dropdown-item От A до Z
-                .group__dropdown-item.js-group-dropdown-item От Z до A
-                .group__dropdown-item.js-group-dropdown-item Интересное
+            .group__filter.js-group-filter Популярное
             a.group__providers(href="#") Все провайдеры
           .group__grid
             -for (let i = 1; i <= 23; i++)
