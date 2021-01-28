@@ -42,7 +42,7 @@ const openPopup = $popup => {
   $popup.fadeIn(300);
 };
 
-$('.js-open-popup').on('click', e => {
+$('body').on('click', '.js-open-popup', e => {
   const target = $(e.currentTarget).attr('data-popup');
   const $popup = $(`.js-popup[data-popup="${target}"]`);
   openPopup($popup);

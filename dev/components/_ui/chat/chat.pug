@@ -17,7 +17,7 @@ mixin chat
             p.chat__messages-date воскресенье 02:54
             -for(let i = 1; i <= 3; i++)
               p.chat__messages-item
-                span.chat__messages-name selena45
+                a(href="javascript:void(0)", data-popup="user").chat__messages-name.js-open-popup selena45
                 |: Во окатило на ночь! Всем удачи и до завтра!
       .chat__messages-actions.js-chat-mentions
         .chat__messages-actions-wrapper

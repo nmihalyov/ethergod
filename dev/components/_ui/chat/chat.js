@@ -153,7 +153,7 @@ $('.js-chat-form').on('submit', e => {
     <p class="chat__messages-item">
       <span class="chat__messages-name">username</span>: ${$('.js-chat-input').val()}
     </p>`.replace(/@(\S+)\s/gm, (a, b) => {
-      return `<a href="/user/${b}" class="chat__messages-user">@${b}</a> `;
+      return `<a href="javascript:void(0)" class="chat__messages-user js-open-popup" data-popup="user">@${b}</a> `;
     });
 
   if ($('.js-chat-input').val().replace(/\s/g, '').length) {
